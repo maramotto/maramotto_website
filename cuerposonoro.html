@@ -31,7 +31,7 @@
     </ul>
   </nav>
 
-  <!-- ======= PROJECT HERO (two-column with decorative circles) ======= -->
+  <!-- ======= PROJECT HERO ======= -->
   <section class="project-hero">
     <div class="project-hero__circle project-hero__circle--1"></div>
     <div class="project-hero__circle project-hero__circle--2"></div>
@@ -60,10 +60,9 @@
     </div>
   </section>
 
-  <!-- ======= PROJECT BODY ======= -->
+  <!-- ======= THE QUESTION + HOW IT WORKS ======= -->
   <section class="project-body">
     <div class="container--narrow">
-
       <h2>The question</h2>
       <p>
         What if your body were a musical instrument? Not a metaphor, not a dance, an actual
@@ -90,8 +89,87 @@
         there are no "wrong notes". It's like putting your hands in clay: there's
         always a shape, only which shape changes.
       </p>
+    </div>
+  </section>
 
-      <!-- ======= TECHNICAL DEEP-DIVE ======= -->
+  <!-- ======= TRY THE WEB DEMO ======= -->
+  <section class="project-body">
+    <div class="container--narrow">
+      <h2>Try the web demo</h2>
+      <p>
+        Experience CuerpoSonoro directly in your browser. The web demo uses MediaPipe.js
+        for pose detection and the Web Audio API for sound synthesis &mdash;
+        no installation needed.
+      </p>
+      <iframe
+        src="https://cuerposonoro.art"
+        class="demo-frame"
+        title="CuerpoSonoro Web Demo"
+        loading="lazy"
+      ></iframe>
+      <p style="font-size: 0.9rem; color: var(--text-light); text-align: center;">
+        If the demo doesn't load above, you can
+        <a href="https://cuerposonoro.art" target="_blank" rel="noopener" style="color: var(--teal); font-weight: 600;">open it in a new tab</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- ======= WHY THIS PROJECT MATTERS (highlighted) ======= -->
+  <section class="project-body project-body--highlight">
+    <div class="container--narrow">
+      <h2>Why this project matters to me</h2>
+      <p>
+        CuerpoSonoro sits exactly where I like to work: the intersection of art, technology
+        and human experience. It's a project that requires musical thinking, programming skill,
+        and an understanding of the body as an expressive medium.
+      </p>
+      <p>
+        It represents what I believe technology should be: a tool that
+        <span class="highlight">serves people, extends their creative capabilities,
+        and creates experiences that wouldn't exist otherwise</span>.
+      </p>
+    </div>
+  </section>
+
+  <!-- ======= TECHNOLOGY STACK ======= -->
+  <section class="project-body">
+    <div class="container--narrow">
+      <h2>Technology stack</h2>
+      <div class="tech-stack">
+        <div class="tech-item">
+          <div class="tech-item__label">Computer vision</div>
+          <div class="tech-item__value">MediaPipe Pose</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item__label">Audio engine</div>
+          <div class="tech-item__value">SuperCollider</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item__label">Communication</div>
+          <div class="tech-item__value">OSC + MIDI/MPE</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item__label">Backend</div>
+          <div class="tech-item__value">Python + FastAPI</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item__label">Web demo</div>
+          <div class="tech-item__value">MediaPipe.js + Web Audio API</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item__label">Infrastructure</div>
+          <div class="tech-item__value">Docker + Hetzner VPS</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item__label">Testing</div>
+          <div class="tech-item__value">pytest &mdash; 129 automated tests</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item__label">Source</div>
+          <div class="tech-item__value">Open Source (MIT)</div>
+        </div>
+      </div>
+
       <h2>Under the hood</h2>
       <p>
         CuerpoSonoro runs a real-time pipeline that goes from camera capture to audio output
@@ -207,74 +285,17 @@
         <div class="mapping-grid__cell mapping-grid__cell--move">Head tilt</div>
         <div class="mapping-grid__cell mapping-grid__cell--sound">Global filter sweep</div>
       </div>
+    </div>
+  </section>
 
-      <h2>Technology stack</h2>
-      <div class="tech-stack">
-        <div class="tech-item">
-          <div class="tech-item__label">Computer vision</div>
-          <div class="tech-item__value">MediaPipe Pose</div>
-        </div>
-        <div class="tech-item">
-          <div class="tech-item__label">Audio engine</div>
-          <div class="tech-item__value">SuperCollider</div>
-        </div>
-        <div class="tech-item">
-          <div class="tech-item__label">Communication</div>
-          <div class="tech-item__value">OSC + MIDI/MPE</div>
-        </div>
-        <div class="tech-item">
-          <div class="tech-item__label">Backend</div>
-          <div class="tech-item__value">Python + FastAPI</div>
-        </div>
-        <div class="tech-item">
-          <div class="tech-item__label">Web demo</div>
-          <div class="tech-item__value">MediaPipe.js + Web Audio API</div>
-        </div>
-        <div class="tech-item">
-          <div class="tech-item__label">Infrastructure</div>
-          <div class="tech-item__value">Docker + Hetzner VPS</div>
-        </div>
-        <div class="tech-item">
-          <div class="tech-item__label">Testing</div>
-          <div class="tech-item__value">pytest &mdash; 129 automated tests</div>
-        </div>
-        <div class="tech-item">
-          <div class="tech-item__label">Source</div>
-          <div class="tech-item__value">Open Source (MIT)</div>
-        </div>
-      </div>
-
-      <h2>Try the web demo</h2>
-      <p>
-        Experience CuerpoSonoro directly in your browser. The web demo uses MediaPipe.js
-        for pose detection in the browser and the Web Audio API for sound synthesis &mdash;
-        no installation needed.
-      </p>
-      <iframe
-        src="https://cuerposonoro.art"
-        class="demo-frame"
-        title="CuerpoSonoro Web Demo"
-        loading="lazy"
-      ></iframe>
-      <p style="font-size: 0.9rem; color: var(--text-light); text-align: center;">
-        If the demo doesn't load above, you can
-        <a href="https://cuerposonoro.art" target="_blank" rel="noopener" style="color: var(--purple); font-weight: 600;">open it in a new tab</a>.
-      </p>
-
-      <h2>Why this project matters to me</h2>
-      <p>
-        CuerpoSonoro sits exactly where I like to work: the intersection of art, technology
-        and human experience. It's a project that requires musical thinking, programming skill,
-        and an understanding of the body as an expressive medium.
-      </p>
-      <p>
-        It represents what I believe technology should be: a tool that
-        <span class="highlight">serves people, extends their creative capabilities,
-        and creates experiences that wouldn't exist otherwise</span>.
-      </p>
-
+  <!-- ======= EXPLORE THE CODE (highlighted) ======= -->
+  <section class="project-body project-body--highlight-dark">
+    <div class="container--narrow" style="text-align: center;">
       <h2>Explore the code</h2>
-      <div class="btn-group" style="margin-top: 1rem;">
+      <p style="margin-bottom: 2rem;">
+        CuerpoSonoro is open source. Dive into the code, run it locally, or build on top of it.
+      </p>
+      <div class="btn-group btn-group--center">
         <a href="https://github.com/maramotto/cuerposonoro" class="btn btn--primary btn--small" target="_blank" rel="noopener">
           GitHub &mdash; CuerpoSonoro
         </a>
@@ -282,17 +303,6 @@
           Live Demo
         </a>
       </div>
-
-      <!-- CTA back to home -->
-      <div class="project-cta">
-        <h2>Like what you see?</h2>
-        <p>Check out my other projects or get in touch to collaborate.</p>
-        <div class="btn-group btn-group--center" style="margin-top: 1rem;">
-          <a href="index.html#projects" class="btn btn--primary btn--small">More projects</a>
-          <a href="index.html#contact" class="btn btn--outline btn--small">Contact me</a>
-        </div>
-      </div>
-
     </div>
   </section>
 
