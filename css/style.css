@@ -1,7 +1,7 @@
 /* ============================================
    maramotto.com — Global Styles
    Palette: Cream #FDF5E6 / Yellow #FFD93D (accent) / Purple #7B2D8E (primary)
-   Project pages: Teal #1E6B7B (hero) / Blue-light #E8F4FD (tech)
+   Project pages: Teal #1E6B7B (hero)
    Fonts: Syne (headings) + DM Sans (body)
    ============================================ */
 
@@ -140,7 +140,10 @@ a { color: inherit; }
 
 .btn-group--center { justify-content: center; }
 
-/* --- Navigation --- */
+/* ============================================
+   NAVIGATION
+   ============================================ */
+
 .nav {
   position: fixed;
   top: 0;
@@ -157,6 +160,7 @@ a { color: inherit; }
   border-bottom: 2px solid rgba(123, 45, 142, 0.06);
 }
 
+/* --- Logo with letter wave --- */
 .nav__logo {
   font-family: 'Syne', sans-serif;
   font-weight: 800;
@@ -164,17 +168,33 @@ a { color: inherit; }
   color: var(--purple);
   text-decoration: none;
   letter-spacing: -0.02em;
+  display: inline-flex;
 }
 
-.nav__logo span { color: var(--purple); }
+.nav__logo-letter {
+  display: inline-block;
+  transition: transform 0.2s;
+}
 
+.nav__logo-letter.wave {
+  animation: letter-wave 0.5s ease calc(var(--i) * 0.06s) both;
+}
+
+@keyframes letter-wave {
+  0%   { transform: translateY(0); }
+  40%  { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+/* --- Nav links --- */
 .nav__links {
   display: flex;
   gap: 2.5rem;
   list-style: none;
+  align-items: center;
 }
 
-.nav__links a {
+.nav__links > li > a {
   text-decoration: none;
   color: var(--dark);
   font-family: 'Syne', sans-serif;
@@ -186,7 +206,7 @@ a { color: inherit; }
   position: relative;
 }
 
-.nav__links a::after {
+.nav__links > li > a::after {
   content: '';
   position: absolute;
   bottom: -4px;
@@ -197,35 +217,70 @@ a { color: inherit; }
   transition: width 0.3s;
 }
 
-.nav__links a:hover { color: var(--purple); }
-.nav__links a:hover::after { width: 100%; }
+.nav__links > li > a:hover { color: var(--purple); }
+.nav__links > li > a:hover::after { width: 100%; }
 
-/* --- Nav dropdown --- */
+/* --- Nav item with dropdown --- */
 .nav__item {
   position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
 }
 
 .nav__item > a {
-  display: inline-flex;
+  /* The "Projects" text link — navigates on click */
+}
+
+/* --- Triangle toggle button --- */
+.nav__dropdown-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.3rem;
+  display: flex;
   align-items: center;
-  gap: 0.3rem;
+  justify-content: center;
+  position: relative;
+  outline: none;
 }
 
 .nav__dropdown-arrow {
-  font-size: 0.55rem;
-  transition: transform 0.2s;
+  display: inline-block;
+  font-size: 0.5rem;
+  color: var(--purple);
+  transition: transform 0.25s ease;
+  /* Default: points RIGHT (toward About) */
+  transform: rotate(-90deg);
+  line-height: 1;
 }
 
-.nav__item:hover .nav__dropdown-arrow {
-  transform: rotate(180deg);
+/* When open: points DOWN */
+.nav__item.dropdown-open .nav__dropdown-arrow {
+  transform: rotate(0deg);
 }
 
+/* --- Shake animation on hover proximity --- */
+.nav__dropdown-arrow.shake {
+  animation: arrow-shake 0.5s ease;
+}
+
+@keyframes arrow-shake {
+  0%   { transform: rotate(-90deg) translateX(0); }
+  15%  { transform: rotate(-90deg) translateX(3px); }
+  30%  { transform: rotate(-90deg) translateX(-2px); }
+  45%  { transform: rotate(-90deg) translateX(2px); }
+  60%  { transform: rotate(-90deg) translateX(-1px); }
+  75%  { transform: rotate(-90deg) translateX(1px); }
+  100% { transform: rotate(-90deg) translateX(0); }
+}
+
+/* --- Dropdown menu --- */
 .nav__dropdown {
   display: none;
   position: absolute;
-  top: calc(100% + 12px);
-  left: 50%;
-  transform: translateX(-50%);
+  top: calc(100% + 14px);
+  left: 0;
   background: var(--white);
   border-radius: 12px;
   padding: 0.5rem 0;
@@ -240,8 +295,7 @@ a { color: inherit; }
   content: '';
   position: absolute;
   top: -8px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 24px;
   width: 0;
   height: 0;
   border-left: 8px solid transparent;
@@ -249,7 +303,8 @@ a { color: inherit; }
   border-bottom: 8px solid var(--white);
 }
 
-.nav__item:hover .nav__dropdown {
+/* Show dropdown via JS class */
+.nav__item.dropdown-open .nav__dropdown {
   display: block;
 }
 
@@ -257,11 +312,12 @@ a { color: inherit; }
   display: block;
   padding: 0.6rem 1.2rem;
   font-family: 'DM Sans', sans-serif;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 600;
   text-transform: none;
   letter-spacing: 0;
   color: var(--text);
+  text-decoration: none;
   transition: background 0.15s, color 0.15s;
 }
 
@@ -272,7 +328,7 @@ a { color: inherit; }
   color: var(--purple);
 }
 
-/* Mobile nav toggle */
+/* --- Mobile nav toggle --- */
 .nav__toggle {
   display: none;
   background: none;
@@ -290,7 +346,10 @@ a { color: inherit; }
   transition: 0.3s;
 }
 
-/* --- Hero --- */
+/* ============================================
+   HERO
+   ============================================ */
+
 .hero {
   min-height: 100vh;
   display: flex;
@@ -379,7 +438,10 @@ a { color: inherit; }
 
 .hero .btn-group { position: relative; z-index: 1; }
 
-/* --- Section padding --- */
+/* ============================================
+   SECTIONS
+   ============================================ */
+
 .section {
   padding: 6rem 0;
 }
@@ -493,7 +555,7 @@ a { color: inherit; }
 
 .card__link:hover { gap: 0.8rem; color: var(--purple-dark); }
 
-/* --- Featured project (CuerpoSonoro highlight on Home) --- */
+/* --- Featured project --- */
 .featured {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -708,7 +770,6 @@ a { color: inherit; }
   overflow: hidden;
 }
 
-/* Decorative circles */
 .project-hero__circle {
   position: absolute;
   border-radius: 50%;
@@ -747,7 +808,6 @@ a { color: inherit; }
   background: rgba(255, 217, 61, 0.08);
 }
 
-/* Two-column layout */
 .project-hero__inner {
   max-width: 1200px;
   margin: 0 auto;
@@ -804,7 +864,7 @@ a { color: inherit; }
   border-color: rgba(255, 255, 255, 0.15);
 }
 
-/* --- Project body content --- */
+/* --- Project body --- */
 .project-body {
   padding: 4rem 0;
 }
@@ -834,15 +894,12 @@ a { color: inherit; }
 }
 
 /* --- Highlighted project sections --- */
-
-/* "Why this project matters" — warm cream with left teal accent */
 .project-body--highlight {
   background: var(--cream);
   border-top: 3px solid var(--yellow);
   border-bottom: 3px solid var(--yellow);
 }
 
-/* "Explore the code" — teal dark band */
 .project-body--highlight-dark {
   background: var(--teal);
   padding: 3.5rem 0;
@@ -880,7 +937,7 @@ a { color: inherit; }
   color: var(--teal-dark);
 }
 
-/* --- Tech stack display --- */
+/* --- Tech stack --- */
 .tech-stack {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -911,7 +968,7 @@ a { color: inherit; }
   color: var(--dark);
 }
 
-/* --- Pipeline visualization --- */
+/* --- Pipeline --- */
 .pipeline {
   display: flex;
   align-items: stretch;
@@ -1051,7 +1108,7 @@ a { color: inherit; }
   color: var(--text-light);
 }
 
-/* --- CTA banner (kept for index.html use) --- */
+/* --- CTA / Demo --- */
 .project-cta {
   background: var(--cream);
   border-radius: 24px;
@@ -1060,11 +1117,8 @@ a { color: inherit; }
   margin-top: 3rem;
 }
 
-.project-cta h2 {
-  margin-top: 0;
-}
+.project-cta h2 { margin-top: 0; }
 
-/* Demo embed */
 .demo-frame {
   width: 100%;
   height: 500px;
@@ -1118,7 +1172,8 @@ a { color: inherit; }
 
   .nav__toggle { display: block; }
 
-  .nav__dropdown {
+  /* Mobile: dropdown always visible under Projects */
+  .nav__item .nav__dropdown {
     display: block;
     position: static;
     transform: none;
@@ -1131,12 +1186,15 @@ a { color: inherit; }
     min-width: auto;
   }
 
-  .nav__dropdown::before { display: none; }
+  .nav__item .nav__dropdown::before { display: none; }
 
-  .nav__dropdown li a {
+  .nav__item .nav__dropdown li a {
     padding: 0.5rem 1rem;
     font-size: 0.8rem;
   }
+
+  /* Hide triangle on mobile (dropdown always visible) */
+  .nav__dropdown-toggle { display: none; }
 
   .hero { padding: 7rem 1.5rem 3rem; }
   .section { padding: 4rem 0; }
