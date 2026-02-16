@@ -4,3 +4,4 @@ COPY index.html /usr/share/nginx/html/
 COPY cuerposonoro.html /usr/share/nginx/html/
 COPY img/ /usr/share/nginx/html/img/
 COPY css/ /usr/share/nginx/html/css/
+COPY js/ /usr/share/nginx/html/js/
