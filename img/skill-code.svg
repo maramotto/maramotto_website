@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none"
+  stroke="#7B2D8E" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Laptop screen -->
+  <rect x="32" y="42" width="136" height="92" rx="8"/>
+  <!-- Screen bezel -->
+  <rect x="42" y="51" width="116" height="74" rx="4"/>
+  <!-- Code bracket < -->
+  <polyline points="78,70 62,88 78,106" stroke-width="6"/>
+  <!-- Code bracket > -->
+  <polyline points="122,70 138,88 122,106" stroke-width="6"/>
+  <!-- Slash -->
+  <line x1="106" y1="66" x2="94" y2="110" stroke-width="4"/>
+  <!-- Base -->
+  <path d="M22,134 L32,134 Q32,146 44,146 L156,146 Q168,146 168,134 L178,134"/>
+  <!-- Trackpad -->
+  <rect x="85" y="138" width="30" height="4" rx="2" stroke-width="2" opacity="0.35"/>
+</svg>

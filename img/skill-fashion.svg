@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none"
+  stroke="#7B2D8E" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Sewing needle -->
+  <line x1="55" y1="150" x2="130" y2="55" stroke-width="4"/>
+  <!-- Needle eye -->
+  <ellipse cx="134" cy="48" rx="4" ry="7" stroke-width="3"/>
+  <!-- Needle point -->
+  <circle cx="52" cy="153" r="2" fill="#7B2D8E" stroke="none"/>
+  <!-- Thread coming from needle -->
+  <path d="M138,45 Q155,35 150,55 Q145,75 160,68 Q175,60 165,80" stroke-width="3" fill="none" opacity="0.6"/>
+  <!-- Fabric piece / pattern -->
+  <rect x="30" y="70" width="65" height="55" rx="4" stroke-dasharray="6,4" stroke-width="3" opacity="0.5"/>
+  <!-- Stitch marks on fabric -->
+  <line x1="40" y1="82" x2="48" y2="82" stroke-width="3"/>
+  <line x1="55" y1="82" x2="63" y2="82" stroke-width="3"/>
+  <line x1="70" y1="82" x2="78" y2="82" stroke-width="3"/>
+  <line x1="40" y1="97" x2="48" y2="97" stroke-width="3"/>
+  <line x1="55" y1="97" x2="63" y2="97" stroke-width="3"/>
+  <line x1="70" y1="97" x2="78" y2="97" stroke-width="3"/>
+  <!-- Thread spool -->
+  <rect x="140" y="115" width="30" height="38" rx="6"/>
+  <line x1="140" y1="122" x2="170" y2="122" stroke-width="2" opacity="0.4"/>
+  <line x1="140" y1="146" x2="170" y2="146" stroke-width="2" opacity="0.4"/>
+  <!-- Thread wrapping lines on spool -->
+  <line x1="144" y1="128" x2="166" y2="128" stroke-width="2" opacity="0.3"/>
+  <line x1="144" y1="133" x2="166" y2="133" stroke-width="2" opacity="0.3"/>
+  <line x1="144" y1="138" x2="166" y2="138" stroke-width="2" opacity="0.3"/>
+</svg>
