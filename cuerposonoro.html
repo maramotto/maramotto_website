@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CuerpoSonoro — Mara Motto</title>
+  <meta name="description" content="CuerpoSonoro: software that transforms human body movement into sound. A creative coding project exploring the intersection of art, technology and the body.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ======= NAV ======= -->
+  <nav class="nav">
+    <a href="index.html" class="nav__logo">mara<span>motto</span></a>
+    <button class="nav__toggle" onclick="document.querySelector('.nav__links').classList.toggle('active')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav__links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#projects">Projects</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ======= PROJECT HERO ======= -->
+  <section class="project-hero">
+    <div class="project-hero__icon">🎵</div>
+    <h1 class="project-hero__title">CuerpoSonoro</h1>
+    <p class="project-hero__tagline">
+      Software that transforms human body movement into sound.
+      Art, technology and the body — united in a single project.
+    </p>
+    <div class="tags">
+      <span class="tag">Creative Coding</span>
+      <span class="tag">Art + Technology</span>
+      <span class="tag">Python</span>
+      <span class="tag">JavaScript</span>
+      <span class="tag">Sound</span>
+      <span class="tag">Body Interaction</span>
+    </div>
+  </section>
+
+  <!-- ======= PROJECT BODY ======= -->
+  <section class="project-body">
+    <div class="container--narrow">
+
+      <h2>The question</h2>
+      <p>
+        What if your body were a musical instrument? Not a metaphor, not a dance — an actual
+        instrument where every gesture produces a unique sound, where your posture shapes
+        the sonic landscape around you.
+      </p>
+      <p>
+        CuerpoSonoro was born from that question. It's a software project that explores
+        the connection between body movement and real-time sound generation, turning the
+        human body into an expressive musical interface.
+      </p>
+
+      <h2>How it works</h2>
+      <p>
+        The software captures body movement through sensors and translates it into musical
+        parameters. Every gesture, every posture generates a different sonic response.
+        There are no scores or pre-recorded sequences: <span class="highlight">you create
+        the sound with your own body</span>.
+      </p>
+      <p>
+        The mapping between movement and sound is designed to feel intuitive and expressive.
+        Small movements produce subtle changes; large gestures create dramatic shifts in
+        the soundscape. The result is a deeply personal, embodied musical experience.
+      </p>
+
+      <h2>Technology</h2>
+      <div class="tech-stack">
+        <div class="tech-item">
+          <div class="tech-item__label">Core</div>
+          <div class="tech-item__value">Python</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item__label">Web Demo</div>
+          <div class="tech-item__value">JavaScript</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item__label">License</div>
+          <div class="tech-item__value">The Unlicense</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item__label">Source</div>
+          <div class="tech-item__value">Open Source</div>
+        </div>
+      </div>
+
+      <h2>Try the web demo</h2>
+      <p>
+        Experience CuerpoSonoro directly in your browser. The web demo is built in JavaScript
+        and lets you explore the core concept without installing anything.
+      </p>
+      <iframe
+        src="https://maramotto.github.io/cuerposonoro-webdemo/"
+        class="demo-frame"
+        title="CuerpoSonoro Web Demo"
+        loading="lazy"
+      ></iframe>
+      <p style="font-size: 0.9rem; color: var(--text-light); text-align: center;">
+        If the demo doesn't load above, you can
+        <a href="https://maramotto.github.io/cuerposonoro-webdemo/" target="_blank" rel="noopener" style="color: var(--purple); font-weight: 600;">open it in a new tab</a>.
+      </p>
+
+      <h2>Why this project matters to me</h2>
+      <p>
+        CuerpoSonoro sits exactly where I like to work: the intersection of art, technology
+        and human experience. It's a project that requires musical thinking, programming skill,
+        and an understanding of the body as an expressive medium.
+      </p>
+      <p>
+        It represents what I believe technology should be: a tool that
+        <span class="highlight">serves people, extends their creative capabilities,
+        and creates experiences that wouldn't exist otherwise</span>.
+      </p>
+
+      <h2>Explore the code</h2>
+      <div class="btn-group" style="margin-top: 1rem;">
+        <a href="https://github.com/maramotto/cuerposonoro" class="btn btn--primary btn--small" target="_blank" rel="noopener">
+          GitHub — CuerpoSonoro
+        </a>
+        <a href="https://github.com/maramotto/cuerposonoro-webdemo" class="btn btn--outline btn--small" target="_blank" rel="noopener">
+          GitHub — Web Demo
+        </a>
+        <a href="https://maramotto.github.io/cuerposonoro-webdemo/" class="btn btn--outline btn--small" target="_blank" rel="noopener">
+          Live Demo ↗
+        </a>
+      </div>
+
+      <!-- CTA back to home -->
+      <div class="project-cta">
+        <h2>Like what you see?</h2>
+        <p>Check out my other projects or get in touch to collaborate.</p>
+        <div class="btn-group btn-group--center" style="margin-top: 1rem;">
+          <a href="index.html#projects" class="btn btn--primary btn--small">More projects</a>
+          <a href="index.html#contact" class="btn btn--outline btn--small">Contact me</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======= FOOTER ======= -->
+  <footer class="footer">
+    © 2025 <span>maramotto</span>.com — Made with art and code ·
+    <a href="index.html">Home</a>
+  </footer>
+
+</body>
+</html>
