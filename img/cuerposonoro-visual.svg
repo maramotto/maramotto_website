@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none"
+  stroke="#FDF5E6" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Head -->
+  <circle cx="200" cy="90" r="30"/>
+  <!-- Neck -->
+  <line x1="200" y1="120" x2="200" y2="140"/>
+  <!-- Torso -->
+  <path d="M160,148 Q160,140 200,138 Q240,140 240,148 L235,245 Q235,252 200,252 Q165,252 165,245 Z"/>
+  <!-- Left arm reaching out -->
+  <path d="M160,158 Q130,148 100,155 Q80,160 65,150"/>
+  <!-- Left hand open -->
+  <path d="M65,150 Q58,146 55,150" stroke-width="3.5"/>
+  <path d="M65,150 Q60,155 62,160" stroke-width="3.5"/>
+  <!-- Right arm reaching out -->
+  <path d="M240,158 Q270,148 300,155 Q320,160 335,150"/>
+  <!-- Right hand open -->
+  <path d="M335,150 Q342,146 345,150" stroke-width="3.5"/>
+  <path d="M335,150 Q340,155 338,160" stroke-width="3.5"/>
+  <!-- Left leg -->
+  <path d="M180,252 L170,325 Q168,335 175,338"/>
+  <!-- Right leg -->
+  <path d="M220,252 L230,325 Q232,335 225,338"/>
+
+  <!-- Sound waves emanating — left -->
+  <path d="M50,180 Q32,205 50,235" stroke-width="4" opacity="0.7"/>
+  <path d="M32,170 Q8,205 32,248" stroke-width="3.5" opacity="0.45"/>
+  <path d="M18,162 Q-12,205 18,258" stroke-width="3" opacity="0.25"/>
+
+  <!-- Sound waves emanating — right -->
+  <path d="M350,180 Q368,205 350,235" stroke-width="4" opacity="0.7"/>
+  <path d="M368,170 Q392,205 368,248" stroke-width="3.5" opacity="0.45"/>
+  <path d="M382,162 Q412,205 382,258" stroke-width="3" opacity="0.25"/>
+
+  <!-- Sound waves — top (from head) -->
+  <path d="M182,62 Q175,42 182,22" stroke-width="3" opacity="0.45"/>
+  <path d="M218,62 Q225,42 218,22" stroke-width="3" opacity="0.45"/>
+
+  <!-- Particles / energy dots -->
+  <circle cx="120" cy="120" r="3" fill="#FDF5E6" stroke="none" opacity="0.5"/>
+  <circle cx="280" cy="120" r="3" fill="#FDF5E6" stroke="none" opacity="0.5"/>
+  <circle cx="95" cy="210" r="2.5" fill="#FDF5E6" stroke="none" opacity="0.4"/>
+  <circle cx="305" cy="210" r="2.5" fill="#FDF5E6" stroke="none" opacity="0.4"/>
+  <circle cx="140" cy="290" r="2" fill="#FDF5E6" stroke="none" opacity="0.3"/>
+  <circle cx="260" cy="290" r="2" fill="#FDF5E6" stroke="none" opacity="0.3"/>
+  <circle cx="200" cy="30" r="2" fill="#FDF5E6" stroke="none" opacity="0.35"/>
+
+  <!-- Waveform at bottom (sound visualization) -->
+  <polyline points="100,370 115,362 125,375 140,358 155,372 170,355 185,368 200,352 215,368 230,355 245,372 260,358 275,375 285,362 300,370"
+    stroke-width="3" opacity="0.4"/>
+</svg>
