@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>maramotto-cuerposonoro</title>
-  <meta name="description" content="CuerpoSonoro: software that transforms human body movement into sound. A creative coding project exploring the intersection of art, technology and the body.">
+  <title>maramotto &mdash; CuerpoSonoro</title>
+  <meta name="description" content="CuerpoSonoro: software that transforms human body movement into sound in real time. A creative coding project exploring the intersection of art, technology and the body.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
@@ -20,7 +20,12 @@
     </button>
     <ul class="nav__links">
       <li><a href="index.html">Home</a></li>
-      <li><a href="index.html#projects">Projects</a></li>
+      <li class="nav__item">
+        <a href="index.html#projects">Projects <span class="nav__dropdown-arrow">&#9660;</span></a>
+        <ul class="nav__dropdown">
+          <li><a href="cuerposonoro.html">CuerpoSonoro</a></li>
+        </ul>
+      </li>
       <li><a href="index.html#about">About</a></li>
       <li><a href="index.html#contact">Contact</a></li>
     </ul>
@@ -28,26 +33,36 @@
 
   <!-- ======= PROJECT HERO ======= -->
   <section class="project-hero">
-    <img src="img/cuerposonoro-visual.svg" alt="CuerpoSonoro — Body becomes sound" class="project-hero__img">
-    <h1 class="project-hero__title">CuerpoSonoro</h1>
-    <p class="project-hero__tagline">
-      Software that transforms human body movement into sound.
-      Human body and technology transformed into art, united in a single project.
-    </p>
-    <div class="tags">
-      <span class="tag">Creative Coding</span>
-      <span class="tag">Art + Technology</span>
-      <span class="tag">Python</span>
-      <span class="tag">JavaScript</span>
-      <span class="tag">Sound</span>
-      <span class="tag">Body Interaction</span>
+    <div class="project-hero__circle project-hero__circle--1"></div>
+    <div class="project-hero__circle project-hero__circle--2"></div>
+    <div class="project-hero__circle project-hero__circle--3"></div>
+    <div class="project-hero__circle project-hero__circle--4"></div>
+
+    <div class="project-hero__inner">
+      <div class="project-hero__visual">
+        <img src="img/cuerposonoro-visual.svg" alt="CuerpoSonoro &mdash; Body becomes sound" class="project-hero__img">
+      </div>
+      <div class="project-hero__content">
+        <h1 class="project-hero__title">CuerpoSonoro</h1>
+        <p class="project-hero__tagline">
+          Software that transforms human body movement into sound.
+          Human body and technology transformed into art, united in a single project.
+        </p>
+        <div class="tags">
+          <span class="tag">Creative Coding</span>
+          <span class="tag">Art + Technology</span>
+          <span class="tag">Python</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">Sound</span>
+          <span class="tag">Body Interaction</span>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- ======= PROJECT BODY ======= -->
+  <!-- ======= THE QUESTION + HOW IT WORKS ======= -->
   <section class="project-body">
     <div class="container--narrow">
-
       <h2>The question</h2>
       <p>
         What if your body were a musical instrument? Not a metaphor, not a dance, an actual
@@ -62,37 +77,29 @@
 
       <h2>How it works</h2>
       <p>
-        The software captures body movement through a cam and translates it into musical
+        The software captures body movement through a camera and translates it into musical
         parameters. Every gesture, every posture generates a different sonic response.
         There are no scores or pre-recorded sequences: <span class="highlight">you create
         the sound with your own body in real-time</span>.
       </p>
       <p>
-        The mapping between movement and sound is designed to feel intuitive and expressive.
-        Small movements produce subtle changes; large gestures create dramatic shifts in
-        the soundscape. The result is a deeply personal, embodied musical experience.
+        The key artistic principle: the body doesn't "play notes" &mdash; the body shapes sound.
+        It's not an instrument that triggers discrete events, but an interface that continuously
+        moulds a living soundscape. Any position of the body produces an interesting sonic state;
+        there are no "wrong notes". It's like putting your hands in clay: there's
+        always a shape, only which shape changes.
       </p>
+    </div>
+  </section>
 
-      <h2>Technology</h2>
-      <div class="tech-stack">
-        <div class="tech-item">
-          <div class="tech-item__label">Core</div>
-          <div class="tech-item__value">Python</div>
-        </div>
-        <div class="tech-item">
-          <div class="tech-item__label">Web Demo</div>
-          <div class="tech-item__value">JavaScript</div>
-        </div>
-        <div class="tech-item">
-          <div class="tech-item__label">Source</div>
-          <div class="tech-item__value">Open Source</div>
-        </div>
-      </div>
-
+  <!-- ======= TRY THE WEB DEMO ======= -->
+  <section class="project-body">
+    <div class="container--narrow">
       <h2>Try the web demo</h2>
       <p>
-        Experience CuerpoSonoro directly in your browser. The web demo is built in JavaScript
-        and lets you explore the core concept without installing anything.
+        Experience CuerpoSonoro directly in your browser. The web demo uses MediaPipe.js
+        for pose detection and the Web Audio API for sound synthesis &mdash;
+        no installation needed.
       </p>
       <iframe
         src="https://cuerposonoro.art"
@@ -102,9 +109,14 @@
       ></iframe>
       <p style="font-size: 0.9rem; color: var(--text-light); text-align: center;">
         If the demo doesn't load above, you can
-        <a href="https://cuerposonoro.art" target="_blank" rel="noopener" style="color: var(--purple); font-weight: 600;">open it in a new tab</a>.
+        <a href="https://cuerposonoro.art" target="_blank" rel="noopener" style="color: var(--teal); font-weight: 600;">open it in a new tab</a>.
       </p>
+    </div>
+  </section>
 
+  <!-- ======= WHY THIS PROJECT MATTERS (highlighted) ======= -->
+  <section class="project-body project-body--highlight">
+    <div class="container--narrow">
       <h2>Why this project matters to me</h2>
       <p>
         CuerpoSonoro sits exactly where I like to work: the intersection of art, technology
@@ -116,33 +128,187 @@
         <span class="highlight">serves people, extends their creative capabilities,
         and creates experiences that wouldn't exist otherwise</span>.
       </p>
+    </div>
+  </section>
 
+  <!-- ======= TECHNOLOGY STACK ======= -->
+  <section class="project-body">
+    <div class="container--narrow">
+      <h2>Technology stack</h2>
+      <div class="tech-stack">
+        <div class="tech-item">
+          <div class="tech-item__label">Computer vision</div>
+          <div class="tech-item__value">MediaPipe Pose</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item__label">Audio engine</div>
+          <div class="tech-item__value">SuperCollider</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item__label">Communication</div>
+          <div class="tech-item__value">OSC + MIDI/MPE</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item__label">Backend</div>
+          <div class="tech-item__value">Python + FastAPI</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item__label">Web demo</div>
+          <div class="tech-item__value">MediaPipe.js + Web Audio API</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item__label">Infrastructure</div>
+          <div class="tech-item__value">Docker + Hetzner VPS</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item__label">Testing</div>
+          <div class="tech-item__value">pytest &mdash; 129 automated tests</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item__label">Source</div>
+          <div class="tech-item__value">Open Source (MIT)</div>
+        </div>
+      </div>
+
+      <h2>Under the hood</h2>
+      <p>
+        CuerpoSonoro runs a real-time pipeline that goes from camera capture to audio output
+        in under 80 milliseconds. Here's how data flows through the system:
+      </p>
+
+      <div class="pipeline">
+        <div class="pipeline__step">
+          <div class="pipeline__step-number">1</div>
+          <div class="pipeline__step-title">Capture</div>
+          <div class="pipeline__step-detail">Camera feed at 640&times;480</div>
+        </div>
+        <div class="pipeline__arrow">&rarr;</div>
+        <div class="pipeline__step">
+          <div class="pipeline__step-number">2</div>
+          <div class="pipeline__step-title">Pose</div>
+          <div class="pipeline__step-detail">33 body landmarks detected per frame</div>
+        </div>
+        <div class="pipeline__arrow">&rarr;</div>
+        <div class="pipeline__step">
+          <div class="pipeline__step-number">3</div>
+          <div class="pipeline__step-title">Features</div>
+          <div class="pipeline__step-detail">17 movement descriptors extracted</div>
+        </div>
+        <div class="pipeline__arrow">&rarr;</div>
+        <div class="pipeline__step">
+          <div class="pipeline__step-number">4</div>
+          <div class="pipeline__step-title">Mapping</div>
+          <div class="pipeline__step-detail">Features mapped to sound parameters</div>
+        </div>
+        <div class="pipeline__arrow">&rarr;</div>
+        <div class="pipeline__step">
+          <div class="pipeline__step-number">5</div>
+          <div class="pipeline__step-title">Sound</div>
+          <div class="pipeline__step-detail">Real-time audio synthesis</div>
+        </div>
+      </div>
+
+      <h2>Pose estimation &amp; feature extraction</h2>
+      <p>
+        The system uses <span class="highlight">MediaPipe Pose</span> to detect 33 body
+        landmarks in real-time at ~20&ndash;22 FPS. From these raw coordinates, a custom feature
+        extraction module computes 17 movement descriptors that describe the character of
+        your movement &mdash; not just where your body is, but <em>how</em> it moves:
+      </p>
+
+      <div class="tech-detail-grid">
+        <div class="tech-detail-item">
+          <div class="tech-detail-item__label">Energy</div>
+          <div class="tech-detail-item__value">Motion energy</div>
+          <div class="tech-detail-item__desc">Overall body activity based on landmark velocity</div>
+        </div>
+        <div class="tech-detail-item">
+          <div class="tech-detail-item__label">Balance</div>
+          <div class="tech-detail-item__value">Symmetry index</div>
+          <div class="tech-detail-item__desc">Left-right balance of the body</div>
+        </div>
+        <div class="tech-detail-item">
+          <div class="tech-detail-item__label">Fluidity</div>
+          <div class="tech-detail-item__value">Temporal smoothness</div>
+          <div class="tech-detail-item__desc">Jerk metric &mdash; fluid vs. abrupt movement</div>
+        </div>
+        <div class="tech-detail-item">
+          <div class="tech-detail-item__label">Arms</div>
+          <div class="tech-detail-item__value">Arm angles</div>
+          <div class="tech-detail-item__desc">Elevation angle of both arms</div>
+        </div>
+        <div class="tech-detail-item">
+          <div class="tech-detail-item__label">Height</div>
+          <div class="tech-detail-item__value">Vertical extension</div>
+          <div class="tech-detail-item__desc">How stretched or compressed the body is</div>
+        </div>
+        <div class="tech-detail-item">
+          <div class="tech-detail-item__label">Tilt</div>
+          <div class="tech-detail-item__value">Hip &amp; head tilt</div>
+          <div class="tech-detail-item__desc">Lateral inclination of hips and head</div>
+        </div>
+        <div class="tech-detail-item">
+          <div class="tech-detail-item__label">Hands</div>
+          <div class="tech-detail-item__value">Hand velocity &amp; height</div>
+          <div class="tech-detail-item__desc">Speed and vertical position of both hands</div>
+        </div>
+        <div class="tech-detail-item">
+          <div class="tech-detail-item__label">Triggers</div>
+          <div class="tech-detail-item__value">Movement triggers</div>
+          <div class="tech-detail-item__desc">Sudden hand movements detected as events</div>
+        </div>
+      </div>
+
+      <h2>Movement &rarr; Sound mapping</h2>
+      <p>
+        Each movement feature controls a specific aspect of the sound. The mapping is designed
+        to feel intuitive &mdash; your body understands the connection before your mind does:
+      </p>
+
+      <div class="mapping-grid">
+        <div class="mapping-grid__header">Movement</div>
+        <div class="mapping-grid__header">Sound effect</div>
+        <div class="mapping-grid__cell mapping-grid__cell--move">Fast movement</div>
+        <div class="mapping-grid__cell mapping-grid__cell--sound">Brighter, louder sound</div>
+        <div class="mapping-grid__cell mapping-grid__cell--move">Raising arms</div>
+        <div class="mapping-grid__cell mapping-grid__cell--sound">Higher pitch</div>
+        <div class="mapping-grid__cell mapping-grid__cell--move">Body asymmetry</div>
+        <div class="mapping-grid__cell mapping-grid__cell--sound">Stereo panning</div>
+        <div class="mapping-grid__cell mapping-grid__cell--move">Smooth, fluid motion</div>
+        <div class="mapping-grid__cell mapping-grid__cell--sound">Long reverb, legato texture</div>
+        <div class="mapping-grid__cell mapping-grid__cell--move">Abrupt, jerky motion</div>
+        <div class="mapping-grid__cell mapping-grid__cell--sound">Distortion, staccato texture</div>
+        <div class="mapping-grid__cell mapping-grid__cell--move">Vertical stretch</div>
+        <div class="mapping-grid__cell mapping-grid__cell--sound">Higher, more ethereal register</div>
+        <div class="mapping-grid__cell mapping-grid__cell--move">Hand velocity</div>
+        <div class="mapping-grid__cell mapping-grid__cell--sound">Note intensity and duration</div>
+        <div class="mapping-grid__cell mapping-grid__cell--move">Head tilt</div>
+        <div class="mapping-grid__cell mapping-grid__cell--sound">Global filter sweep</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= EXPLORE THE CODE (highlighted) ======= -->
+  <section class="project-body project-body--highlight-dark">
+    <div class="container--narrow" style="text-align: center;">
       <h2>Explore the code</h2>
-      <div class="btn-group" style="margin-top: 1rem;">
+      <p style="margin-bottom: 2rem;">
+        CuerpoSonoro is open source. Dive into the code, run it locally, or build on top of it.
+      </p>
+      <div class="btn-group btn-group--center">
         <a href="https://github.com/maramotto/cuerposonoro" class="btn btn--primary btn--small" target="_blank" rel="noopener">
-          GitHub — CuerpoSonoro
+          GitHub &mdash; CuerpoSonoro
         </a>
         <a href="https://cuerposonoro.art" class="btn btn--outline btn--small" target="_blank" rel="noopener">
           Live Demo
         </a>
       </div>
-
-      <!-- CTA back to home -->
-      <div class="project-cta">
-        <h2>Like what you see?</h2>
-        <p>Check out my other projects or get in touch to collaborate.</p>
-        <div class="btn-group btn-group--center" style="margin-top: 1rem;">
-          <a href="index.html#projects" class="btn btn--primary btn--small">More projects</a>
-          <a href="index.html#contact" class="btn btn--outline btn--small">Contact me</a>
-        </div>
-      </div>
-
     </div>
   </section>
 
   <!-- ======= FOOTER ======= -->
   <footer class="footer">
-    © 2026 <span>maramotto</span>.com — Made with art and code
+    &copy; 2026 <span>maramotto</span>.com &mdash; Made with art and code
     <a href="index.html">Home</a>
   </footer>
 
