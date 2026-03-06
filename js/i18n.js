@@ -62,7 +62,7 @@ const TRANSLATIONS = {
     /* --- CONTACT --- */
     'contact.label':      'Contacto',
     'contact.title':      '\u00bfTrabajamos juntas?',
-    'contact.desc':       '\u00bfTienes un proyecto en mente? \u00bfBuscas un perfil creativo-t\u00e9cnico? Me encantar\u00eda saber de ti.',
+    'contact.desc':       '\u00bfTienes un proyecto en mente? \u00bfBuscas un perfil creativo-t\u00e9cnico?<br>Me encantar\u00eda saber de ti.',
     'contact.cta':        'Escr\u00edbeme',
 
     /* --- FOOTER --- */
@@ -245,7 +245,7 @@ const TRANSLATIONS = {
     /* --- CONTACT --- */
     'contact.label':      'Contact',
     'contact.title':      'Shall we work together?',
-    'contact.desc':       'Have a project in mind? Looking for a creative-technical profile? I\'d love to hear from you.',
+    'contact.desc':       'Have a project in mind? Looking for a creative-technical profile?<br>I\'d love to hear from you.',
     'contact.cta':        'Get in touch',
 
     /* --- FOOTER --- */
