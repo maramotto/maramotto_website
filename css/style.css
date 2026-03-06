@@ -328,6 +328,38 @@ a { color: inherit; }
   color: var(--purple);
 }
 
+/* --- Language toggle --- */
+.lang-toggle {
+  display: flex;
+  gap: 0.15rem;
+  background: rgba(123, 45, 142, 0.1);
+  border-radius: 20px;
+  padding: 0.2rem;
+}
+
+.lang-toggle__btn {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  padding: 0.3rem 0.7rem;
+  border-radius: 16px;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  color: var(--purple);
+  transition: all 0.2s;
+}
+
+.lang-toggle__btn.active {
+  background: var(--purple);
+  color: var(--white);
+}
+
+.lang-toggle__btn:hover:not(.active) {
+  background: rgba(123, 45, 142, 0.15);
+}
+
 /* --- Mobile nav toggle --- */
 .nav__toggle {
   display: none;
@@ -1195,6 +1227,8 @@ a { color: inherit; }
 
   /* Hide triangle on mobile (dropdown always visible) */
   .nav__dropdown-toggle { display: none; }
+
+  .lang-toggle { align-self: flex-start; }
 
   .hero { padding: 7rem 1.5rem 3rem; }
   .section { padding: 4rem 0; }
