@@ -15,7 +15,7 @@ const TRANSLATIONS = {
 
     /* --- INDEX: HERO --- */
     'hero.subtitle':      'Ingeniera de Software \u00b7 Artista \u00b7 Tecn\u00f3loga Creativa',
-    'hero.description':   'Creo cosas en la intersecci\u00f3n entre el arte y la tecnolog\u00eda. Me apasiona cacharrear, inventar y dar vida a las ideas. Desde c\u00f3digo que convierte el movimiento humano en sonido hasta mezclar IA y conocimiento artesanal para crear piezas \u00fanicas de moda reciclada.',
+    'hero.description':   'Creo cosas en la intersecci\u00f3n entre el arte y la tecnolog\u00eda.<br>Me apasiona cacharrear, inventar y dar vida a las ideas.<br>Desde c\u00f3digo que convierte el movimiento humano en sonido<br>hasta mezclar IA y conocimiento artesanal para crear piezas \u00fanicas de moda reciclada.',
     'hero.cta.work':      'Ver mi trabajo',
     'hero.cta.about':     'Sobre m\u00ed',
 
@@ -198,7 +198,7 @@ const TRANSLATIONS = {
 
     /* --- INDEX: HERO --- */
     'hero.subtitle':      'Software Engineer \u00b7 Artist \u00b7 Creative Technologist',
-    'hero.description':   'I create things at the intersection of art and technology. I\'m passionate about tinkering, inventing and bringing ideas to life. From code that turns the human movement into sound to mixing AI and craft knowledge to create unique upcycled fashion pieces.',
+    'hero.description':   'I create things at the intersection of art and technology.<br>I\'m passionate about tinkering, inventing and bringing ideas to life.<br>From code that turns the human movement into sound<br>to mixing AI and craft knowledge to create unique upcycled fashion pieces.',
     'hero.cta.work':      'See my work',
     'hero.cta.about':     'About me',
 
