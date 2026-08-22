@@ -7,7 +7,9 @@ RUN npx eleventy
 
 FROM nginx:alpine
 COPY nginx.conf /etc/nginx/conf.d/default.conf
-COPY index.html cuerposonoro.html robots.txt sitemap.xml /usr/share/nginx/html/
+COPY *.html /usr/share/nginx/html/
+COPY robots.txt /usr/share/nginx/html/
+COPY sitemap.xml /usr/share/nginx/html/
 COPY img/ /usr/share/nginx/html/img/
 COPY css/ /usr/share/nginx/html/css/
 COPY js/ /usr/share/nginx/html/js/
