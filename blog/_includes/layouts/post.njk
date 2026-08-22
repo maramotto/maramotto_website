@@ -1,0 +1,26 @@
+---
+layout: layouts/base.njk
+---
+<article class="post">
+  <header class="post__header">
+    <p class="post__date">{{ date | readableDate(lang) }} · {{ content | readingTime }} {{ "min de lectura" if lang == "es" else "min read" }}</p>
+    <h1 class="post__title">{{ title }}</h1>
+    <ul class="post__tags">
+      {% for tag in tags %}
+      <li><a href="/blog/{{ 'en/' if lang == 'en' }}tags/{{ tag | slugify }}/">{{ tag }}</a></li>
+      {% endfor %}
+    </ul>
+  </header>
+  <img
+    class="post__cover post__cover--{{ imageRatio }}"
+    src="{{ image }}"
+    alt="{{ title }}"
+    width="1200"
+    height="{{ '675' if imageRatio == 'wide' else '1200' }}"
+    loading="eager"
+    fetchpriority="high">
+  <div class="post__body">
+    {{ content | safe }}
+  </div>
+  <p class="post__back"><a href="/blog/{{ 'en/' if lang == 'en' }}">{{ "← Volver al blog" if lang == "es" else "← Back to blog" }}</a></p>
+</article>

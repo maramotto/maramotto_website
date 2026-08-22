@@ -9,6 +9,7 @@ const TRANSLATIONS = {
   es: {
     /* --- NAV --- */
     'nav.projects':       'En qu\u00e9 ando',
+    'nav.blog':           'Blog',
     'nav.workshops':      'Talleres',
     'nav.about':          'Sobre m\u00ed',
     'nav.contact':        'Contacto',
@@ -263,6 +264,7 @@ const TRANSLATIONS = {
   en: {
     /* --- NAV --- */
     'nav.projects':       'What I\'m up to',
+    'nav.blog':           'Blog',
     'nav.workshops':      'Workshops',
     'nav.about':          'About',
     'nav.contact':        'Contact',

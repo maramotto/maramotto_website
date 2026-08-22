@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }} — maramotto</title>
+  <meta name="description" content="{{ description }}">
+  <link rel="canonical" href="https://maramotto.com{{ page.url }}">
+  <meta property="og:type" content="{{ ogType or 'website' }}">
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:description" content="{{ description }}">
+  <meta property="og:url" content="https://maramotto.com{{ page.url }}">
+  <meta property="og:site_name" content="maramotto">
+  <meta property="og:locale" content="{{ 'es_ES' if lang == 'es' else 'en_GB' }}">
+  {% if structuredData %}{{ structuredData | safe }}{% endif %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/blog.css">
+</head>
+<body>
+  {% include "partials/nav.njk" %}
+  <main>
+    {{ content | safe }}
+  </main>
+  <script src="/js/nav.js" defer></script>
+</body>
+</html>

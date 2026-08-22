@@ -1,0 +1,16 @@
+---
+title: "Blog"
+description: "Articles and notes by maramotto on interactive art, creative coding and creative technology."
+lang: en
+permalink: /blog/en/
+eleventyExcludeFromCollections: true
+layout: layouts/list.njk
+---
+<section class="blog-list">
+  <h1>{{ title }}</h1>
+  <div class="blog-list__grid">
+    {% for post in collections.posts | postsByLang(lang) %}
+      {% include "partials/post-card.njk" %}
+    {% endfor %}
+  </div>
+</section>

@@ -1,0 +1,136 @@
+/* ============================================
+   maramotto.com — Blog styles
+   ============================================ */
+
+.blog-list {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+}
+
+.blog-list h1 {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(2rem, 1.5rem + 2vw, 3.5rem);
+  color: var(--dark);
+  margin-bottom: 2rem;
+}
+
+.blog-list__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.post-card {
+  background: var(--white);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(26, 26, 46, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(26, 26, 46, 0.14);
+}
+
+.post-card__image,
+.post__cover {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.post-card__image--square,
+.post__cover--square { aspect-ratio: 1 / 1; }
+
+.post-card__image--wide,
+.post__cover--wide { aspect-ratio: 16 / 9; }
+
+.post__cover { border-radius: 16px; margin-bottom: 2rem; }
+
+.post-card__body { padding: 1.25rem 1.5rem 1.5rem; }
+
+.post-card__date,
+.post__date {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  margin-bottom: 0.5rem;
+}
+
+.post-card__title {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.post-card__title a { color: var(--dark); text-decoration: none; }
+.post-card__title a:hover { color: var(--purple); }
+
+.post-card__excerpt {
+  color: var(--text);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 0.75rem;
+}
+
+.post-card__tags,
+.post__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+}
+
+.post-card__tags a,
+.post__tags a {
+  display: inline-block;
+  background: var(--purple-light);
+  color: var(--purple-dark);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  text-decoration: none;
+}
+
+.post-card__tags a:hover,
+.post__tags a:hover { background: var(--yellow-light); color: var(--dark); }
+
+.post {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+}
+
+.post__header { margin-bottom: 2rem; }
+
+.post__title {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(2rem, 1.5rem + 2vw, 3rem);
+  color: var(--dark);
+  margin: 0.5rem 0 1rem;
+}
+
+.post__body {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--text);
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.post__body h2 {
+  font-family: 'Syne', sans-serif;
+  color: var(--dark);
+  margin: 2rem 0 1rem;
+}
+
+.post__body p { margin-bottom: 1.25rem; }
+.post__body img { max-width: 100%; border-radius: 12px; }
+
+.post__back { margin-top: 2.5rem; }
+.post__back a { color: var(--purple); font-weight: 600; text-decoration: none; }
+.post__back a:hover { text-decoration: underline; }
