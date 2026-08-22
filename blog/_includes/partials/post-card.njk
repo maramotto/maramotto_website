@@ -1,0 +1,21 @@
+<article class="post-card">
+  <a href="{{ post.url }}" class="post-card__image-link">
+    <img
+      class="post-card__image post-card__image--{{ post.data.imageRatio }}"
+      src="{{ post.data.image }}"
+      alt="{{ post.data.title }}"
+      width="1200"
+      height="{{ '675' if post.data.imageRatio == 'wide' else '1200' }}"
+      loading="lazy">
+  </a>
+  <div class="post-card__body">
+    <p class="post-card__date">{{ post.date | readableDate(post.data.lang) }}</p>
+    <h2 class="post-card__title"><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+    <p class="post-card__excerpt">{{ post.data.excerpt }}</p>
+    <ul class="post-card__tags">
+      {% for tag in post.data.tags %}
+      <li><a href="/blog/{{ 'en/' if post.data.lang == 'en' }}tags/{{ tag | slugify }}/">{{ tag }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</article>
