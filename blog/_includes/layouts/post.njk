@@ -9,14 +9,14 @@ layout: layouts/base.njk
   "headline": {{ title | dump | safe }},
   "description": {{ excerpt | dump | safe }},
   "datePublished": "{{ date | isoDate }}",
-  "image": "https://maramotto.com{{ image }}",
+  "image": {{ ("https://maramotto.com" + image) | dump | safe }},
   "author": {
     "@type": "Person",
     "name": "Mara",
     "alternateName": "maramotto",
     "url": "https://maramotto.com"
   },
-  "url": "https://maramotto.com{{ url }}"
+  "url": {{ ("https://maramotto.com" + url) | dump | safe }}
 }
 </script>
 {% endblock %}
