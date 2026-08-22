@@ -863,6 +863,43 @@ a { color: inherit; }
   object-fit: contain;
 }
 
+.hero-shot {
+  width: 100%;
+}
+
+.hero-shot__img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+}
+
+.hero-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem 2rem;
+  margin-top: 1.5rem;
+}
+
+.hero-stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-stat__num {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  color: var(--white);
+  line-height: 1.1;
+}
+
+.hero-stat__label {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
 .project-hero__content {
   text-align: left;
 }
