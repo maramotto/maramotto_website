@@ -2,3 +2,5 @@ node_modules/
 blog/_site/
 test-results/
 playwright-report/
+.idea/
+.DS_Store
