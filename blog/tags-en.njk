@@ -12,7 +12,6 @@ eleventyExcludeFromCollections: true
 layout: layouts/list.njk
 ---
 {% set taggedPosts = collections.posts | postsByLang("en") | postsByTag(tag) %}
-{% block content %}
 <section class="blog-list">
   <h1>{{ tag }}</h1>
   <div class="blog-list__grid">
@@ -21,4 +20,3 @@ layout: layouts/list.njk
     {% endfor %}
   </div>
 </section>
-{% endblock %}

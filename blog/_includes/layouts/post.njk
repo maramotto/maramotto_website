@@ -1,26 +1,6 @@
 ---
 layout: layouts/base.njk
 ---
-{% block structuredData %}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": {{ title | dump | safe }},
-  "description": {{ excerpt | dump | safe }},
-  "datePublished": "{{ date | isoDate }}",
-  "image": {{ ("https://maramotto.com" + image) | dump | safe }},
-  "author": {
-    "@type": "Person",
-    "name": "Mara",
-    "alternateName": "maramotto",
-    "url": "https://maramotto.com"
-  },
-  "url": {{ ("https://maramotto.com" + url) | dump | safe }}
-}
-</script>
-{% endblock %}
-{% block content %}
 <article class="post">
   <header class="post__header">
     <p class="post__date">{{ date | readableDate(lang) }} · {{ content | readingTime }} {{ "min de lectura" if lang == "es" else "min read" }}</p>
@@ -44,4 +24,3 @@ layout: layouts/base.njk
   </div>
   <p class="post__back"><a href="/blog/{{ 'en/' if lang == 'en' }}">{{ "← Volver al blog" if lang == "es" else "← Back to blog" }}</a></p>
 </article>
-{% endblock %}
