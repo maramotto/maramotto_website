@@ -1,0 +1,24 @@
+{% if translationKey %}
+  {% set esHref = collections.posts | translationUrl(translationKey, "es") %}
+  {% set enHref = collections.posts | translationUrl(translationKey, "en") %}
+{% else %}
+  {% set esHref = "/blog/" %}
+  {% set enHref = "/blog/en/" %}
+{% endif %}
+<nav class="nav">
+  <a href="/" class="nav__logo">maramotto</a>
+  <button class="nav__toggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav__links">
+    <li><a href="/#projects">{{ "En qué ando" if lang == "es" else "Projects" }}</a></li>
+    <li><a href="/blog/{{ 'en/' if lang == 'en' }}">Blog</a></li>
+    <li><a href="/#contact">{{ "Contacto" if lang == "es" else "Contact" }}</a></li>
+    <li>
+      <div class="lang-toggle">
+        <a class="lang-toggle__btn{{ ' active' if lang == 'es' }}" href="{{ esHref or '/blog/' }}">ES</a>
+        <a class="lang-toggle__btn{{ ' active' if lang == 'en' }}" href="{{ enHref or '/blog/en/' }}">EN</a>
+      </div>
+    </li>
+  </ul>
+</nav>
