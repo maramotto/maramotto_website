@@ -1,0 +1,24 @@
+---
+pagination:
+  data: collections.tagListEn
+  size: 1
+  alias: tag
+permalink: "/blog/en/tags/{{ tag | slugify }}/"
+eleventyComputed:
+  title: "{{ tag }}"
+lang: en
+description: "Blog posts tagged {{ tag }}."
+eleventyExcludeFromCollections: true
+layout: layouts/list.njk
+---
+{% set taggedPosts = collections.posts | postsByLang("en") | postsByTag(tag) %}
+{% block content %}
+<section class="blog-list">
+  <h1>{{ tag }}</h1>
+  <div class="blog-list__grid">
+    {% for post in taggedPosts %}
+      {% include "partials/post-card.njk" %}
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}
