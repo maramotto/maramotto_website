@@ -1,0 +1,25 @@
+---
+permalink: /blog/feed.xml
+eleventyExcludeFromCollections: true
+layout: false
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>maramotto — Blog</title>
+  <subtitle>Artículos y notas sobre arte interactivo, creative coding y tecnología creativa.</subtitle>
+  <link href="https://maramotto.com/blog/feed.xml" rel="self"/>
+  <link href="https://maramotto.com/blog/"/>
+  <updated>{{ collections.posts | postsByLang("es") | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+  <id>https://maramotto.com/blog/</id>
+  <author><name>Mara</name></author>
+  {% for post in collections.posts | postsByLang("es") %}
+  <entry>
+    <title>{{ post.data.title }}</title>
+    <link href="https://maramotto.com{{ post.url }}"/>
+    <updated>{{ post.date | dateToRfc3339 }}</updated>
+    <id>https://maramotto.com{{ post.url }}</id>
+    <summary>{{ post.data.excerpt }}</summary>
+    <content type="html">{{ post.templateContent | htmlToAbsoluteUrls("https://maramotto.com") }}</content>
+  </entry>
+  {% endfor %}
+</feed>

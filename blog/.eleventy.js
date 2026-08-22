@@ -4,6 +4,7 @@ const translationUrl = require("./eleventy/filters/translation-url.js");
 const postsByTag = require("./eleventy/filters/posts-by-tag.js");
 const readableDate = require("./eleventy/filters/readable-date.js");
 const isoDate = require("./eleventy/filters/iso-date.js");
+const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 function uniqueSortedTags(posts) {
   const tags = new Set();
@@ -12,6 +13,8 @@ function uniqueSortedTags(posts) {
 }
 
 module.exports = function (eleventyConfig) {
+  eleventyConfig.addPlugin(pluginRss);
+
   eleventyConfig.addFilter("readingTime", readingTime);
   eleventyConfig.addFilter("postsByLang", postsByLang);
   eleventyConfig.addFilter("translationUrl", translationUrl);
