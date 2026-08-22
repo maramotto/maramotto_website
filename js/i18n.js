@@ -8,62 +8,69 @@
 const TRANSLATIONS = {
   es: {
     /* --- NAV --- */
-    'nav.projects':       'Proyectos',
+    'nav.projects':       'En qu\u00e9 ando',
     'nav.blog':           'Blog',
+    'nav.workshops':      'Talleres',
     'nav.about':          'Sobre m\u00ed',
     'nav.contact':        'Contacto',
     'nav.home':           'Inicio',
 
     /* --- INDEX: HERO --- */
-    'hero.subtitle':      'Ingeniera de Software \u00b7 Artista \u00b7 Tecn\u00f3loga Creativa',
-    'hero.description':   'Creo cosas en la intersecci\u00f3n entre el arte y la tecnolog\u00eda.<br>Me apasiona cacharrear, inventar y dar vida a las ideas.<br>Desde c\u00f3digo que convierte el movimiento humano en sonido<br>hasta mezclar IA y conocimiento artesanal para crear piezas \u00fanicas de moda reciclada.',
+    'hero.subtitle':      'Artista \u00b7 Ingeniera de Software \u00b7 Tecn\u00f3loga Creativa',
+    'hero.description':   'Construyo e invento objetos donde lo artesanal y lo digital se encuentran. C\u00f3digo, pintura, m\u00fasica, sonido y visuales.',
     'hero.cta.work':      'Ver mi trabajo',
     'hero.cta.about':     'Sobre m\u00ed',
 
-    /* --- FEATURED PROJECT --- */
-    'featured.label':         'Proyecto destacado',
-    'featured.visual.label':  'Cuerpo \u2192 Sonido',
-    'featured.desc.1':        '\u00bfY si tu cuerpo pudiera crear y dar forma al sonido? CuerpoSonoro es un proyecto de software que transforma el movimiento del cuerpo humano en sonido en tiempo real, convirtiendo gestos y posturas en paisajes sonoros en constante cambio.',
-    'featured.desc.2':        'Vive en la intersecci\u00f3n del arte, la tecnolog\u00eda y el cuerpo. Exactamente el tipo de trabajo que me encanta.',
+    /* --- FEATURED PROJECT: CUERPOSONORO --- */
+    'featured.label':         'En qu\u00e9 ando',
+    'featured.visual.label':  'Cuerpo \u2192 Datos \u2192 Sonido',
+    'featured.desc.1':        '\u00bfY si fuera tu cuerpo el que genera el sonido al moverse, en lugar de reaccionar a \u00e9l? CuerpoSonoro convierte el movimiento en sonido en tiempo real: sin partitura, sin secuencias grabadas, sin sensores. Solo t\u00fa movi\u00e9ndote.',
     'featured.tag.creative':  'Creative Coding',
     'featured.tag.sound':     'Sonido',
-    'featured.cta':           'Explorar el proyecto \u2192',
+    'featured.cta':           'Ver proyecto \u2192',
 
-    /* --- PORTFOLIO --- */
-    'portfolio.label':        'Portfolio',
-    'portfolio.title':        'M\u00e1s proyectos',
-    'librored.desc':          'Una aplicaci\u00f3n web para el intercambio de libros entre personas. Tecnolog\u00eda al servicio de la comunidad.',
-    'librored.tag.webapp':    'App Web',
-    'librored.link':          'Ver en GitHub \u2192',
-    'spotify.title':          'Explorando datos de Spotify',
-    'spotify.desc':           'An\u00e1lisis exploratorio de datos de usuario de Spotify. Ciencia de datos aplicada a la m\u00fasica.',
-    'spotify.tag.datascience':'Ciencia de Datos',
-    'spotify.link':           'Ver en GitHub \u2192',
+    /* --- EN QU\u00c9 ANDO: ESTRATOS --- */
+    'estratos.tagline':          'Datos p\u00fablicos \u2192 Sonido \u2192 Instalaci\u00f3n sonora',
+    'estratos.desc':             '\u00bfY si la historia de un territorio se pudiera escuchar? Estratos convierte datos p\u00fablicos \u2014los que est\u00e1n ah\u00ed, disponibles, pero que nadie mira\u2014 en una instalaci\u00f3n sonora que cuenta lo que esconden.',
+    'estratos.tag.opendata':     'Datos abiertos',
+    'estratos.tag.sonification': 'Sonificaci\u00f3n de datos',
+    'estratos.tag.installation': 'Instalaci\u00f3n',
+
+    /* --- EN QU\u00c9 ANDO: UNIVERSO PUNZADAS --- */
+    'punzadas.tagline':      'Podcast \u2192 Datos \u2192 Visualizaci\u00f3n y buscador',
+    'punzadas.desc':         '<em>Punzadas Sonoras</em> es mi podcast favorito: me fascina c\u00f3mo In\u00e9s y Paula eligen los temas y c\u00f3mo los abordan. Siempre quise una biblioteca con las obras, autoras y referencias de sus m\u00e1s de 100 episodios, as\u00ed que la he construido.',
+    'punzadas.tag.data':     'Datos',
+    'punzadas.tag.search':   'Buscador',
+    'punzadas.tag.dataviz':  'Visualizaci\u00f3n de datos',
+    'punzadas.link':         'Ver proyecto \u2192',
 
     /* --- ABOUT --- */
     'about.label':        'Sobre m\u00ed',
-    'about.title':        'Arte + C\u00f3digo + Curiosidad',
-    'about.p1':           'Soy una persona creativa apasionada por el arte, la ciencia y la tecnolog\u00eda. Soy m\u00e1s feliz cuando imagino algo y consigo hacerlo realidad, ya sea un programa, una canci\u00f3n, una pintura con plotter de pinceles o un accesorio de moda hecho con materiales reciclados.',
-    'about.p2':           'Mi formaci\u00f3n es en ingenier\u00eda de software, pero mi curiosidad va mucho m\u00e1s all\u00e1. Compongo y produzco m\u00fasica, pinto abstracci\u00f3n, hago macrofotograf\u00eda y dise\u00f1o piezas de moda reciclada con patrones cortados por l\u00e1ser CNC.',
-    'about.p3.html':      'Para m\u00ed, fusionar arte y c\u00f3digo es natural. Me encanta <strong>caminar por los bordes entre disciplinas</strong> e inventar nuevas formas de conectarlas. Creo en la tecnolog\u00eda que sirve a las personas. <strong>Las personas primero.</strong>',
-    'about.p4':           'Cuando no estoy creando, me encontrar\u00e1s con mi perra, explorando r\u00edos y embalses en kayak, nadando en el mar o recorriendo carreteras en nuestro coche viejo buscando la pr\u00f3xima aventura.',
+    'about.title':        'Arte + Curiosidad + Creatividad',
+    'about.p1':           'Soy feliz cuando imagino algo y consigo hacerlo real. Da igual si acaba siendo software, una canci\u00f3n, una acuarela o un taller: el impulso es el mismo.',
+    'about.p2':           'Vengo de la ingenier\u00eda de software, pero la curiosidad me lleva lejos. Compongo y produzco m\u00fasica, pinto, hago macrofotograf\u00eda y dise\u00f1o instalaciones que convierten datos en sonido. Mezclar arte y c\u00f3digo no me parece raro, para m\u00ed es de lo m\u00e1s natural.',
+    'about.p3':           '\u00daltimamente me interesa mucho lo que pasa cuando los datos dejan de ser una tabla o un gr\u00e1fico y se convierten en algo que se puede escuchar o tocar.',
+    'about.p4':           'Creo en la tecnolog\u00eda que sirve a las personas. Es un conjunto de herramientas incre\u00edble, pero solo tiene sentido cuando se emplea en mejorar la vida de las personas y de los seres vivos.',
+    'about.p5':           'Cuando no estoy creando, estoy con mi perro Otto, explorando r\u00edos y embalses en nuestro kayak, nadando, o en la carretera con nuestro coche camperizado buscando la pr\u00f3xima aventura.',
 
     /* --- SKILLS --- */
     'skills.label':           'Lo que hago',
     'skills.title':           'Multidisciplinar por naturaleza',
     'skill.code.title':       'C\u00f3digo y Software',
-    'skill.code.desc':        'Desarrollo de software, desarrollo de IA, aplicaciones web, an\u00e1lisis de datos, creative coding',
+    'skill.code.desc':        'Desarrollo de software e IA, aplicaciones web, an\u00e1lisis de datos, creative coding.',
     'skill.music.title':      'M\u00fasica y Audio',
-    'skill.music.desc':       'Composici\u00f3n, producci\u00f3n musical, ingenier\u00eda de audio para podcasts',
+    'skill.music.desc':       'Composici\u00f3n, producci\u00f3n musical, ingenier\u00eda de audio para podcasts.',
+    'skill.techart.title':    'Instalaciones tech-art',
+    'skill.techart.desc':     'Objetos e instalaciones que convierten datos en sonido y movimiento.',
     'skill.visual.title':     'Arte Visual',
-    'skill.visual.desc':      'Macrofotograf\u00eda, acuarela, pintura acr\u00edlica',
-    'skill.fashion.title':    'Moda y Textiles',
-    'skill.fashion.desc':     'Upcycling, dise\u00f1o de patrones, corte l\u00e1ser CNC',
+    'skill.visual.desc':      'Macrofotograf\u00eda, pintura, collage.',
+    'skill.workshops.title':  'Talleres',
+    'skill.workshops.desc':   'Talleres presenciales y online que fomentan la creatividad en adultos.',
 
     /* --- CONTACT --- */
     'contact.label':      'Contacto',
     'contact.title':      '\u00bfTrabajamos juntas?',
-    'contact.desc':       '\u00bfTienes un proyecto en mente? \u00bfBuscas un perfil creativo-t\u00e9cnico?<br>Me encantar\u00eda saber de ti.',
+    'contact.desc':       '\u00bfTienes un proyecto en mente? \u00bfBuscas un perfil t\u00e9cnico y creativo?<br>Me encantar\u00eda saber de ti.',
     'contact.cta':        'Escr\u00edbeme',
 
     /* --- FOOTER --- */
@@ -188,66 +195,137 @@ const TRANSLATIONS = {
 
     /* --- CS Footer --- */
     'footer.home':        'Inicio',
+
+    /* ============================
+       UNIVERSO PUNZADAS PROJECT PAGE
+       ============================ */
+
+    /* --- Project hero --- */
+    'up.stat.episodes':   'episodios catalogados',
+    'up.stat.authors':    'autoras y autores citados',
+    'up.stat.mentions':   'menciones extraídas',
+    'up.tagline':         '<em>Punzadas Sonoras</em> es mi podcast favorito: me fascina cómo Inés y Paula eligen los temas y cómo los abordan. Siempre quise una biblioteca con las obras, autoras y referencias de sus más de 100 episodios, así que la he construido.',
+    'up.tag.data':        'Datos',
+    'up.tag.search':      'Buscador',
+    'up.tag.dataviz':     'Visualización de datos',
+
+    /* --- The question --- */
+    'up.question.title':  'La pregunta',
+    'up.question.p1':     'Las descripciones oficiales de los episodios solo cuentan una fracción de lo que realmente se cita. ¿Y si se pudiera buscar cualquier autora, obra o tema mencionado en el podcast, con la cita exacta y el minuto en el que se dijo?',
+    'up.question.p2':     'Universo Punzadas nació de esa pregunta. Cataloga cada referencia cultural citada en los 118 episodios del podcast: libros, películas, discos, autoras, autores y los temas que las conectan.',
+
+    /* --- How it works --- */
+    'up.how.title':       'Cómo funciona',
+    'up.how.p1.html':     'Cada episodio se transcribe y se lee entero, palabra por palabra. Solo entra en el catálogo lo que se puede señalar con <span class="highlight">una cita literal en el audio</span> — nada se completa por conocimiento externo.',
+    'up.how.p2':          'Las transcripciones se generan con mlx-whisper (modelo large-v3) y diarización con pyannote 3.1, corriendo en local. La extracción de referencias — qué se cita, quién lo cita y en qué episodio — se hace a mano, leyendo la transcripción completa con un criterio editorial documentado.',
+
+    /* --- Try the catalogue --- */
+    'up.demo.title':      'Explora el catálogo',
+    'up.demo.p1':         'Búscalo directamente aquí: por autora, obra, tema o episodio, con gráficos que conectan las referencias entre sí.',
+    'up.demo.fallback.html': 'Si no carga arriba, puedes <a href="https://universopunzadas.com" target="_blank" rel="noopener" style="color: var(--teal); font-weight: 600;">abrirlo en una nueva pestaña</a>.',
+
+    /* --- Why it matters --- */
+    'up.why.title':       'Por qué este proyecto es importante para mí',
+    'up.why.p1':          'Universo Punzadas junta dos cosas que me encantan: escuchar el podcast y construir herramientas de datos. Es un proyecto que exige paciencia — horas de audio escuchadas y transcritas — y cuidado editorial: cada dato tiene que poder señalarse con una cita literal.',
+    'up.why.p2.html':     'Para mí representa lo que más me gusta de trabajar con datos: <span class="highlight">convertir algo disperso y difícil de encontrar en algo navegable, buscable y compartido</span>.',
+
+    /* --- Tech stack --- */
+    'up.tech.title':          'Stack tecnológico',
+    'up.tech.transcription':  'Transcripción',
+    'up.tech.extraction':     'Extracción',
+    'up.tech.extraction.val': 'Criterio editorial manual, cita a cita',
+    'up.tech.frontend':       'Frontend',
+    'up.tech.dataviz':        'Gráficos',
+    'up.tech.data':           'Datos',
+    'up.tech.data.val':       'JSON generado con scripts Python',
+    'up.tech.infra':          'Infraestructura',
+    'up.tech.source':         'Código fuente',
+    'up.tech.source.val':     'Open Source (MIT)',
+
+    /* --- Pipeline --- */
+    'up.pipeline.title':  'De la voz al catálogo',
+    'up.pipeline.p1':     'Cada episodio nuevo recorre el mismo proceso, de principio a fin:',
+    'up.pipe.1.title':    'Transcripción',
+    'up.pipe.1.detail':   'Audio → texto con hablante identificado',
+    'up.pipe.2.title':    'Extracción',
+    'up.pipe.2.detail':   'Lectura completa, cita a cita',
+    'up.pipe.3.title':    'Datos',
+    'up.pipe.3.detail':   'Reconciliación y QA, JSON para la web',
+    'up.pipe.4.title':    'Web',
+    'up.pipe.4.detail':   'Buscador y gráficos publicados',
+
+    /* --- Explore the code --- */
+    'up.code.title':      'Explora el código',
+    'up.code.desc':       'Universo Punzadas es open source. Explora el código o visita el catálogo completo.',
+    'up.code.github':     'GitHub — Universo Punzadas',
+    'up.code.site':       'Ver el catálogo',
   },
 
   en: {
     /* --- NAV --- */
-    'nav.projects':       'Projects',
+    'nav.projects':       'What I\'m up to',
     'nav.blog':           'Blog',
+    'nav.workshops':      'Workshops',
     'nav.about':          'About',
     'nav.contact':        'Contact',
     'nav.home':           'Home',
 
     /* --- INDEX: HERO --- */
-    'hero.subtitle':      'Software Engineer \u00b7 Artist \u00b7 Creative Technologist',
-    'hero.description':   'I create things at the intersection of art and technology.<br>I\'m passionate about tinkering, inventing and bringing ideas to life.<br>From code that turns the human movement into sound<br>to mixing AI and craft knowledge to create unique upcycled fashion pieces.',
+    'hero.subtitle':      'Artist \u00b7 Software Engineer \u00b7 Creative Technologist',
+    'hero.description':   'I build and invent objects where the handmade and the digital meet. Code, painting, music, sound and visuals.',
     'hero.cta.work':      'See my work',
     'hero.cta.about':     'About me',
 
-    /* --- FEATURED PROJECT --- */
-    'featured.label':         'Featured Project',
-    'featured.visual.label':  'Body \u2192 Sound',
-    'featured.desc.1':        'What if your body were to create and shape sound? CuerpoSonoro is a software project that transforms human body movement into sound in real time, turning gestures and postures into ever-changing soundscapes.',
-    'featured.desc.2':        'It lives at the intersection of art, technology and the body. Exactly the kind of work I love.',
+    /* --- FEATURED PROJECT: CUERPOSONORO --- */
+    'featured.label':         'What I\'m up to',
+    'featured.visual.label':  'Body \u2192 Data \u2192 Sound',
+    'featured.desc.1':        'What if your body were the one generating sound as it moves, rather than reacting to it? CuerpoSonoro turns movement into sound in real time: no score, no pre-recorded sequences, no sensors. Just you, moving.',
     'featured.tag.creative':  'Creative Coding',
     'featured.tag.sound':     'Sound',
-    'featured.cta':           'Explore the project \u2192',
+    'featured.cta':           'View project \u2192',
 
-    /* --- PORTFOLIO --- */
-    'portfolio.label':        'Portfolio',
-    'portfolio.title':        'More projects',
-    'librored.desc':          'A web application for exchanging books between people. Technology at the service of community.',
-    'librored.tag.webapp':    'Web App',
-    'librored.link':          'View on GitHub \u2192',
-    'spotify.title':          'Exploring Spotify Data',
-    'spotify.desc':           'Exploratory data analysis of Spotify user data. Data science applied to music.',
-    'spotify.tag.datascience':'Data Science',
-    'spotify.link':           'View on GitHub \u2192',
+    /* --- WHAT I'M UP TO: ESTRATOS --- */
+    'estratos.tagline':          'Public data \u2192 Sound \u2192 Sound installation',
+    'estratos.desc':             'What if the story of a place could be heard? Estratos turns public data \u2014 the kind that\'s out there, available, but that nobody ever looks at \u2014 into a sound installation that tells you what it\'s hiding.',
+    'estratos.tag.opendata':     'Open data',
+    'estratos.tag.sonification': 'Data sonification',
+    'estratos.tag.installation': 'Installation',
+
+    /* --- WHAT I'M UP TO: UNIVERSO PUNZADAS --- */
+    'punzadas.tagline':      'Podcast \u2192 Data \u2192 Visualisation and search',
+    'punzadas.desc':         '<em>Punzadas Sonoras</em> is my favourite podcast: I\'m fascinated by how In\u00e9s and Paula choose their subjects and the way they get into them. I always wanted a library of the works, authors and references from their 100-plus episodes, so I built one.',
+    'punzadas.tag.data':     'Data',
+    'punzadas.tag.search':   'Search',
+    'punzadas.tag.dataviz':  'Data visualisation',
+    'punzadas.link':         'View project →',
 
     /* --- ABOUT --- */
     'about.label':        'About me',
-    'about.title':        'Art + Code + Curiosity',
-    'about.p1':           'I\'m a creative person passionate about art, science and technology. I\'m happiest when I imagine something and manage to make it real, whether it\'s a piece of software, a song, a brush plotter painting or a fashion accessory made from recycled materials.',
-    'about.p2':           'My background is in software engineering, but my curiosity goes much further. I compose and produce music, abstract painting, do macrophotography, and design upcycled fashion pieces with CNC laser-cut patterns.',
-    'about.p3.html':      'For me, blending art and code is natural. I love <strong>walking the edges between disciplines</strong> and inventing new ways to connect them. I believe in technology that serves people. <strong>Humans first.</strong>',
-    'about.p4':           'When I\'m not creating, you\'ll find me with my dog, exploring rivers and reservoirs by kayak, swimming in the sea or hitting the road in our old car looking for the next adventure.',
+    'about.title':        'Art + Curiosity + Creativity',
+    'about.p1':           'I\'m happy when I imagine something and manage to make it real. Whether it ends up being software, a song, a watercolour or a workshop, the impulse is the same.',
+    'about.p2':           'I come from software engineering, but curiosity takes me a long way from it. I compose and produce music, I paint, I do macro photography and I design installations that turn data into sound. Mixing art and code doesn\'t strike me as odd \u2014 to me it\'s the most natural thing there is.',
+    'about.p3':           'Lately I\'m fascinated by what happens when data stops being a table or a chart and becomes something you can hear or touch.',
+    'about.p4':           'I believe in technology that serves people. It\'s an incredible set of tools, but it only makes sense when it\'s used to improve the lives of people and of every living thing.',
+    'about.p5':           'When I\'m not making something, I\'m with my dog Otto, exploring rivers and reservoirs in our kayak, swimming, or on the road in our camper van looking for the next adventure.',
 
     /* --- SKILLS --- */
     'skills.label':           'What I do',
     'skills.title':           'Multidisciplinary by nature',
     'skill.code.title':       'Code & Software',
-    'skill.code.desc':        'Software development, AI development, web applications, data analysis, creative coding',
+    'skill.code.desc':        'Software and AI development, web applications, data analysis, creative coding.',
     'skill.music.title':      'Music & Audio',
-    'skill.music.desc':       'Composition, music production, audio engineering for podcasts',
+    'skill.music.desc':       'Composition, music production, audio engineering for podcasts.',
+    'skill.techart.title':    'Tech-art installations',
+    'skill.techart.desc':     'Objects and installations that turn data into sound and movement.',
     'skill.visual.title':     'Visual Art',
-    'skill.visual.desc':      'Macrophotography, watercolour, acrylic painting',
-    'skill.fashion.title':    'Fashion & Textiles',
-    'skill.fashion.desc':     'Upcycling, pattern design, CNC laser cutting',
+    'skill.visual.desc':      'Macro photography, painting, collage.',
+    'skill.workshops.title':  'Workshops',
+    'skill.workshops.desc':   'In-person and online workshops that foster creativity in adults.',
 
     /* --- CONTACT --- */
     'contact.label':      'Contact',
     'contact.title':      'Shall we work together?',
-    'contact.desc':       'Have a project in mind? Looking for a creative-technical profile?<br>I\'d love to hear from you.',
+    'contact.desc':       'Got a project in mind? Looking for a technical and creative profile?<br>I\'d love to hear from you.',
     'contact.cta':        'Get in touch',
 
     /* --- FOOTER --- */
@@ -372,6 +450,70 @@ const TRANSLATIONS = {
 
     /* --- CS Footer --- */
     'footer.home':        'Home',
+
+    /* ============================
+       UNIVERSO PUNZADAS PROJECT PAGE
+       ============================ */
+
+    /* --- Project hero --- */
+    'up.stat.episodes':   'episodes catalogued',
+    'up.stat.authors':    'authors cited',
+    'up.stat.mentions':   'mentions extracted',
+    'up.tagline':         '<em>Punzadas Sonoras</em> is my favourite podcast: I\'m fascinated by how Inés and Paula choose their subjects and the way they get into them. I always wanted a library of the works, authors and references from their 100-plus episodes, so I built one.',
+    'up.tag.data':        'Data',
+    'up.tag.search':      'Search',
+    'up.tag.dataviz':     'Data visualisation',
+
+    /* --- The question --- */
+    'up.question.title':  'The question',
+    'up.question.p1':     'Official episode descriptions only tell a fraction of what\'s actually cited. What if you could search any author, work or subject mentioned on the podcast, with the exact quote and the minute it was said?',
+    'up.question.p2':     'Universo Punzadas was born from that question. It catalogues every cultural reference cited across the podcast\'s 118 episodes: books, films, records, authors, and the subjects that connect them.',
+
+    /* --- How it works --- */
+    'up.how.title':       'How it works',
+    'up.how.p1.html':     'Every episode is transcribed and read in full, word by word. Only what can be pinned to <span class="highlight">a literal quote in the audio</span> makes it into the catalogue — nothing is filled in from outside knowledge.',
+    'up.how.p2':          'Transcripts are generated with mlx-whisper (large-v3 model) and pyannote 3.1 diarisation, running locally. Extracting references — what\'s cited, who cites it and in which episode — is done by hand, reading the full transcript against a documented editorial criterion.',
+
+    /* --- Try the catalogue --- */
+    'up.demo.title':      'Explore the catalogue',
+    'up.demo.p1':         'Search it directly here: by author, work, subject or episode, with charts that connect the references to each other.',
+    'up.demo.fallback.html': 'If it doesn\'t load above, you can <a href="https://universopunzadas.com" target="_blank" rel="noopener" style="color: var(--teal); font-weight: 600;">open it in a new tab</a>.',
+
+    /* --- Why it matters --- */
+    'up.why.title':       'Why this project matters to me',
+    'up.why.p1':          'Universo Punzadas brings together two things I love: listening to the podcast and building data tools. It\'s a project that demands patience — hours of audio listened to and transcribed — and editorial care: every data point has to be traceable to a literal quote.',
+    'up.why.p2.html':     'To me it represents what I love most about working with data: <span class="highlight">turning something scattered and hard to find into something navigable, searchable and shared</span>.',
+
+    /* --- Tech stack --- */
+    'up.tech.title':          'Technology stack',
+    'up.tech.transcription':  'Transcription',
+    'up.tech.extraction':     'Extraction',
+    'up.tech.extraction.val': 'Manual editorial criterion, quote by quote',
+    'up.tech.frontend':       'Frontend',
+    'up.tech.dataviz':        'Charts',
+    'up.tech.data':           'Data',
+    'up.tech.data.val':       'JSON generated with Python scripts',
+    'up.tech.infra':          'Infrastructure',
+    'up.tech.source':         'Source',
+    'up.tech.source.val':     'Open Source (MIT)',
+
+    /* --- Pipeline --- */
+    'up.pipeline.title':  'From voice to catalogue',
+    'up.pipeline.p1':     'Every new episode goes through the same process, start to finish:',
+    'up.pipe.1.title':    'Transcription',
+    'up.pipe.1.detail':   'Audio → text with speaker identification',
+    'up.pipe.2.title':    'Extraction',
+    'up.pipe.2.detail':   'Full read-through, quote by quote',
+    'up.pipe.3.title':    'Data',
+    'up.pipe.3.detail':   'Reconciliation and QA, JSON for the site',
+    'up.pipe.4.title':    'Web',
+    'up.pipe.4.detail':   'Search and charts published',
+
+    /* --- Explore the code --- */
+    'up.code.title':      'Explore the code',
+    'up.code.desc':       'Universo Punzadas is open source. Explore the code or visit the full catalogue.',
+    'up.code.github':     'GitHub — Universo Punzadas',
+    'up.code.site':       'View the catalogue',
   }
 };
 

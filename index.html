@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>maramotto — Tecnóloga Creativa | Arte Interactivo y Desarrollo Software</title>
-  <meta name="description" content="maramotto — Tecnóloga creativa e ingeniera de software. Desarrollo software, arte interactivo, creative coding y tecnología creativa. Proyectos en la intersección del arte y la tecnología.">
-  <meta name="keywords" content="creative technologist, tecnóloga creativa, tecnología creativa, desarrollo software, arte interactivo, interactive art, creative coding, tech, art, software engineer, ingeniera de software, upcycled fashion, música, data science">
+  <title>maramotto — Arte, código y curiosidad</title>
+  <meta name="description" content="Artista, ingeniera de software y tecnóloga creativa. Instalaciones que convierten datos en sonido, software a medida y talleres de creatividad.">
+  <meta name="keywords" content="creative technologist, tecnóloga creativa, tecnología creativa, desarrollo software, arte interactivo, interactive art, creative coding, tech, art, software engineer, ingeniera de software, instalaciones tech-art, sonificación de datos, data sonification, talleres de creatividad, música, data science">
   <link rel="canonical" href="https://maramotto.com/">
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="maramotto — Tecnóloga Creativa | Arte Interactivo y Desarrollo Software">
-  <meta property="og:description" content="Tecnóloga creativa e ingeniera de software. Desarrollo software, arte interactivo, creative coding y proyectos en la intersección del arte y la tecnología.">
+  <meta property="og:title" content="maramotto — Arte, código y curiosidad">
+  <meta property="og:description" content="Artista, ingeniera de software y tecnóloga creativa. Instalaciones que convierten datos en sonido, software a medida y talleres de creatividad.">
   <meta property="og:url" content="https://maramotto.com/">
   <meta property="og:site_name" content="maramotto">
   <meta property="og:locale" content="es_ES">
@@ -25,9 +25,9 @@
       "name": "Mara",
       "alternateName": "maramotto",
       "url": "https://maramotto.com",
-      "jobTitle": ["Creative Technologist", "Software Engineer", "Tecnóloga Creativa"],
-      "description": "Tecnóloga creativa e ingeniera de software. Desarrollo software, arte interactivo, creative coding, música y tecnología creativa.",
-      "knowsAbout": ["Creative Coding", "Software Development", "Interactive Art", "Music Production", "Data Science", "Upcycled Fashion", "Python", "JavaScript"],
+      "jobTitle": ["Artist", "Software Engineer", "Creative Technologist", "Tecnóloga Creativa"],
+      "description": "Artista, ingeniera de software y tecnóloga creativa. Instalaciones que convierten datos en sonido, software a medida y talleres de creatividad.",
+      "knowsAbout": ["Creative Coding", "Software Development", "Tech Art Installations", "Data Sonification", "Music Production", "Data Science", "Creativity Workshops", "Python", "JavaScript"],
       "sameAs": [
         "https://github.com/maramotto",
         "https://www.linkedin.com/in/mara-crespo/"
@@ -50,17 +50,19 @@
     </button>
     <ul class="nav__links">
       <li class="nav__item">
-        <a href="index.html#projects" data-i18n="nav.projects">Proyectos</a>
+        <a href="index.html#projects" data-i18n="nav.projects">En qu&eacute; ando</a>
         <button class="nav__dropdown-toggle" aria-label="Toggle projects list">
           <span class="nav__dropdown-arrow">&#9660;</span>
         </button>
         <ul class="nav__dropdown">
           <li><a href="cuerposonoro.html">CuerpoSonoro</a></li>
+          <li><a href="universo-punzadas.html">Universo Punzadas</a></li>
         </ul>
       </li>
       <li><a href="blog/" data-i18n="nav.blog">Blog</a></li>
-      <li><a href="#about" data-i18n="nav.about">Sobre m&iacute;</a></li>
+      <li><a href="#talleres" data-i18n="nav.workshops">Talleres</a></li>
       <li><a href="#contact" data-i18n="nav.contact">Contacto</a></li>
+      <li><a href="#about" data-i18n="nav.about">Sobre m&iacute;</a></li>
       <li>
         <div class="lang-toggle">
           <button class="lang-toggle__btn" data-lang="es">ES</button>
@@ -74,11 +76,9 @@
   <section class="hero">
     <div class="hero__wave">&#12336;&#65039;&#12336;&#65039;&#12336;&#65039;</div>
     <h1 class="hero__title">maramotto</h1>
-    <p class="hero__subtitle" data-i18n="hero.subtitle">Ingeniera de Software &middot; Artista &middot; Tecn&oacute;loga Creativa</p>
-    <p class="hero__description" data-i18n-html="hero.description">
-      Creo cosas en la intersecci&oacute;n entre el arte y la tecnolog&iacute;a.
-      Me apasiona cacharrear, inventar y dar vida a las ideas.
-      Desde c&oacute;digo que convierte el movimiento humano en sonido hasta mezclar IA y conocimiento artesanal para crear piezas &uacute;nicas de moda reciclada.
+    <p class="hero__subtitle" data-i18n="hero.subtitle">Artista &middot; Ingeniera de Software &middot; Tecn&oacute;loga Creativa</p>
+    <p class="hero__description" data-i18n="hero.description">
+      Construyo e invento objetos donde lo artesanal y lo digital se encuentran. C&oacute;digo, pintura, m&uacute;sica, sonido y visuales.
     </p>
     <div class="btn-group btn-group--center">
       <a href="#projects" class="btn btn--primary" data-i18n="hero.cta.work">Ver mi trabajo</a>
@@ -89,22 +89,18 @@
   <!-- ======= FEATURED: CUERPOSONORO ======= -->
   <section class="section section--white" id="projects">
     <div class="container">
-      <div class="section-label" data-i18n="featured.label">Proyecto destacado</div>
+      <div class="section-label" data-i18n="featured.label">En qu&eacute; ando</div>
       <div class="featured">
         <div class="featured__visual">
           <img src="img/cuerposonoro-visual.svg" alt="CuerpoSonoro &mdash; Body becomes sound" class="featured__visual-img">
-          <div class="featured__visual-label" data-i18n="featured.visual.label">Cuerpo &rarr; Sonido</div>
+          <div class="featured__visual-label" data-i18n="featured.visual.label">Cuerpo &rarr; Datos &rarr; Sonido</div>
         </div>
         <div class="featured__content">
           <h3>CuerpoSonoro</h3>
           <p data-i18n="featured.desc.1">
-            &iquest;Y si tu cuerpo pudiera crear y dar forma al sonido? CuerpoSonoro es un proyecto de software
-            que transforma el movimiento del cuerpo humano en sonido en tiempo real, convirtiendo gestos
-            y posturas en paisajes sonoros en constante cambio.
-          </p>
-          <p data-i18n="featured.desc.2">
-            Vive en la intersecci&oacute;n del arte, la tecnolog&iacute;a y el cuerpo.
-            Exactamente el tipo de trabajo que me encanta.
+            &iquest;Y si fuera tu cuerpo el que genera el sonido al moverse, en lugar de reaccionar a &eacute;l?
+            CuerpoSonoro convierte el movimiento en sonido en tiempo real: sin partitura, sin secuencias
+            grabadas, sin sensores. Solo t&uacute; movi&eacute;ndote.
           </p>
           <div class="tags">
             <span class="tag">Python</span>
@@ -112,41 +108,36 @@
             <span class="tag" data-i18n="featured.tag.creative">Creative Coding</span>
             <span class="tag" data-i18n="featured.tag.sound">Sonido</span>
           </div>
-          <a href="cuerposonoro.html" class="btn btn--primary btn--small" data-i18n="featured.cta">Explorar el proyecto &rarr;</a>
+          <a href="cuerposonoro.html" class="btn btn--primary btn--small" data-i18n="featured.cta">Ver proyecto &rarr;</a>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- ======= MORE PROJECTS ======= -->
-  <section class="section section--cream">
-    <div class="container">
-      <div class="section-label" data-i18n="portfolio.label">Portfolio</div>
-      <h2 class="section-title" data-i18n="portfolio.title">M&aacute;s proyectos</h2>
-      <div class="projects-grid">
+      <div class="projects-grid" style="margin-top: 3rem;">
 
         <div class="card">
-          <img src="img/project-librored.svg" alt="LibroRed" class="card__img">
-          <h3>LibroRed</h3>
-          <p data-i18n="librored.desc">Una aplicaci&oacute;n web para el intercambio de libros entre personas. Tecnolog&iacute;a al servicio de la comunidad.</p>
+          <div class="card__icon card__icon--purple">&#127911;&#65039;</div>
+          <h3>Estratos</h3>
+          <p style="font-style: italic; color: var(--text-light); font-size: 0.85rem; margin-bottom: 0.75rem;" data-i18n="estratos.tagline">Datos p&uacute;blicos &rarr; Sonido &rarr; Instalaci&oacute;n sonora</p>
+          <p data-i18n="estratos.desc">&iquest;Y si la historia de un territorio se pudiera escuchar? Estratos convierte datos p&uacute;blicos &mdash;los que est&aacute;n ah&iacute;, disponibles, pero que nadie mira&mdash; en una instalaci&oacute;n sonora que cuenta lo que esconden.</p>
           <div class="tags">
-            <span class="tag">HTML</span>
-            <span class="tag" data-i18n="librored.tag.webapp">App Web</span>
-            <span class="tag">Open Source</span>
+            <span class="tag" data-i18n="estratos.tag.opendata">Datos abiertos</span>
+            <span class="tag" data-i18n="estratos.tag.sonification">Sonificaci&oacute;n de datos</span>
+            <span class="tag" data-i18n="estratos.tag.installation">Instalaci&oacute;n</span>
           </div>
-          <a href="https://github.com/maramotto/libroredwebapp" class="card__link" target="_blank" rel="noopener" data-i18n="librored.link">Ver en GitHub &rarr;</a>
         </div>
 
         <div class="card">
-          <img src="img/project-spotify.svg" alt="Exploring Spotify Data" class="card__img">
-          <h3 data-i18n="spotify.title">Explorando datos de Spotify</h3>
-          <p data-i18n="spotify.desc">An&aacute;lisis exploratorio de datos de usuario de Spotify. Ciencia de datos aplicada a la m&uacute;sica.</p>
+          <div class="card__icon card__icon--yellow">&#127908;</div>
+          <h3>Universo Punzadas</h3>
+          <p style="font-style: italic; color: var(--text-light); font-size: 0.85rem; margin-bottom: 0.75rem;" data-i18n="punzadas.tagline">Podcast &rarr; Datos &rarr; Visualizaci&oacute;n y buscador</p>
+          <p data-i18n-html="punzadas.desc"><em>Punzadas Sonoras</em> es mi podcast favorito: me fascina c&oacute;mo In&eacute;s y Paula eligen los temas y c&oacute;mo los abordan. Siempre quise una biblioteca con las obras, autoras y referencias de sus m&aacute;s de 100 episodios, as&iacute; que la he construido.</p>
           <div class="tags">
-            <span class="tag">Python</span>
-            <span class="tag">Spotify API</span>
-            <span class="tag" data-i18n="spotify.tag.datascience">Ciencia de Datos</span>
+            <span class="tag" data-i18n="punzadas.tag.data">Datos</span>
+            <span class="tag">Astro</span>
+            <span class="tag" data-i18n="punzadas.tag.search">Buscador</span>
+            <span class="tag" data-i18n="punzadas.tag.dataviz">Visualizaci&oacute;n de datos</span>
           </div>
-          <a href="https://github.com/maramotto/exploring-spotify-user-data" class="card__link" target="_blank" rel="noopener" data-i18n="spotify.link">Ver en GitHub &rarr;</a>
+          <a href="universo-punzadas.html" class="card__link" data-i18n="punzadas.link">Ver proyecto &rarr;</a>
         </div>
 
       </div>
@@ -157,25 +148,30 @@
   <section class="section section--purple" id="about">
     <div class="container--narrow">
       <div class="section-label" data-i18n="about.label">Sobre m&iacute;</div>
-      <h2 class="section-title" data-i18n="about.title">Arte + C&oacute;digo + Curiosidad</h2>
+      <h2 class="section-title" data-i18n="about.title">Arte + Curiosidad + Creatividad</h2>
       <p class="about-text" data-i18n="about.p1">
-        Soy una persona creativa apasionada por el arte, la ciencia y la tecnolog&iacute;a.
-        Soy m&aacute;s feliz cuando imagino algo y consigo hacerlo realidad, ya sea
-        un programa, una canci&oacute;n, una pintura con plotter de pinceles o un accesorio de moda hecho con materiales reciclados.
+        Soy feliz cuando imagino algo y consigo hacerlo real. Da igual si acaba siendo software,
+        una canci&oacute;n, una acuarela o un taller: el impulso es el mismo.
       </p>
       <p class="about-text" data-i18n="about.p2">
-        Mi formaci&oacute;n es en ingenier&iacute;a de software, pero mi curiosidad va mucho m&aacute;s all&aacute;.
-        Compongo y produzco m&uacute;sica, pinto abstracci&oacute;n, hago macrofotograf&iacute;a
-        y dise&ntilde;o piezas de moda reciclada con patrones cortados por l&aacute;ser CNC.
+        Vengo de la ingenier&iacute;a de software, pero la curiosidad me lleva lejos. Compongo y
+        produzco m&uacute;sica, pinto, hago macrofotograf&iacute;a y dise&ntilde;o instalaciones que
+        convierten datos en sonido. Mezclar arte y c&oacute;digo no me parece raro, para m&iacute;
+        es de lo m&aacute;s natural.
       </p>
-      <p class="about-text" data-i18n-html="about.p3.html">
-        Para m&iacute;, fusionar arte y c&oacute;digo es natural. Me encanta
-        <strong>caminar por los bordes entre disciplinas</strong> e inventar nuevas formas de conectarlas.
-        Creo en la tecnolog&iacute;a que sirve a las personas. <strong>Las personas primero.</strong>
+      <p class="about-text" data-i18n="about.p3">
+        &Uacute;ltimamente me interesa mucho lo que pasa cuando los datos dejan de ser una tabla o
+        un gr&aacute;fico y se convierten en algo que se puede escuchar o tocar.
       </p>
       <p class="about-text" data-i18n="about.p4">
-        Cuando no estoy creando, me encontrar&aacute;s con mi perra, explorando r&iacute;os y embalses
-        en kayak, nadando en el mar o recorriendo carreteras en nuestro coche viejo buscando la pr&oacute;xima aventura.
+        Creo en la tecnolog&iacute;a que sirve a las personas. Es un conjunto de herramientas
+        incre&iacute;ble, pero solo tiene sentido cuando se emplea en mejorar la vida de las
+        personas y de los seres vivos.
+      </p>
+      <p class="about-text" data-i18n="about.p5">
+        Cuando no estoy creando, estoy con mi perro Otto, explorando r&iacute;os y embalses en
+        nuestro kayak, nadando, o en la carretera con nuestro coche camperizado buscando la
+        pr&oacute;xima aventura.
       </p>
     </div>
   </section>
@@ -189,22 +185,27 @@
         <div class="skill-card">
           <img src="img/skill-code.svg" alt="Code &amp; Software" class="skill-card__img">
           <h3 data-i18n="skill.code.title">C&oacute;digo y Software</h3>
-          <p data-i18n="skill.code.desc">Desarrollo de software, desarrollo de IA, aplicaciones web, an&aacute;lisis de datos, creative coding</p>
+          <p data-i18n="skill.code.desc">Desarrollo de software e IA, aplicaciones web, an&aacute;lisis de datos, creative coding.</p>
         </div>
         <div class="skill-card">
           <img src="img/skill-music.svg" alt="Music &amp; Audio" class="skill-card__img">
           <h3 data-i18n="skill.music.title">M&uacute;sica y Audio</h3>
-          <p data-i18n="skill.music.desc">Composici&oacute;n, producci&oacute;n musical, ingenier&iacute;a de audio para podcasts</p>
+          <p data-i18n="skill.music.desc">Composici&oacute;n, producci&oacute;n musical, ingenier&iacute;a de audio para podcasts.</p>
+        </div>
+        <div class="skill-card">
+          <span class="skill-card__emoji">&#127899;&#65039;</span>
+          <h3 data-i18n="skill.techart.title">Instalaciones tech-art</h3>
+          <p data-i18n="skill.techart.desc">Objetos e instalaciones que convierten datos en sonido y movimiento.</p>
         </div>
         <div class="skill-card">
           <img src="img/skill-visual.svg" alt="Visual Art" class="skill-card__img">
           <h3 data-i18n="skill.visual.title">Arte Visual</h3>
-          <p data-i18n="skill.visual.desc">Macrofotograf&iacute;a, acuarela, pintura acr&iacute;lica</p>
+          <p data-i18n="skill.visual.desc">Macrofotograf&iacute;a, pintura, collage.</p>
         </div>
-        <div class="skill-card">
-          <img src="img/skill-fashion.svg" alt="Fashion &amp; Textiles" class="skill-card__img">
-          <h3 data-i18n="skill.fashion.title">Moda y Textiles</h3>
-          <p data-i18n="skill.fashion.desc">Upcycling, dise&ntilde;o de patrones, corte l&aacute;ser CNC</p>
+        <div class="skill-card" id="talleres">
+          <span class="skill-card__emoji">&#128736;&#65039;</span>
+          <h3 data-i18n="skill.workshops.title">Talleres</h3>
+          <p data-i18n="skill.workshops.desc">Talleres presenciales y online que fomentan la creatividad en adultos.</p>
         </div>
       </div>
     </div>
@@ -216,7 +217,7 @@
       <div class="section-label" data-i18n="contact.label">Contacto</div>
       <h2 class="section-title" data-i18n="contact.title">&iquest;Trabajamos juntas?</h2>
       <p style="font-size:1.1rem; color:var(--text); margin-bottom:2rem; line-height:1.6;" data-i18n-html="contact.desc">
-        &iquest;Tienes un proyecto en mente? &iquest;Buscas un perfil creativo-t&eacute;cnico? Me encantar&iacute;a saber de ti.
+        &iquest;Tienes un proyecto en mente? &iquest;Buscas un perfil t&eacute;cnico y creativo? Me encantar&iacute;a saber de ti.
       </p>
       <a href="mailto:hello@maramotto.com" class="btn btn--primary" data-i18n="contact.cta">Escr&iacute;beme</a>
       <div class="social-links">
