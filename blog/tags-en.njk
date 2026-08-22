@@ -6,8 +6,8 @@ pagination:
 permalink: "/blog/en/tags/{{ tag | slugify }}/"
 eleventyComputed:
   title: "{{ tag }}"
+  description: "Blog posts tagged {{ tag }}."
 lang: en
-description: "Blog posts tagged {{ tag }}."
 eleventyExcludeFromCollections: true
 layout: layouts/list.njk
 ---

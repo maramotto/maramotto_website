@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ title }} — maramotto</title>
   <meta name="description" content="{{ description }}">
-  <link rel="canonical" href="https://maramotto.com{{ url }}">
+  <link rel="canonical" href="https://maramotto.com{{ page.url }}">
   <meta property="og:type" content="{{ ogType or 'website' }}">
   <meta property="og:title" content="{{ title }}">
   <meta property="og:description" content="{{ description }}">
-  <meta property="og:url" content="https://maramotto.com{{ url }}">
+  <meta property="og:url" content="https://maramotto.com{{ page.url }}">
   <meta property="og:site_name" content="maramotto">
   <meta property="og:locale" content="{{ 'es_ES' if lang == 'es' else 'en_GB' }}">
   {% if structuredData %}{{ structuredData | safe }}{% endif %}
