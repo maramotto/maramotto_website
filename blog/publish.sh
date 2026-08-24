@@ -299,7 +299,7 @@ for dir in "${VALID_DIRS[@]}"; do
 done
 SLUGS_JOINED="$(IFS=', '; echo "${SLUGS[*]}")"
 
-if [ -n "$(git status --porcelain --cached -- blog/)" ]; then
+if ! git diff --cached --quiet -- blog/; then
   git commit -m "feat(blog): traducción automática de ${SLUGS_JOINED}"
 fi
 
