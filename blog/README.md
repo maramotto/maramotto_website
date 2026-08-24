@@ -1,5 +1,27 @@
 # Blog authoring workflow
 
+## Publicación autónoma (recomendado)
+
+1. Abre una rama nueva.
+2. Crea `blog/posts/<fecha>-<slug>/<slug>.es.md` (ver el formato del
+   front matter más abajo) y añade la imagen de portada en la misma
+   carpeta.
+3. Commitea el post (`.es.md` + imagen) en tu rama.
+4. Ejecuta `./blog/publish.sh`.
+
+El script traduce el post al inglés con el CLI `claude`, te enseña el
+resultado y pide confirmación, mezcla tu rama en `master`, despliega
+con `./blog/deploy.sh` y borra la rama local. Ver
+`docs/superpowers/specs/2026-08-24-blog-publish-automation-design.md`
+para el diseño completo, incluyendo el manejo de errores y la
+limitación conocida del parseo de front matter (evita comillas dobles
+literales dentro de `title`/`excerpt`).
+
+## Flujo manual (alternativa)
+
+Si prefieres traducir tú misma, o `publish.sh` no es adecuado para un
+post concreto:
+
 1. Crea la carpeta del post: `blog/posts/<date>-<slug>/`. Cada post
    vive en su propia carpeta, con los dos idiomas y la imagen juntos:
 
