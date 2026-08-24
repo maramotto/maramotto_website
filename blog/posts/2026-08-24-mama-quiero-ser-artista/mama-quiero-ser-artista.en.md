@@ -1,16 +1,26 @@
 ---
-title: "So, I want to be an artist"
+title: "Mom, I want to be an artist"
 date: 2026-08-24
 lang: en
-translationKey: quiero-ser-artista
-tags: ["note", "art"]
+translationKey: mama-quiero-ser-artista
+tags: ["note"]
 imageFile: "cover.svg"
 imageRatio: square
-excerpt: "At 37, I decide I want to devote myself to art, without knowing quite how or where it will lead, but knowing it's the only thing I want to do."
+excerpt: "The first post of this blog"
 ---
 
 Yes, I want to be an artist. And no, I don't want to do anything else
 with my time and my energy. I want to devote myself to art 24/7.
+
+Because as the great Concha Velasco said:
+
+"
+And she thought, and rightly so,
+
+That there are only two kinds of people,
+
+The artists, and everyone else
+"
 
 And I'm deciding this at 37.
 

@@ -1,16 +1,26 @@
 ---
-title: "Quiero ser artista"
+title: "Mamá quiero ser artista"
 date: 2026-08-24
 lang: es
-translationKey: quiero-ser-artista
-tags: ["nota", "arte"]
+translationKey: mama-quiero-ser-artista
+tags: ["nota"]
 imageFile: "cover.svg"
 imageRatio: square
-excerpt: "A los 37 años decido que quiero dedicarme al arte, sin saber muy bien cómo ni hacia dónde, pero sabiendo que es lo único que quiero hacer."
+excerpt: "El primer post de este blog"
 ---
 
 Sí, quiero ser artista. Y no, no quiero hacer otra cosa con mi tiempo y mi
 energía. Quiero dedicarme al arte 24/7.
+
+Porque como dijo la gran Concha Velasco:
+
+"
+Y pensaba con toda la razón
+
+Que hay dos clases de gente nada más
+
+Los artistas y todos los demás
+"
 
 Y lo decido a los 37 años.
 
