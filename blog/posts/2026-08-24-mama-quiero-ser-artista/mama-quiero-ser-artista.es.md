@@ -9,20 +9,16 @@ imageRatio: square
 excerpt: "El primer post de este blog"
 ---
 
-Sí, quiero ser artista. Y no, no quiero hacer otra cosa con mi tiempo y mi
+**Sí, quiero ser artista.** Y no, no quiero hacer otra cosa con mi tiempo y mi
 energía. Quiero dedicarme al arte 24/7.
 
 Porque como dijo la gran Concha Velasco:
 
-"
-Y pensaba con toda la razón
-
+>"Y pensaba con toda la razón
 Que hay dos clases de gente nada más
-
 Los artistas y todos los demás
-"
 
-Y lo decido a los 37 años.
+**Y lo decido a los 37 años.**
 
 No tengo ningún conocimiento sobre el mundo del arte. No tengo ningún tipo
 de estudios ni contactos relacionados con esta industria/mercado. No sé

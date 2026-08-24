@@ -9,20 +9,15 @@ imageRatio: square
 excerpt: "The first post of this blog"
 ---
 
-Yes, I want to be an artist. And no, I don't want to do anything else
+**Yes, I want to be an artist.** And no, I don't want to do anything else
 with my time and my energy. I want to devote myself to art 24/7.
 
 Because as the great Concha Velasco said:
 
-"
-And she thought, and rightly so,
+> "And she thought, and rightly so,
+ That there are only two kinds of people, The artists, and everyone else"
 
-That there are only two kinds of people,
-
-The artists, and everyone else
-"
-
-And I'm deciding this at 37.
+**And I'm deciding this at 37.**
 
 I have no knowledge of the art world. No studies, no contacts, nothing
 connecting me to this industry, this market. I don't know exactly what I
