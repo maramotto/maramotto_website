@@ -142,6 +142,17 @@ descartadas) — se documenta en cabecera del propio script y en
 usar comillas dobles dentro del valor (comillas simples o sin
 comillas van bien).
 
+## Validación de imagen
+
+Antes de traducir nada, por cada post de la cola el script comprueba
+que el archivo declarado en `imageFile` existe en la misma carpeta que
+el `.es.md`. Si falta, aborta esa carpeta con un error explícito
+(`falta <carpeta>/<imageFile>`) sin llamar a `claude` ni escribir
+ningún `.en.md` — publicar un post con la imagen de portada rota es
+peor que no publicarlo. Si hay varios posts en la cola y solo uno
+tiene la imagen que falta, el script aborta entero (misma política que
+el resto de fallos: no publicar una tanda a medias).
+
 ## Confirmación antes de publicar
 
 El caso normal es un post por rama, pero el script admite varios en la
