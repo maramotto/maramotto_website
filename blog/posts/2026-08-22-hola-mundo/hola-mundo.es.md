@@ -4,7 +4,7 @@ date: 2026-08-22
 lang: es
 translationKey: hola-mundo
 tags: ["nota"]
-image: "/blog/images/hola-mundo/cover.svg"
+imageFile: "cover.svg"
 imageRatio: square
 excerpt: "El primer post de este blog: por qué existe y qué vas a encontrar aquí."
 ---

@@ -9,6 +9,7 @@ module.exports = {
   ogType: "article",
   eleventyComputed: {
     permalink: (data) => postUrl(data),
+    image: (data) => `/blog/images/${data.translationKey}/${data.imageFile}`,
     description: (data) => data.excerpt,
     structuredData: (data) => `<script type="application/ld+json">
 {

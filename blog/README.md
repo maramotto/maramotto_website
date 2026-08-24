@@ -1,9 +1,20 @@
 # Blog authoring workflow
 
-1. Write the post in Spanish: `blog/posts/<date>-<slug>.es.md`.
-   Required front matter: `title`, `date`, `lang: es`, `translationKey`
-   (shared between the ES/EN pair), `tags`, `image`, `imageRatio`
-   (`square` or `wide`), `excerpt`.
+1. Crea la carpeta del post: `blog/posts/<date>-<slug>/`. Cada post
+   vive en su propia carpeta, con los dos idiomas y la imagen juntos:
+
+   ```
+   blog/posts/2026-09-01-mi-nuevo-post/
+     mi-nuevo-post.es.md
+     mi-nuevo-post.en.md
+     cover.jpg
+   ```
+
+2. Escribe la versión en español, `mi-nuevo-post.es.md`. Required
+   front matter: `title`, `date`, `lang: es`, `translationKey`
+   (shared between the ES/EN pair), `tags`, `imageFile` (nombre del
+   archivo de imagen dentro de la misma carpeta), `imageRatio`
+   (`square` o `wide`), `excerpt`.
 
    ```markdown
    ---
@@ -12,7 +23,7 @@
    lang: es
    translationKey: mi-nuevo-post
    tags: ["nota", "creative-coding"]
-   image: "/blog/images/mi-nuevo-post/cover.jpg"
+   imageFile: "cover.jpg"
    imageRatio: square
    excerpt: "Resumen corto para el listado y las meta tags."
    ---
@@ -23,24 +34,27 @@
    `translationKey` debe coincidir exactamente entre la versión ES y EN
    de un mismo post — es lo que enlaza ambas URLs en el selector de
    idioma. `imageRatio` es `square` (1:1) o `wide` (16:9), según la
-   imagen que prepares. Cualquier `tag` nuevo genera automáticamente su
-   propia página en `/blog/tags/<tag>/`.
+   imagen que prepares. `imageFile` solo lleva el nombre del archivo
+   (no la ruta) — Eleventy construye la URL pública automáticamente a
+   partir de `translationKey` + `imageFile`. Cualquier `tag` nuevo
+   genera automáticamente su propia página en `/blog/tags/<tag>/`.
 
-2. Añade la imagen de portada en `blog/images/<slug>/`, con el mismo
-   path que declaraste en `image` (puede ser `.jpg`, `.png` o `.svg`).
+3. Añade la imagen de portada en la misma carpeta del post (`.jpg`,
+   `.png` o `.svg`), con el mismo nombre que declaraste en
+   `imageFile`.
 
-3. Pide la traducción al inglés (a Claude, o tradúcela tú) — debe crear
-   `blog/posts/<date>-<slug>.en.md` con el mismo `translationKey` y
-   `imageRatio`, y `lang: en`.
+4. Pide la traducción al inglés (a Claude, o tradúcela tú) — debe crear
+   `mi-nuevo-post.en.md` en la misma carpeta, con el mismo
+   `translationKey`, `imageFile` e `imageRatio`, y `lang: en`.
 
-4. Revisa la traducción y ajusta el tono si hace falta.
+5. Revisa la traducción y ajusta el tono si hace falta.
 
-5. Previsualiza en local (ver "Local development" abajo) antes de
+6. Previsualiza en local (ver "Local development" abajo) antes de
    publicar: revisa el post, el listado y la página de su(s) tag(s).
 
-6. Commitea ambos archivos de idioma juntos (y la imagen).
+7. Commitea la carpeta del post completa (los dos `.md` y la imagen).
 
-7. Despliega con `./blog/deploy.sh` (ver "Deploying" abajo).
+8. Despliega con `./blog/deploy.sh` (ver "Deploying" abajo).
 
 ## Local development
 

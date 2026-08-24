@@ -1,3 +1,5 @@
+const fs = require("fs");
+const path = require("path");
 const readingTime = require("./eleventy/filters/reading-time.js");
 const postsByLang = require("./eleventy/filters/posts-by-lang.js");
 const translationUrl = require("./eleventy/filters/translation-url.js");
@@ -15,7 +17,21 @@ function uniqueSortedTags(posts) {
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
 
-  eleventyConfig.addPassthroughCopy({ "images": "blog/images" });
+  // Each post folder (posts/<date>-<slug>/) holds its own cover image
+  // alongside its .md files. Copy every non-markdown file to
+  // blog/images/<slug>/, stripping the date prefix so the folder's date
+  // never leaks into the public image URL.
+  const postsDir = path.join(__dirname, "posts");
+  for (const entry of fs.readdirSync(postsDir, { withFileTypes: true })) {
+    if (!entry.isDirectory()) continue;
+    const slug = entry.name.replace(/^\d{4}-\d{2}-\d{2}-/, "");
+    for (const file of fs.readdirSync(path.join(postsDir, entry.name))) {
+      if (file.endsWith(".md")) continue;
+      eleventyConfig.addPassthroughCopy({
+        [`posts/${entry.name}/${file}`]: `blog/images/${slug}/${file}`,
+      });
+    }
+  }
 
   eleventyConfig.addFilter("readingTime", readingTime);
   eleventyConfig.addFilter("postsByLang", postsByLang);
@@ -25,15 +41,15 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("isoDate", isoDate);
 
   eleventyConfig.addCollection("posts", (collectionApi) =>
-    collectionApi.getFilteredByGlob("posts/*.md").sort((a, b) => b.date - a.date)
+    collectionApi.getFilteredByGlob("posts/*/*.md").sort((a, b) => b.date - a.date)
   );
 
   eleventyConfig.addCollection("tagListEs", (collectionApi) =>
-    uniqueSortedTags(collectionApi.getFilteredByGlob("posts/*.md").filter((p) => p.data.lang === "es"))
+    uniqueSortedTags(collectionApi.getFilteredByGlob("posts/*/*.md").filter((p) => p.data.lang === "es"))
   );
 
   eleventyConfig.addCollection("tagListEn", (collectionApi) =>
-    uniqueSortedTags(collectionApi.getFilteredByGlob("posts/*.md").filter((p) => p.data.lang === "en"))
+    uniqueSortedTags(collectionApi.getFilteredByGlob("posts/*/*.md").filter((p) => p.data.lang === "en"))
   );
 
   return {

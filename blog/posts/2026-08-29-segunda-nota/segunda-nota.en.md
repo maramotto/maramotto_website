@@ -4,7 +4,7 @@ date: 2026-08-29
 lang: en
 translationKey: segunda-nota
 tags: ["note", "creative-coding"]
-image: "/blog/images/segunda-nota/cover.svg"
+imageFile: "cover.svg"
 imageRatio: wide
 excerpt: "A short sample note, with a 16:9 cover image."
 ---
