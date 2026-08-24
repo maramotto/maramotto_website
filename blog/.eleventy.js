@@ -15,7 +15,7 @@ function uniqueSortedTags(posts) {
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
 
-  eleventyConfig.addPassthroughCopy("images");
+  eleventyConfig.addPassthroughCopy({ "images": "blog/images" });
 
   eleventyConfig.addFilter("readingTime", readingTime);
   eleventyConfig.addFilter("postsByLang", postsByLang);
