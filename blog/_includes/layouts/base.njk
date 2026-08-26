@@ -12,7 +12,16 @@
   <meta property="og:url" content="https://maramotto.com{{ page.url }}">
   <meta property="og:site_name" content="maramotto">
   <meta property="og:locale" content="{{ 'es_ES' if lang == 'es' else 'en_GB' }}">
+  <meta property="og:image" content="https://maramotto.com{{ image or '/img/cuerposonoro-visual.png' }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ title }}">
+  <meta name="twitter:description" content="{{ description }}">
+  <meta name="twitter:image" content="https://maramotto.com{{ image or '/img/cuerposonoro-visual.png' }}">
   {% if structuredData %}{{ structuredData | safe }}{% endif %}
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+  <meta name="theme-color" content="#FFD93D">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">

@@ -35,6 +35,8 @@ const TRANSLATIONS = {
     'estratos.tag.opendata':     'Datos abiertos',
     'estratos.tag.sonification': 'Sonificaci\u00f3n de datos',
     'estratos.tag.installation': 'Instalaci\u00f3n',
+    'estratos.status':           'En construcci\u00f3n',
+    'estratos.status.cta':       'Escr\u00edbeme si te interesa \u2192',
 
     /* --- EN QU\u00c9 ANDO: UNIVERSO PUNZADAS --- */
     'punzadas.tagline':      'Podcast \u2192 Datos \u2192 Visualizaci\u00f3n y buscador',
@@ -101,6 +103,8 @@ const TRANSLATIONS = {
     'cs.demo.title':      'Prueba la demo web',
     'cs.demo.p1':         'Experimenta CuerpoSonoro directamente en tu navegador. La demo web usa MediaPipe.js para la detecci\u00f3n de postura y la Web Audio API para la s\u00edntesis de sonido \u2014 no necesitas instalar nada.',
     'cs.demo.fallback.html': 'Si la demo no carga arriba, puedes <a href="https://cuerposonoro.art" target="_blank" rel="noopener" style="color: var(--teal); font-weight: 600;">abrirla en una nueva pesta\u00f1a</a>.',
+    'cs.contact.title':   '\u00bfUn proyecto parecido en mente?',
+    'cs.contact.cta':     'Escr\u00edbeme',
 
     /* --- Why it matters --- */
     'cs.why.title':       'Por qu\u00e9 este proyecto es importante para m\u00ed',
@@ -259,6 +263,8 @@ const TRANSLATIONS = {
     'up.code.desc':       'Universo Punzadas es open source. Explora el código o visita el catálogo completo.',
     'up.code.github':     'GitHub — Universo Punzadas',
     'up.code.site':       'Ver el catálogo',
+    'up.contact.title':   '¿Un proyecto parecido en mente?',
+    'up.contact.cta':     'Escríbeme',
   },
 
   en: {
@@ -290,6 +296,8 @@ const TRANSLATIONS = {
     'estratos.tag.opendata':     'Open data',
     'estratos.tag.sonification': 'Data sonification',
     'estratos.tag.installation': 'Installation',
+    'estratos.status':           'Work in progress',
+    'estratos.status.cta':       'Reach out if you\'re interested →',
 
     /* --- WHAT I'M UP TO: UNIVERSO PUNZADAS --- */
     'punzadas.tagline':      'Podcast \u2192 Data \u2192 Visualisation and search',
@@ -356,6 +364,8 @@ const TRANSLATIONS = {
     'cs.demo.title':      'Try the web demo',
     'cs.demo.p1':         'Experience CuerpoSonoro directly in your browser. The web demo uses MediaPipe.js for pose detection and the Web Audio API for sound synthesis \u2014 no installation needed.',
     'cs.demo.fallback.html': 'If the demo doesn\'t load above, you can <a href="https://cuerposonoro.art" target="_blank" rel="noopener" style="color: var(--teal); font-weight: 600;">open it in a new tab</a>.',
+    'cs.contact.title':   'Got a similar project in mind?',
+    'cs.contact.cta':     'Get in touch',
 
     /* --- Why it matters --- */
     'cs.why.title':       'Why this project matters to me',
@@ -514,6 +524,8 @@ const TRANSLATIONS = {
     'up.code.desc':       'Universo Punzadas is open source. Explore the code or visit the full catalogue.',
     'up.code.github':     'GitHub — Universo Punzadas',
     'up.code.site':       'View the catalogue',
+    'up.contact.title':   'Got a similar project in mind?',
+    'up.contact.cta':     'Get in touch',
   }
 };
 
@@ -537,6 +549,14 @@ function applyTranslations() {
   document.querySelectorAll('[data-i18n-html]').forEach(el => {
     const key = el.getAttribute('data-i18n-html');
     el.innerHTML = t(key);
+  });
+
+  // data-es/data-en -> locale-formatted number literal (e.g. "1.160" es vs
+  // "1,160" en). Intl.NumberFormat's grouping threshold for 4-digit numbers
+  // is inconsistent across browsers' ICU data, so the two variants are
+  // authored explicitly instead of computed.
+  document.querySelectorAll('[data-es][data-en]').forEach(el => {
+    el.textContent = currentLang === 'en' ? el.dataset.en : el.dataset.es;
   });
 
   // Update lang toggle buttons

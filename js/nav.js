@@ -4,9 +4,11 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   /* ----- 1. Logo letter wave (every 10s) ----- */
   const logo = document.querySelector('.nav__logo');
-  if (logo) {
+  if (logo && !prefersReducedMotion) {
     // Wrap each letter in a span, preserving the <span> child for "motto"
     const raw = logo.innerHTML;            // e.g. mara<span>motto</span>
     // Build letter spans from full text "maramotto"
@@ -37,14 +39,14 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ----- 2. Dropdown toggle (triangle click) ----- */
   document.querySelectorAll('.nav__dropdown-toggle').forEach(btn => {
     const item = btn.closest('.nav__item');
-    const dropdown = item.querySelector('.nav__dropdown');
-    const arrow = btn.querySelector('.nav__dropdown-arrow');
+
+    btn.setAttribute('aria-expanded', 'false');
 
     btn.addEventListener('click', (e) => {
       e.preventDefault();
       e.stopPropagation();
       const isOpen = item.classList.toggle('dropdown-open');
-      arrow.setAttribute('aria-expanded', isOpen);
+      btn.setAttribute('aria-expanded', isOpen);
     });
   });
 
@@ -79,8 +81,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const toggle = document.querySelector('.nav__toggle');
   const links = document.querySelector('.nav__links');
   if (toggle && links) {
+    toggle.setAttribute('aria-expanded', 'false');
     toggle.addEventListener('click', () => {
-      links.classList.toggle('active');
+      const isOpen = links.classList.toggle('active');
+      toggle.setAttribute('aria-expanded', isOpen);
     });
   }
 

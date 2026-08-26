@@ -6,7 +6,7 @@ translationKey: mama-quiero-ser-artista
 tags: ["note"]
 imageFile: "cover.svg"
 imageRatio: square
-excerpt: "The first post of this blog"
+excerpt: "At 37, with no art-world background or contacts, I'm deciding to pursue it anyway. I don't know where it'll lead — I just know it's what makes me feel alive."
 ---
 
 **Yes, I want to be an artist.** And no, I don't want to do anything else

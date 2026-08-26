@@ -6,7 +6,7 @@ translationKey: mama-quiero-ser-artista
 tags: ["nota"]
 imageFile: "cover.svg"
 imageRatio: square
-excerpt: "El primer post de este blog"
+excerpt: "A los 37, sin estudios de arte ni contactos en la industria, decido dedicarme a ello de todas formas. No sé a dónde me llevará — solo sé que es lo que me hace sentir viva."
 ---
 
 **Sí, quiero ser artista.** Y no, no quiero hacer otra cosa con mi tiempo y mi
