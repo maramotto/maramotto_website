@@ -1,5 +1,5 @@
 <footer class="footer">
   &copy; 2026 <span>maramotto</span>.com &mdash;
-  {% if clientI18n %}<span data-i18n="footer.text">Hecho con arte y código</span>{% else %}<span>{{ "Hecho con arte y código" if lang == "es" else "Made with art and code" }}</span>{% endif %}
-  {% if not isHome %}<a href="/"{% if clientI18n %} data-i18n="footer.home"{% endif %}>{{ "Inicio" if (clientI18n or lang == "es") else "Home" }}</a>{% endif %}
+  <span>{{ "footer.text" | t(lang) }}</span>
+  {% if not isHome %}<a href="{{ '/en/' if lang == 'en' else '/' }}">{{ "footer.home" | t(lang) }}</a>{% endif %}
 </footer>
