@@ -7,6 +7,7 @@ docs/
 brand-review.md
 website-audit.md
 .claude/
+.superpowers/
 
 node_modules/
 blog/node_modules/

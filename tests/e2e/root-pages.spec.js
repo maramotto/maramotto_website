@@ -37,16 +37,16 @@ const PAGES = [
   },
 ];
 
-for (const { es, en, titleEs, titleEn, h1, hasHomeLink, translatedSelector } of PAGES) {
+for (const { es, en, titleEs, titleEn, h1, h1Es, h1En, hasHomeLink, translatedSelector } of PAGES) {
   test.describe(`Root page ${es}`, () => {
-    for (const [url, title, lang] of [
-      [es, titleEs, "es"],
-      [en, titleEn, "en"],
+    for (const [url, title, expectedH1, lang] of [
+      [es, titleEs, h1Es || h1, "es"],
+      [en, titleEn, h1En || h1, "en"],
     ]) {
       test(`${lang}: loads with correct title, heading, lang, nav, footer and hreflang`, async ({ page }) => {
         await page.goto(url);
         await expect(page).toHaveTitle(title);
-        await expect(page.locator("h1")).toHaveText(h1);
+        await expect(page.locator("h1")).toHaveText(expectedH1);
         await expect(page.locator("html")).toHaveAttribute("lang", lang);
         await expect(page.locator(".nav__logo")).toBeVisible();
         await expect(page.locator("footer.footer")).toBeVisible();
@@ -70,10 +70,10 @@ for (const { es, en, titleEs, titleEn, h1, hasHomeLink, translatedSelector } of 
       });
     }
 
-    test("project dropdown links stay in the same language", async ({ page }) => {
+    test("project dropdown links stay in the same language, except Universo Punzadas (Spanish-only)", async ({ page }) => {
       await page.goto(en);
       await expect(page.locator(".nav__dropdown a[href='/en/cuerposonoro.html']")).toHaveCount(1);
-      await expect(page.locator(".nav__dropdown a[href='/en/universo-punzadas.html']")).toHaveCount(1);
+      await expect(page.locator(".nav__dropdown a[href='/universo-punzadas.html']")).toHaveCount(1);
     });
 
     test("language toggle navigates to the real English URL", async ({ page }) => {

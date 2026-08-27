@@ -1,0 +1,24 @@
+---
+layout: layouts/base.njk
+fullTitle: true
+eleventyExcludeFromCollections: true
+pagination:
+  data: languages
+  size: 1
+  alias: lang
+permalink: "{{ '/en/legal-notice.html' if lang == 'en' else '/aviso-legal.html' }}"
+eleventyComputed:
+  esUrl: "/aviso-legal.html"
+  enUrl: "/en/legal-notice.html"
+  ogLocaleAlternate: "{{ 'es_ES' if lang == 'en' else 'en_GB' }}"
+---
+<section class="section section--white">
+  <div class="container--narrow legal-page">
+    <h1 class="section-title">{{ "legal.title" | t(lang) }}</h1>
+    <p class="about-text">{{ "legal.intro" | t(lang) }}</p>
+    <h2>{{ "legal.owner.title" | t(lang) }}</h2>
+    <p class="about-text">{{ "legal.owner.body" | t(lang) }}</p>
+    <h2>{{ "legal.purpose.title" | t(lang) }}</h2>
+    <p class="about-text">{{ "legal.purpose.body" | t(lang) }}</p>
+  </div>
+</section>

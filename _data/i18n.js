@@ -4,11 +4,9 @@
 module.exports = {
   es: {
     /* --- NAV --- */
-    'nav.projects':       'En qu\u00e9 ando',
+    'nav.projects':       'Proyectos',
     'nav.blog':           'Blog',
-    'nav.workshops':      'Talleres',
-    'nav.about':          'Sobre m\u00ed',
-    'nav.contact':        'Contacto',
+    'nav.contact':        'Cont\u00e1ctame',
     'nav.home':           'Inicio',
 
     /* --- INDEX: HERO --- */
@@ -54,16 +52,34 @@ module.exports = {
     /* --- SKILLS --- */
     'skills.label':           'Lo que hago',
     'skills.title':           'Multidisciplinar por naturaleza',
-    'skill.code.title':       'C\u00f3digo y Software',
+    'skill.code.title':       'C\u00f3digo y software',
     'skill.code.desc':        'Desarrollo de software e IA, aplicaciones web, an\u00e1lisis de datos, creative coding.',
-    'skill.music.title':      'M\u00fasica y Audio',
+    'skill.music.title':      'M\u00fasica y audio',
     'skill.music.desc':       'Composici\u00f3n, producci\u00f3n musical, ingenier\u00eda de audio para podcasts.',
     'skill.techart.title':    'Instalaciones tech-art',
     'skill.techart.desc':     'Objetos e instalaciones que convierten datos en sonido y movimiento.',
-    'skill.visual.title':     'Arte Visual',
+    'skill.visual.title':     'Arte visual',
     'skill.visual.desc':      'Macrofotograf\u00eda, pintura, collage.',
     'skill.workshops.title':  'Talleres',
     'skill.workshops.desc':   'Talleres presenciales y online que fomentan la creatividad en adultos.',
+
+    /* --- LEGAL PAGE --- */
+    'legal.title':         'Aviso legal',
+    'legal.intro':         'Este sitio es un proyecto personal de Mara Crespo.',
+    'legal.owner.title':   'Titular',
+    'legal.owner.body':    'Mara Crespo, contacto: hello@maramotto.com.',
+    'legal.purpose.title': 'Objeto',
+    'legal.purpose.body':  'maramotto.com presenta proyectos personales de arte y tecnolog\u00eda, y ofrece informaci\u00f3n de contacto para talleres y colaboraciones.',
+
+    /* --- PRIVACY PAGE --- */
+    'privacy.title':           'Privacidad',
+    'privacy.intro':           'Este sitio no usa cookies ni recopila datos personales m\u00e1s all\u00e1 de lo estrictamente necesario para funcionar.',
+    'privacy.analytics.title': 'Anal\u00edtica',
+    'privacy.analytics.body':  'Actualmente este sitio no usa ninguna herramienta de anal\u00edtica. Est\u00e1 previsto incorporar en el futuro Umami, una herramienta de anal\u00edtica sin cookies y sin datos personales, alojada en servidor propio, sin compartir datos con terceros. Esta p\u00e1gina se actualizar\u00e1 cuando est\u00e9 activa.',
+    'privacy.storage.title':   'Almacenamiento',
+    'privacy.storage.body':    'Este sitio no guarda nada en tu navegador: ni cookies, ni almacenamiento local.',
+    'privacy.embeds.title':    'Contenido incrustado',
+    'privacy.embeds.body':     'Las páginas de CuerpoSonoro y Universo Punzadas incrustan contenido de cuerposonoro.art y universopunzadas.com, ambos también proyectos de Mara. Cargar esas páginas transmite tu IP a esos dominios. La demo de CuerpoSonoro funciona en tu propio navegador — no se sube nada a ningún servidor.',
 
     /* --- CONTACT --- */
     'contact.label':      'Contacto',
@@ -73,6 +89,8 @@ module.exports = {
 
     /* --- FOOTER --- */
     'footer.text':        'Hecho con arte y c\u00f3digo',
+    'footer.legal':       'Aviso legal',
+    'footer.privacy':     'Privacidad',
 
     /* ============================
        CUERPOSONORO PROJECT PAGE
@@ -205,6 +223,7 @@ module.exports = {
     'up.stat.authors':    'autoras y autores citados',
     'up.stat.mentions':   'menciones extraídas',
     'up.tagline':         '<em>Punzadas Sonoras</em> es mi podcast favorito: me fascina cómo Inés y Paula eligen los temas y cómo los abordan. Siempre quise una biblioteca con las obras, autoras y referencias de sus más de 100 episodios, así que la he construido.',
+    'up.disclaimer':      'Proyecto independiente de admiradora, sin relación oficial con <em>Punzadas Sonoras</em> ni con sus autoras.',
     'up.tag.data':        'Datos',
     'up.tag.search':      'Buscador',
     'up.tag.dataviz':     'Visualización de datos',
@@ -265,11 +284,9 @@ module.exports = {
 
   en: {
     /* --- NAV --- */
-    'nav.projects':       'What I\'m up to',
+    'nav.projects':       'Projects',
     'nav.blog':           'Blog',
-    'nav.workshops':      'Workshops',
-    'nav.about':          'About',
-    'nav.contact':        'Contact',
+    'nav.contact':        'Contact me',
     'nav.home':           'Home',
 
     /* --- INDEX: HERO --- */
@@ -315,16 +332,34 @@ module.exports = {
     /* --- SKILLS --- */
     'skills.label':           'What I do',
     'skills.title':           'Multidisciplinary by nature',
-    'skill.code.title':       'Code & Software',
+    'skill.code.title':       'Code and software',
     'skill.code.desc':        'Software and AI development, web applications, data analysis, creative coding.',
-    'skill.music.title':      'Music & Audio',
+    'skill.music.title':      'Music and audio',
     'skill.music.desc':       'Composition, music production, audio engineering for podcasts.',
     'skill.techart.title':    'Tech-art installations',
     'skill.techart.desc':     'Objects and installations that turn data into sound and movement.',
-    'skill.visual.title':     'Visual Art',
+    'skill.visual.title':     'Visual art',
     'skill.visual.desc':      'Macro photography, painting, collage.',
     'skill.workshops.title':  'Workshops',
     'skill.workshops.desc':   'In-person and online workshops that foster creativity in adults.',
+
+    /* --- LEGAL PAGE --- */
+    'legal.title':         'Legal notice',
+    'legal.intro':         'This site is a personal project by Mara Crespo.',
+    'legal.owner.title':   'Owner',
+    'legal.owner.body':    'Mara Crespo, contact: hello@maramotto.com.',
+    'legal.purpose.title': 'Purpose',
+    'legal.purpose.body':  'maramotto.com presents personal art and technology projects, and provides contact information for workshops and collaborations.',
+
+    /* --- PRIVACY PAGE --- */
+    'privacy.title':           'Privacy',
+    'privacy.intro':           'This site does not use cookies or collect personal data beyond what is strictly necessary to function.',
+    'privacy.analytics.title': 'Analytics',
+    'privacy.analytics.body':  'This site does not currently use any analytics tool. I plan to add Umami — a self-hosted, cookie-free analytics tool that collects no personal data and shares nothing with third parties. This page will be updated once it is active.',
+    'privacy.storage.title':   'Storage',
+    'privacy.storage.body':    'This site stores nothing in your browser — no cookies, no local storage.',
+    'privacy.embeds.title':    'Embedded content',
+    'privacy.embeds.body':     "The CuerpoSonoro and Universo Punzadas pages embed content from cuerposonoro.art and universopunzadas.com, both also Mara's own projects. Loading those pages transmits your IP to those domains. The CuerpoSonoro demo runs in your own browser — nothing is uploaded to any server.",
 
     /* --- CONTACT --- */
     'contact.label':      'Contact',
@@ -334,6 +369,8 @@ module.exports = {
 
     /* --- FOOTER --- */
     'footer.text':        'Made with art and code',
+    'footer.legal':       'Legal notice',
+    'footer.privacy':     'Privacy',
 
     /* ============================
        CUERPOSONORO PROJECT PAGE
@@ -452,7 +489,7 @@ module.exports = {
     'cs.code.title':      'Explore the code',
     'cs.code.desc':       'CuerpoSonoro is open source. Dive into the code, run it locally, or build on top of it.',
     'cs.code.github':     'GitHub \u2014 CuerpoSonoro',
-    'cs.code.demo':       'Live Demo',
+    'cs.code.demo':       'Live demo',
 
     /* --- CS Footer --- */
     'footer.home':        'Home',
@@ -466,6 +503,7 @@ module.exports = {
     'up.stat.authors':    'authors cited',
     'up.stat.mentions':   'mentions extracted',
     'up.tagline':         '<em>Punzadas Sonoras</em> is my favourite podcast: I\'m fascinated by how Inés and Paula choose their subjects and the way they get into them. I always wanted a library of the works, authors and references from their 100-plus episodes, so I built one.',
+    'up.disclaimer':      'An independent fan project, unaffiliated with <em>Punzadas Sonoras</em> or its hosts.',
     'up.tag.data':        'Data',
     'up.tag.search':      'Search',
     'up.tag.dataviz':     'Data visualisation',

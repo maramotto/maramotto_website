@@ -1,5 +1,7 @@
 <footer class="footer">
   &copy; 2026 <span>maramotto</span>.com &mdash;
   <span>{{ "footer.text" | t(lang) }}</span>
-  {% if not isHome %}<a href="{{ '/en/' if lang == 'en' else '/' }}">{{ "footer.home" | t(lang) }}</a>{% endif %}
+  {% if not isHome %}&middot; <a href="{{ '/en/' if lang == 'en' else '/' }}">{{ "footer.home" | t(lang) }}</a>{% endif %}
+  &middot; <a href="{{ '/en/legal-notice.html' if lang == 'en' else '/aviso-legal.html' }}">{{ "footer.legal" | t(lang) }}</a>
+  &middot; <a href="{{ '/en/privacy.html' if lang == 'en' else '/privacidad.html' }}">{{ "footer.privacy" | t(lang) }}</a>
 </footer>

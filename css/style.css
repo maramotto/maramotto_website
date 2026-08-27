@@ -10,21 +10,32 @@
   --yellow: #FFD93D;
   --yellow-light: #FFF3C4;
   --yellow-muted: #E8CC4A;
+  --yellow-deep: #8A6A00; /* únicamente para texto sobre fondos claros (cream/white) — --yellow normal falla contraste ahí, ver F-001 */
   --purple: #7B2D8E;
   --purple-dark: #5C1F6A;
   --purple-light: #F3E8F9;
   --teal: #1E6B7B;
   --teal-dark: #155460;
   --teal-light: #E6F3F5;
-  --blue-light: #E8F4FD;
-  --blue: #5BA4CF;
-  --blue-dark: #3A7CA5;
   --dark: #1A1A2E;
   --text: #2D2D3A;
   --text-light: #6B6B80;
   --white: #FFFEF8;
   --cream: #FDF5E6;
   --cream-dark: #F7ECDA;
+
+  /* Type scale — hand-tuned, roughly 1.11-1.17 ratio at the small end
+     widening to ~1.33-1.4 at display sizes (not a fixed modular ratio).
+     Introducida en B-4; migrar el resto de la hoja de estilos "según se
+     toque", no de golpe (ver website-audit.md F-017). */
+  --fs-xs: 0.8rem;
+  --fs-sm: 0.9rem;
+  --fs-base: 1rem;
+  --fs-md: 1.15rem;
+  --fs-lg: 1.35rem;
+  --fs-xl: 1.8rem;
+  --fs-2xl: 2.5rem;
+  --fs-3xl: 3.5rem;
 }
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -74,6 +85,23 @@ a { color: inherit; }
   color: var(--dark);
   margin-bottom: 1rem;
   letter-spacing: -0.02em;
+}
+
+/* --- Legal pages (aviso legal / privacidad) --- */
+.legal-page h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: var(--fs-lg, 1.35rem);
+  font-weight: 700;
+  color: var(--dark);
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* .about-text defaults to white text for use on dark/purple sections
+   (see the About section below). These pages sit on .section--white,
+   so keep the type scale but override the color to stay readable. */
+.legal-page .about-text {
+  color: var(--dark);
 }
 
 /* --- Buttons --- */
@@ -436,7 +464,7 @@ a { color: inherit; }
   font-family: 'Syne', sans-serif;
   font-size: clamp(2.2rem, 8vw, 5.5rem);
   font-weight: 800;
-  color: var(--yellow);
+  color: var(--yellow-deep);
   line-height: 1;
   margin-bottom: 1rem;
   letter-spacing: -0.03em;
@@ -492,7 +520,7 @@ a { color: inherit; }
 }
 
 .card {
-  background: var(--white);
+  background: var(--cream);
   border-radius: 20px;
   padding: 2.5rem 2rem;
   transition: all 0.35s;
@@ -730,10 +758,18 @@ a { color: inherit; }
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
 }
 
+/* Interim fix (F-019): box matched to .skill-card__img so baselines
+   align across the skills grid. Real fix still needs two new SVGs
+   (tech-art, talleres) matching skill-code.svg's style — art pending,
+   F-019 not fully closed. */
 .skill-card__emoji {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.2rem;
+  font-size: var(--fs-2xl);
 }
 
 .skill-card__img {
@@ -938,6 +974,16 @@ a { color: inherit; }
   line-height: 1.65;
 }
 
+.project-hero__disclaimer {
+  font-size: var(--fs-xs);
+  color: rgba(255, 255, 255, 0.85);
+  font-style: italic;
+  max-width: 520px;
+  margin-bottom: 1.5rem;
+}
+
+.project-hero__disclaimer em { font-style: normal; }
+
 .project-hero .tags {
   position: relative;
   z-index: 1;
@@ -945,7 +991,7 @@ a { color: inherit; }
 
 .project-hero .tag {
   background: var(--teal-dark);
-  color: var(--yellow);
+  color: var(--white);
   border-color: rgba(255, 255, 255, 0.15);
 }
 
