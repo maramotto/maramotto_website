@@ -13,12 +13,12 @@ eleventyComputed:
   ogLocaleAlternate: "{{ 'es_ES' if lang == 'en' else 'en_GB' }}"
 ---
 <section class="section section--white">
-  <div class="container--narrow">
-    <h1>{{ "legal.title" | t(lang) }}</h1>
-    <p>{{ "legal.intro" | t(lang) }}</p>
+  <div class="container--narrow legal-page">
+    <h1 class="section-title">{{ "legal.title" | t(lang) }}</h1>
+    <p class="about-text">{{ "legal.intro" | t(lang) }}</p>
     <h2>{{ "legal.owner.title" | t(lang) }}</h2>
-    <p>{{ "legal.owner.body" | t(lang) }}</p>
+    <p class="about-text">{{ "legal.owner.body" | t(lang) }}</p>
     <h2>{{ "legal.purpose.title" | t(lang) }}</h2>
-    <p>{{ "legal.purpose.body" | t(lang) }}</p>
+    <p class="about-text">{{ "legal.purpose.body" | t(lang) }}</p>
   </div>
 </section>

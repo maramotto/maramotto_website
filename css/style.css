@@ -87,6 +87,23 @@ a { color: inherit; }
   letter-spacing: -0.02em;
 }
 
+/* --- Legal pages (aviso legal / privacidad) --- */
+.legal-page h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: var(--fs-lg, 1.35rem);
+  font-weight: 700;
+  color: var(--dark);
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* .about-text defaults to white text for use on dark/purple sections
+   (see the About section below). These pages sit on .section--white,
+   so keep the type scale but override the color to stay readable. */
+.legal-page .about-text {
+  color: var(--dark);
+}
+
 /* --- Buttons --- */
 .btn {
   display: inline-flex;
@@ -959,11 +976,13 @@ a { color: inherit; }
 
 .project-hero__disclaimer {
   font-size: var(--fs-xs);
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(255, 255, 255, 0.85);
   font-style: italic;
   max-width: 520px;
   margin-bottom: 1.5rem;
 }
+
+.project-hero__disclaimer em { font-style: normal; }
 
 .project-hero .tags {
   position: relative;

@@ -93,8 +93,10 @@ module.exports = {
     'privacy.intro':           'Este sitio no usa cookies ni recopila datos personales m\u00e1s all\u00e1 de lo estrictamente necesario para funcionar.',
     'privacy.analytics.title': 'Anal\u00edtica',
     'privacy.analytics.body':  'Actualmente este sitio no usa ninguna herramienta de anal\u00edtica. Est\u00e1 previsto incorporar en el futuro Umami, una herramienta de anal\u00edtica sin cookies y sin datos personales, alojada en servidor propio, sin compartir datos con terceros. Esta p\u00e1gina se actualizar\u00e1 cuando est\u00e9 activa.',
-    'privacy.storage.title':   'Almacenamiento local',
-    'privacy.storage.body':    'El sitio guarda tu idioma preferido en el almacenamiento local del navegador (localStorage). No es una cookie y no sale de tu navegador.',
+    'privacy.storage.title':   'Almacenamiento',
+    'privacy.storage.body':    'Este sitio no guarda nada en tu navegador: ni cookies, ni almacenamiento local.',
+    'privacy.embeds.title':    'Contenido incrustado',
+    'privacy.embeds.body':     'Las páginas de CuerpoSonoro y Universo Punzadas incrustan contenido de cuerposonoro.art y universopunzadas.com, ambos también proyectos de Mara. Cargar esas páginas transmite tu IP a esos dominios. La demo de CuerpoSonoro funciona en tu propio navegador — no se sube nada a ningún servidor.',
 
     /* --- CONTACT --- */
     'contact.label':      'Contacto',
@@ -377,9 +379,9 @@ module.exports = {
 
     /* --- LEGAL PAGE --- */
     'legal.title':         'Legal notice',
-    'legal.intro':         'This site is a personal project by Mara <<PENDIENTE: surname>>.',
+    'legal.intro':         'This site is a personal project by Mara <<PENDING: surname>>.',
     'legal.owner.title':   'Owner',
-    'legal.owner.body':    'Mara <<PENDIENTE: surname>>, contact: hello@maramotto.com. <<PENDIENTE: tax ID if applicable, address if in-person workshops require it?>>',
+    'legal.owner.body':    'Mara <<PENDING: surname>>, contact: hello@maramotto.com. <<PENDING: tax ID if applicable, address if in-person workshops require it?>>',
     'legal.purpose.title': 'Purpose',
     'legal.purpose.body':  'maramotto.com presents personal art and technology projects, and provides contact information for workshops and collaborations.',
 
@@ -387,9 +389,11 @@ module.exports = {
     'privacy.title':           'Privacy',
     'privacy.intro':           'This site does not use cookies or collect personal data beyond what is strictly necessary to function.',
     'privacy.analytics.title': 'Analytics',
-    'privacy.analytics.body':  'This site does not currently use any analytics tool. We plan to add Umami, a cookie-free analytics tool that collects no personal data, self-hosted, without sharing data with third parties, in the future. This page will be updated once it is active.',
-    'privacy.storage.title':   'Local storage',
-    'privacy.storage.body':    'The site stores your preferred language in the browser\'s local storage (localStorage). It is not a cookie and never leaves your browser.',
+    'privacy.analytics.body':  'This site does not currently use any analytics tool. I plan to add Umami — a self-hosted, cookie-free analytics tool that collects no personal data and shares nothing with third parties. This page will be updated once it is active.',
+    'privacy.storage.title':   'Storage',
+    'privacy.storage.body':    'This site stores nothing in your browser — no cookies, no local storage.',
+    'privacy.embeds.title':    'Embedded content',
+    'privacy.embeds.body':     "The CuerpoSonoro and Universo Punzadas pages embed content from cuerposonoro.art and universopunzadas.com, both also Mara's own projects. Loading those pages transmits your IP to those domains. The CuerpoSonoro demo runs in your own browser — nothing is uploaded to any server.",
 
     /* --- CONTACT --- */
     'contact.label':      'Contact',
