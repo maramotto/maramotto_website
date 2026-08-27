@@ -21,7 +21,7 @@
       </ul>
     </li>
     <li><a href="{{ '/blog/en/' if lang == 'en' else '/blog/' }}">{{ "nav.blog" | t(lang) }}</a></li>
-    <li><a href="{{ home }}#talleres">{{ "nav.workshops" | t(lang) }}</a></li>
+    <li><a href="{{ '/en/workshops.html' if lang == 'en' else '/talleres.html' }}">{{ "nav.workshops" | t(lang) }}</a></li>
     <li><a href="{{ home }}#contact">{{ "nav.contact" | t(lang) }}</a></li>
     <li><a href="{{ home }}#about">{{ "nav.about" | t(lang) }}</a></li>
     <li>

@@ -115,6 +115,7 @@ isHome: true
           <span class="skill-card__emoji" aria-hidden="true">&#128736;&#65039;</span>
           <h3>{{ "skill.workshops.title" | t(lang) }}</h3>
           <p>{{ "skill.workshops.desc" | t(lang) }}</p>
+          <a href="{{ '/en/workshops.html' if lang == 'en' else '/talleres.html' }}" class="card__link">{{ "skill.workshops.cta" | t(lang) }}</a>
         </div>
       </div>
     </div>

@@ -64,6 +64,7 @@ module.exports = {
     'skill.visual.desc':      'Macrofotograf\u00eda, pintura, collage.',
     'skill.workshops.title':  'Talleres',
     'skill.workshops.desc':   'Talleres presenciales y online que fomentan la creatividad en adultos.',
+    'skill.workshops.cta':    'Ver talleres →',
 
     /* --- WORKSHOPS PAGE --- */
     'workshops.label':         'Talleres',
@@ -339,6 +340,7 @@ module.exports = {
     'skill.visual.desc':      'Macro photography, painting, collage.',
     'skill.workshops.title':  'Workshops',
     'skill.workshops.desc':   'In-person and online workshops that foster creativity in adults.',
+    'skill.workshops.cta':    'See workshops →',
 
     /* --- WORKSHOPS PAGE --- */
     'workshops.label':         'Workshops',
