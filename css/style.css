@@ -464,7 +464,7 @@ a { color: inherit; }
   font-family: 'Syne', sans-serif;
   font-size: clamp(2.2rem, 8vw, 5.5rem);
   font-weight: 800;
-  color: var(--yellow-deep);
+  color: var(--yellow);
   line-height: 1;
   margin-bottom: 1rem;
   letter-spacing: -0.03em;
@@ -558,20 +558,6 @@ a { color: inherit; }
   border-color: transparent;
   box-shadow: none;
 }
-
-.card__icon {
-  width: 50px;
-  height: 50px;
-  border-radius: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.card__icon--purple { background: var(--purple-light); }
-.card__icon--yellow { background: var(--yellow-light); }
 
 .card__img {
   width: 56px;
@@ -756,20 +742,6 @@ a { color: inherit; }
 .skill-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
-}
-
-/* Interim fix (F-019): box matched to .skill-card__img so baselines
-   align across the skills grid. Real fix still needs two new SVGs
-   (tech-art, talleres) matching skill-code.svg's style — art pending,
-   F-019 not fully closed. */
-.skill-card__emoji {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 80px;
-  height: 80px;
-  margin: 0 auto 1.2rem;
-  font-size: var(--fs-2xl);
 }
 
 .skill-card__img {

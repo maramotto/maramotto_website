@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none"
+  stroke="#7B2D8E" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Control panel -->
+  <rect x="42" y="58" width="116" height="84" rx="14"/>
+  <!-- Knob 1 -->
+  <circle cx="78" cy="100" r="19"/>
+  <line x1="78" y1="100" x2="78" y2="86" stroke-width="4"/>
+  <!-- Knob 2 -->
+  <circle cx="122" cy="100" r="19"/>
+  <line x1="122" y1="100" x2="132" y2="90" stroke-width="4"/>
+  <!-- Status light -->
+  <circle cx="136" cy="72" r="5" fill="#7B2D8E" stroke="none" opacity="0.75"/>
+  <!-- Signal rising from the panel, becoming sound/movement -->
+  <path d="M70,50 Q70,36 79,29" stroke-width="3" opacity="0.5"/>
+  <path d="M100,50 Q100,30 100,18" stroke-width="3.5" opacity="0.65"/>
+  <path d="M130,50 Q130,36 121,29" stroke-width="3" opacity="0.5"/>
+  <!-- Base -->
+  <path d="M60,142 L60,156 Q60,162 66,162 L134,162 Q140,162 140,156 L140,142"/>
+</svg>
