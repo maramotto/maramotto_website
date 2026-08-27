@@ -1,9 +1,6 @@
-{% if translationKey %}
-  {% set esHref = collections.posts | translationUrl(translationKey, "es") %}
-  {% set enHref = collections.posts | translationUrl(translationKey, "en") %}
-{% else %}
-  {% set esHref = "/blog/" %}
-  {% set enHref = "/blog/en/" %}
+{% if not clientI18n %}
+  {% set esHref = collections.posts | translationUrl(translationKey, "es") if translationKey else "/blog/" %}
+  {% set enHref = collections.posts | translationUrl(translationKey, "en") if translationKey else "/blog/en/" %}
 {% endif %}
 <nav class="nav">
   <a href="/" class="nav__logo">maramotto</a>
@@ -11,13 +8,32 @@
     <span></span><span></span><span></span>
   </button>
   <ul class="nav__links">
-    <li><a href="/#projects">{{ "En qué ando" if lang == "es" else "Projects" }}</a></li>
-    <li><a href="/blog/{{ 'en/' if lang == 'en' }}">Blog</a></li>
-    <li><a href="/#contact">{{ "Contacto" if lang == "es" else "Contact" }}</a></li>
+    {% if not isHome %}
+    <li><a href="/"{% if clientI18n %} data-i18n="nav.home"{% endif %}>{{ "Inicio" if (clientI18n or lang == "es") else "Home" }}</a></li>
+    {% endif %}
+    <li class="nav__item">
+      <a href="/#projects"{% if clientI18n %} data-i18n="nav.projects"{% endif %}>{{ "En qué ando" if (clientI18n or lang == "es") else "Projects" }}</a>
+      <button class="nav__dropdown-toggle" aria-label="Toggle projects list">
+        <span class="nav__dropdown-arrow">&#9660;</span>
+      </button>
+      <ul class="nav__dropdown">
+        <li><a href="/cuerposonoro.html">CuerpoSonoro</a></li>
+        <li><a href="/universo-punzadas.html">Universo Punzadas</a></li>
+      </ul>
+    </li>
+    <li><a href="{{ '/blog/' if clientI18n else ('/blog/en/' if lang == 'en' else '/blog/') }}"{% if clientI18n %} data-i18n="nav.blog"{% endif %}>Blog</a></li>
+    <li><a href="/#talleres"{% if clientI18n %} data-i18n="nav.workshops"{% endif %}>{{ "Talleres" if (clientI18n or lang == "es") else "Workshops" }}</a></li>
+    <li><a href="/#contact"{% if clientI18n %} data-i18n="nav.contact"{% endif %}>{{ "Contacto" if (clientI18n or lang == "es") else "Contact" }}</a></li>
+    <li><a href="/#about"{% if clientI18n %} data-i18n="nav.about"{% endif %}>{{ "Sobre mí" if (clientI18n or lang == "es") else "About" }}</a></li>
     <li>
       <div class="lang-toggle">
-        <a class="lang-toggle__btn{{ ' active' if lang == 'es' }}" href="{{ esHref or '/blog/' }}">ES</a>
-        <a class="lang-toggle__btn{{ ' active' if lang == 'en' }}" href="{{ enHref or '/blog/en/' }}">EN</a>
+        {% if clientI18n %}
+        <button class="lang-toggle__btn" data-lang="es">ES</button>
+        <button class="lang-toggle__btn" data-lang="en">EN</button>
+        {% else %}
+        <a class="lang-toggle__btn{{ ' active' if lang == 'es' }}" href="{{ esHref }}">ES</a>
+        <a class="lang-toggle__btn{{ ' active' if lang == 'en' }}" href="{{ enHref }}">EN</a>
+        {% endif %}
       </div>
     </li>
   </ul>

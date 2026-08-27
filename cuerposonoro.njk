@@ -1,29 +1,13 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CuerpoSonoro — Arte Interactivo | Movimiento Corporal y Sonido en Tiempo Real</title>
-  <meta name="description" content="CuerpoSonoro: arte interactivo que transforma el movimiento del cuerpo humano en sonido en tiempo real. Un proyecto de creative coding y tecnología creativa por maramotto, en la intersección del arte, la tecnología y el cuerpo.">
-  <link rel="canonical" href="https://maramotto.com/cuerposonoro.html">
-  <!-- Open Graph -->
-  <meta property="og:type" content="article">
-  <meta property="og:title" content="CuerpoSonoro — Arte Interactivo | Movimiento Corporal y Sonido en Tiempo Real">
-  <meta property="og:description" content="Arte interactivo que transforma el movimiento del cuerpo humano en sonido en tiempo real. Creative coding y tecnología creativa por maramotto.">
-  <meta property="og:url" content="https://maramotto.com/cuerposonoro.html">
-  <meta property="og:site_name" content="maramotto">
-  <meta property="og:locale" content="es_ES">
-  <meta property="og:locale:alternate" content="en_GB">
-  <meta property="og:image" content="https://maramotto.com/img/cuerposonoro-visual.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="CuerpoSonoro — Arte Interactivo | Movimiento Corporal y Sonido en Tiempo Real">
-  <meta name="twitter:description" content="Arte interactivo que transforma el movimiento del cuerpo humano en sonido en tiempo real. Creative coding y tecnología creativa por maramotto.">
-  <meta name="twitter:image" content="https://maramotto.com/img/cuerposonoro-visual.png">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="icon" href="/favicon.ico" sizes="32x32">
-  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
-  <meta name="theme-color" content="#1E6B7B">
-  <!-- Structured Data -->
+---
+layout: layouts/root-page.njk
+permalink: /cuerposonoro.html
+title: "CuerpoSonoro — Arte Interactivo | Movimiento Corporal y Sonido en Tiempo Real"
+description: "CuerpoSonoro: arte interactivo que transforma el movimiento del cuerpo humano en sonido en tiempo real. Un proyecto de creative coding y tecnología creativa por maramotto, en la intersección del arte, la tecnología y el cuerpo."
+socialDescription: "Arte interactivo que transforma el movimiento del cuerpo humano en sonido en tiempo real. Creative coding y tecnología creativa por maramotto."
+ogType: article
+image: /img/cuerposonoro-visual.png
+themeColor: "#1E6B7B"
+structuredData: |
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -44,43 +28,7 @@
     "keywords": ["interactive art", "creative coding", "body interaction", "real-time sound", "computer vision", "arte interactivo", "tecnología creativa"]
   }
   </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-  <!-- ======= NAV ======= -->
-  <nav class="nav">
-    <a href="index.html" class="nav__logo">maramotto</a>
-    <button class="nav__toggle" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav__links">
-      <li><a href="index.html" data-i18n="nav.home">Inicio</a></li>
-      <li class="nav__item">
-        <a href="index.html#projects" data-i18n="nav.projects">En qu&eacute; ando</a>
-        <button class="nav__dropdown-toggle" aria-label="Toggle projects list">
-          <span class="nav__dropdown-arrow">&#9660;</span>
-        </button>
-        <ul class="nav__dropdown">
-          <li><a href="cuerposonoro.html">CuerpoSonoro</a></li>
-          <li><a href="universo-punzadas.html">Universo Punzadas</a></li>
-        </ul>
-      </li>
-      <li><a href="blog/" data-i18n="nav.blog">Blog</a></li>
-      <li><a href="index.html#talleres" data-i18n="nav.workshops">Talleres</a></li>
-      <li><a href="index.html#contact" data-i18n="nav.contact">Contacto</a></li>
-      <li><a href="index.html#about" data-i18n="nav.about">Sobre m&iacute;</a></li>
-      <li>
-        <div class="lang-toggle">
-          <button class="lang-toggle__btn" data-lang="es">ES</button>
-          <button class="lang-toggle__btn" data-lang="en">EN</button>
-        </div>
-      </li>
-    </ul>
-  </nav>
+---
 
   <!-- ======= PROJECT HERO ======= -->
   <section class="project-hero">
@@ -91,7 +39,7 @@
 
     <div class="project-hero__inner">
       <div class="project-hero__visual">
-        <img src="img/cuerposonoro-visual.svg" alt="CuerpoSonoro &mdash; Body becomes sound" class="project-hero__img">
+        <img src="/img/cuerposonoro-visual.svg" alt="CuerpoSonoro &mdash; Body becomes sound" class="project-hero__img">
       </div>
       <div class="project-hero__content">
         <h1 class="project-hero__title">CuerpoSonoro</h1>
@@ -370,14 +318,3 @@
       </div>
     </div>
   </section>
-
-  <!-- ======= FOOTER ======= -->
-  <footer class="footer">
-    &copy; 2026 <span>maramotto</span>.com &mdash; <span data-i18n="footer.text">Hecho con arte y c&oacute;digo</span>
-    <a href="index.html" data-i18n="footer.home">Inicio</a>
-  </footer>
-
-  <script src="js/i18n.js"></script>
-  <script src="js/nav.js"></script>
-</body>
-</html>
