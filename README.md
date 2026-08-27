@@ -8,25 +8,29 @@ My personal space on the internet — built with [Eleventy](https://www.11ty.dev
 .
 ├── .eleventy.js              # Eleventy config (dir.input is the repo root)
 ├── .eleventyignore            # docs/scratch files Eleventy must not render as pages
-├── index.njk                  # homepage (hero, projects, about, contact)
-├── cuerposonoro.njk            # project page: CuerpoSonoro
-├── universo-punzadas.njk       # project page: Universo Punzadas
+├── index.njk / cuerposonoro.njk / universo-punzadas.njk   # main pages, paginated es/en
+├── index.11tydata.js / cuerposonoro.11tydata.js / universo-punzadas.11tydata.js
+│                               # per-page title/description/structuredData, one file
+│                               # per language since front matter can't vary by lang
+├── _data/
+│   ├── i18n.js                 # all translated strings, es + en, keyed by dot-notation
+│   └── languages.js             # ["es", "en"] — what the main pages paginate over
 ├── _includes/
 │   ├── layouts/
 │   │   ├── base.njk             # shared <head> + <nav> + <footer>, used by every page
-│   │   ├── root-page.njk        # defaults for the 3 main pages (client-side i18n, full titles)
+│   │   ├── root-page.njk        # defaults for the 3 main pages (pagination, hreflang)
 │   │   ├── list.njk / post.njk  # blog layouts
 │   ├── partials/
 │   │   ├── nav.njk              # one nav for the whole site (main pages + blog)
 │   │   └── footer.njk           # one footer for the whole site
 ├── eleventy/filters/           # Nunjucks filters shared by every template (unit-tested)
+│   └── t.js                     # {{ "key" | t(lang) }} — looks up _data/i18n.js
 ├── css/style.css               # single stylesheet for the whole site
 ├── css/blog.css                 # blog-only additions, loaded only on blog pages
-├── js/
-│   ├── i18n.js                 # translations (ES/EN) + i18n engine — main pages only
-│   └── nav.js                   # nav interactions (dropdown, mobile menu, logo animation)
+├── js/nav.js                    # nav interactions (dropdown, mobile menu, logo animation)
 ├── img/                        # images and SVG illustrations
-├── robots.txt / sitemap.xml    # SEO for the main pages (static, passthrough-copied)
+├── robots.txt                  # SEO — points to both sitemaps
+├── sitemap.njk                  # generates /sitemap.xml with es+en URLs for the 3 main pages
 ├── blog/                       # the blog subsystem — see blog/README.md
 │   ├── posts/<date>-<slug>/     # one folder per post, both languages + cover image
 │   ├── deploy.sh / publish.sh    # deploy/publish automation, repo-root relative paths
@@ -36,9 +40,9 @@ My personal space on the internet — built with [Eleventy](https://www.11ty.dev
 └── LICENSE                      # CC0
 ```
 
-The main pages and the blog share one templating system now: one `<head>`
-(`base.njk`), one nav, one footer. What still differs between them is i18n —
-see "Languages" below — not layout or markup.
+The main pages and the blog share one templating system and one i18n
+mechanism: real per-language URLs, resolved at build time, no client-side
+translation JS anywhere on the site.
 
 ## Local development
 
@@ -52,50 +56,59 @@ useful before a Docker build.
 
 ## Languages
 
-Two different i18n mechanisms coexist, one per subsystem — deliberately not
-unified yet (see the site audit's B-1 for that follow-up):
+Every page on the site — main pages and blog — has a real URL per language,
+generated at build time, no client-side JS involved:
 
-- **Main pages** (`/`, `/cuerposonoro.html`, `/universo-punzadas.html`):
-  client-side, via `js/i18n.js`. Same URL for both languages.
-  Translatable elements use `data-i18n="key"` (plain text) or
-  `data-i18n-html="key"` (rich markup) attributes; a language toggle in the
-  nav calls `window.i18n.setLang()`; the choice persists in `localStorage`.
-  Every string needs **three** copies kept in sync: the Spanish fallback
-  hardcoded in the `.njk` (shown before JS runs), `TRANSLATIONS.es[key]`,
-  and `TRANSLATIONS.en[key]` in `js/i18n.js`. SEO metadata (`<title>`,
-  `<meta description>`, Open Graph, JSON-LD) is only ever served in
-  Spanish for these pages — it does not go through `i18n.js`.
-- **Blog**: real URLs per language (`/blog/`, `/blog/en/`), resolved at
-  build time via each post's `translationKey`. No client-side JS involved;
-  see `blog/README.md`.
+- **Main pages**: `/`, `/en/`; `/cuerposonoro.html`, `/en/cuerposonoro.html`;
+  `/universo-punzadas.html`, `/en/universo-punzadas.html`. Each of the 3
+  `.njk` files paginates over `_data/languages.js` (`pagination: {data:
+  languages, size: 1, alias: lang}` in `layouts/root-page.njk`), and the
+  `permalink` there derives the output path from `lang` + a per-page `slug`
+  front-matter field. Body copy uses the `t` filter — `{{ "key" | t(lang)
+  }}` for plain text, `{{ "key" | t(lang) | safe }}` when the stored string
+  contains inline markup — looking keys up in `_data/i18n.js`. `title`,
+  `description`, `socialDescription` and `structuredData` vary by language
+  too, but front-matter fields aren't re-rendered by Eleventy (only
+  `permalink` is), so those live in each page's `<name>.11tydata.js` as
+  `eleventyComputed` functions instead of plain front matter.
+- **Blog**: `/blog/`, `/blog/en/`, and one physical `.es.md`/`.en.md` pair
+  per post, cross-linked via `translationKey`. See `blog/README.md`.
 
-The shared `_includes/partials/nav.njk` and `footer.njk` branch on a
-`clientI18n` template flag to render the right variant of each — main-page
-templates set it via `layouts/root-page.njk`, blog templates don't.
+`_includes/partials/nav.njk` and `footer.njk` are used by both, and resolve
+each page's sibling-language URL via `esUrl`/`enUrl` (set in
+`root-page.njk` for main pages) or the `translationUrl` filter (for blog
+posts, which don't have a fixed `esUrl`/`enUrl` — the sibling depends on
+which post it is).
 
 ## SEO
 
-- `robots.txt` — allows all crawlers, points to both sitemaps (static
-  `sitemap.xml` for the main pages, Eleventy-generated `/blog/sitemap.xml`)
-- `sitemap.xml` — lists the 3 main pages; add a new `<url>` entry whenever
-  you add one
-- JSON-LD structured data per page, via each template's `structuredData`
-  front matter field
+- `robots.txt` — allows all crawlers, points to both sitemaps (`sitemap.njk`
+  for the main pages, `blog/sitemap.njk` for the blog)
+- `sitemap.njk` — loops a small hardcoded array of `{slug, lastmod,
+  priority}` and emits both the `/slug` and `/en/slug` URL for each; add an
+  entry here when you add a main page (same manual step as before, now
+  covering both languages automatically once added)
+- `<link rel="alternate" hreflang="...">` (es/en/x-default) on every main
+  page, via `esUrl`/`enUrl` in `base.njk` — not on blog pages, that's a
+  separate future improvement
+- JSON-LD structured data per page, via each template's `<name>.11tydata.js`
 - Open Graph / Twitter Card meta tags for social sharing
 
 ## Adding a new project page
 
-1. Copy `universo-punzadas.njk` as a starting point — front matter fields:
-   `layout: layouts/root-page.njk`, `permalink`, `title`, `description`,
-   optionally `socialDescription` (if it should differ from `description`),
-   `ogType: article`, `image`, `themeColor`, `structuredData`.
-2. Add its translation keys to **both** the `es` and `en` blocks in
-   `js/i18n.js`, under a short namespace to avoid collisions.
+1. Copy `universo-punzadas.njk` and `universo-punzadas.11tydata.js` as a
+   starting point. In the `.njk`: `layout: layouts/root-page.njk`, `slug`
+   (no leading slash, e.g. `"my-project.html"`), `ogType: article`, `image`,
+   `themeColor`. In the `.11tydata.js`: `TITLES`/`DESCRIPTIONS`/
+   `SOCIAL_DESCRIPTIONS`/the JSON-LD template, each keyed by `es`/`en`.
+2. Add the page's body-copy translation keys to **both** the `es` and `en`
+   blocks in `_data/i18n.js`, under a short namespace to avoid collisions.
 3. Add the new page's link to `_includes/partials/nav.njk`'s dropdown —
-   **one edit**, it reaches every page on the site (main pages and blog).
+   **one edit**, it reaches every page on the site (main pages and blog),
+   already lang-aware.
 4. Add a card/entry for it on the homepage (`index.njk`, the "En qué ando"
    section).
-5. Add a `<url>` entry to `sitemap.xml`.
+5. Add an entry to the `pages` array in `sitemap.njk`.
 
 You still do **not** need to touch the `Dockerfile` — it copies whatever
 Eleventy writes to `_site/` wholesale.

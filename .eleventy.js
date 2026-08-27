@@ -43,7 +43,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("favicon.ico");
   eleventyConfig.addPassthroughCopy("favicon.svg");
   eleventyConfig.addPassthroughCopy("robots.txt");
-  eleventyConfig.addPassthroughCopy("sitemap.xml");
 
   eleventyConfig.addFilter("readingTime", readingTime);
   eleventyConfig.addFilter("postsByLang", postsByLang);
