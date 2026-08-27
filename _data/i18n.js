@@ -80,6 +80,22 @@ module.exports = {
     'workshops.cta.body':      'Cuéntame qué buscas y hablamos.',
     'workshops.cta.button':    'Escríbeme',
 
+    /* --- LEGAL PAGE --- */
+    'legal.title':         'Aviso legal',
+    'legal.intro':         'Este sitio es un proyecto personal de Mara <<PENDIENTE: apellido completo>>.',
+    'legal.owner.title':   'Titular',
+    'legal.owner.body':    'Mara <<PENDIENTE: apellido>>, contacto: hello@maramotto.com. <<PENDIENTE: \u00bfNIF/CIF si aplica, domicilio si los talleres presenciales lo requieren?>>',
+    'legal.purpose.title': 'Objeto',
+    'legal.purpose.body':  'maramotto.com presenta proyectos personales de arte y tecnolog\u00eda, y ofrece informaci\u00f3n de contacto para talleres y colaboraciones.',
+
+    /* --- PRIVACY PAGE --- */
+    'privacy.title':           'Privacidad',
+    'privacy.intro':           'Este sitio no usa cookies ni recopila datos personales m\u00e1s all\u00e1 de lo estrictamente necesario para funcionar.',
+    'privacy.analytics.title': 'Anal\u00edtica',
+    'privacy.analytics.body':  'Actualmente este sitio no usa ninguna herramienta de anal\u00edtica. Est\u00e1 previsto incorporar en el futuro Umami, una herramienta de anal\u00edtica sin cookies y sin datos personales, alojada en servidor propio, sin compartir datos con terceros. Esta p\u00e1gina se actualizar\u00e1 cuando est\u00e9 activa.',
+    'privacy.storage.title':   'Almacenamiento local',
+    'privacy.storage.body':    'El sitio guarda tu idioma preferido en el almacenamiento local del navegador (localStorage). No es una cookie y no sale de tu navegador.',
+
     /* --- CONTACT --- */
     'contact.label':      'Contacto',
     'contact.title':      '\u00bfTrabajamos juntas?',
@@ -88,6 +104,8 @@ module.exports = {
 
     /* --- FOOTER --- */
     'footer.text':        'Hecho con arte y c\u00f3digo',
+    'footer.legal':       'Aviso legal',
+    'footer.privacy':     'Privacidad',
 
     /* ============================
        CUERPOSONORO PROJECT PAGE
@@ -357,6 +375,22 @@ module.exports = {
     'workshops.cta.body':      'Tell me what you\'re looking for and let\'s talk.',
     'workshops.cta.button':    'Get in touch',
 
+    /* --- LEGAL PAGE --- */
+    'legal.title':         'Legal notice',
+    'legal.intro':         'This site is a personal project by Mara <<PENDIENTE: surname>>.',
+    'legal.owner.title':   'Owner',
+    'legal.owner.body':    'Mara <<PENDIENTE: surname>>, contact: hello@maramotto.com. <<PENDIENTE: tax ID if applicable, address if in-person workshops require it?>>',
+    'legal.purpose.title': 'Purpose',
+    'legal.purpose.body':  'maramotto.com presents personal art and technology projects, and provides contact information for workshops and collaborations.',
+
+    /* --- PRIVACY PAGE --- */
+    'privacy.title':           'Privacy',
+    'privacy.intro':           'This site does not use cookies or collect personal data beyond what is strictly necessary to function.',
+    'privacy.analytics.title': 'Analytics',
+    'privacy.analytics.body':  'This site does not currently use any analytics tool. We plan to add Umami, a cookie-free analytics tool that collects no personal data, self-hosted, without sharing data with third parties, in the future. This page will be updated once it is active.',
+    'privacy.storage.title':   'Local storage',
+    'privacy.storage.body':    'The site stores your preferred language in the browser\'s local storage (localStorage). It is not a cookie and never leaves your browser.',
+
     /* --- CONTACT --- */
     'contact.label':      'Contact',
     'contact.title':      'Shall we work together?',
@@ -365,6 +399,8 @@ module.exports = {
 
     /* --- FOOTER --- */
     'footer.text':        'Made with art and code',
+    'footer.legal':       'Legal notice',
+    'footer.privacy':     'Privacy',
 
     /* ============================
        CUERPOSONORO PROJECT PAGE
