@@ -12,7 +12,7 @@ excerpt: "A los 37, sin estudios de arte ni contactos en la industria, decido de
 **Sí, quiero ser artista.** Y no, no quiero hacer otra cosa con mi tiempo y mi
 energía. Quiero dedicarme al arte 24/7.
 
-Porque como dijo la gran Concha Velasco:
+Porque como dice *Mamá quiero ser artista*, la canción de la gran Concha Velasco:
 
 >"Y pensaba con toda la razón
 Que hay dos clases de gente nada más
