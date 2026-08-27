@@ -10,21 +10,30 @@
   --yellow: #FFD93D;
   --yellow-light: #FFF3C4;
   --yellow-muted: #E8CC4A;
+  --yellow-deep: #8A6A00; /* únicamente para texto sobre fondos claros (cream/white) — --yellow normal falla contraste ahí, ver F-001 */
   --purple: #7B2D8E;
   --purple-dark: #5C1F6A;
   --purple-light: #F3E8F9;
   --teal: #1E6B7B;
   --teal-dark: #155460;
   --teal-light: #E6F3F5;
-  --blue-light: #E8F4FD;
-  --blue: #5BA4CF;
-  --blue-dark: #3A7CA5;
   --dark: #1A1A2E;
   --text: #2D2D3A;
   --text-light: #6B6B80;
   --white: #FFFEF8;
   --cream: #FDF5E6;
   --cream-dark: #F7ECDA;
+
+  /* Type scale — ratio 1.25. Introducida en B-4; migrar el resto de la
+     hoja de estilos "según se toque", no de golpe (ver website-audit.md F-017). */
+  --fs-xs: 0.8rem;
+  --fs-sm: 0.9rem;
+  --fs-base: 1rem;
+  --fs-md: 1.15rem;
+  --fs-lg: 1.35rem;
+  --fs-xl: 1.8rem;
+  --fs-2xl: 2.5rem;
+  --fs-3xl: 3.5rem;
 }
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
