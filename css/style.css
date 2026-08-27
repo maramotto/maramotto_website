@@ -24,8 +24,10 @@
   --cream: #FDF5E6;
   --cream-dark: #F7ECDA;
 
-  /* Type scale — ratio 1.25. Introducida en B-4; migrar el resto de la
-     hoja de estilos "según se toque", no de golpe (ver website-audit.md F-017). */
+  /* Type scale — hand-tuned, roughly 1.11-1.17 ratio at the small end
+     widening to ~1.33-1.4 at display sizes (not a fixed modular ratio).
+     Introducida en B-4; migrar el resto de la hoja de estilos "según se
+     toque", no de golpe (ver website-audit.md F-017). */
   --fs-xs: 0.8rem;
   --fs-sm: 0.9rem;
   --fs-base: 1rem;
@@ -739,6 +741,10 @@ a { color: inherit; }
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
 }
 
+/* Interim fix (F-019): box matched to .skill-card__img so baselines
+   align across the skills grid. Real fix still needs two new SVGs
+   (tech-art, talleres) matching skill-code.svg's style — art pending,
+   F-019 not fully closed. */
 .skill-card__emoji {
   display: flex;
   align-items: center;
@@ -746,7 +752,7 @@ a { color: inherit; }
   width: 80px;
   height: 80px;
   margin: 0 auto 1.2rem;
-  font-size: 3rem;
+  font-size: var(--fs-2xl);
 }
 
 .skill-card__img {
