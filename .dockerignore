@@ -1,2 +1,11 @@
+node_modules/
+_site/
 blog/node_modules/
 blog/_site/
+.git/
+tests/
+test-results/
+playwright-report/
+docs/
+.idea/
+.claude/
