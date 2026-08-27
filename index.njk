@@ -30,39 +30,33 @@ structuredData: |
   <section class="hero">
     <div class="hero__wave" aria-hidden="true">&#12336;&#65039;&#12336;&#65039;&#12336;&#65039;</div>
     <h1 class="hero__title">maramotto</h1>
-    <p class="hero__subtitle" data-i18n="hero.subtitle">Artista &middot; Ingeniera de Software &middot; Tecn&oacute;loga Creativa</p>
-    <p class="hero__description" data-i18n="hero.description">
-      Construyo e invento objetos donde lo artesanal y lo digital se encuentran. C&oacute;digo, pintura, m&uacute;sica, sonido y visuales.
-    </p>
+    <p class="hero__subtitle">{{ "hero.subtitle" | t(lang) }}</p>
+    <p class="hero__description">{{ "hero.description" | t(lang) }}</p>
     <div class="btn-group btn-group--center">
-      <a href="#projects" class="btn btn--primary" data-i18n="hero.cta.work">Ver mi trabajo</a>
-      <a href="#about" class="btn btn--outline" data-i18n="hero.cta.about">Sobre m&iacute;</a>
+      <a href="#projects" class="btn btn--primary">{{ "hero.cta.work" | t(lang) }}</a>
+      <a href="#about" class="btn btn--outline">{{ "hero.cta.about" | t(lang) }}</a>
     </div>
   </section>
 
   <!-- ======= FEATURED: CUERPOSONORO ======= -->
   <section class="section section--white" id="projects">
     <div class="container">
-      <div class="section-label" data-i18n="featured.label">En qu&eacute; ando</div>
+      <div class="section-label">{{ "featured.label" | t(lang) }}</div>
       <div class="featured">
         <div class="featured__visual">
           <img src="/img/cuerposonoro-visual.svg" alt="CuerpoSonoro &mdash; Body becomes sound" class="featured__visual-img">
-          <div class="featured__visual-label" data-i18n="featured.visual.label">Cuerpo &rarr; Datos &rarr; Sonido</div>
+          <div class="featured__visual-label">{{ "featured.visual.label" | t(lang) }}</div>
         </div>
         <div class="featured__content">
           <h3>CuerpoSonoro</h3>
-          <p data-i18n="featured.desc.1">
-            &iquest;Y si fuera tu cuerpo el que genera el sonido al moverse, en lugar de reaccionar a &eacute;l?
-            CuerpoSonoro convierte el movimiento en sonido en tiempo real: sin partitura, sin secuencias
-            grabadas, sin sensores. Solo t&uacute; movi&eacute;ndote.
-          </p>
+          <p>{{ "featured.desc.1" | t(lang) }}</p>
           <div class="tags">
             <span class="tag">Python</span>
             <span class="tag">JavaScript</span>
-            <span class="tag" data-i18n="featured.tag.creative">Creative Coding</span>
-            <span class="tag" data-i18n="featured.tag.sound">Sonido</span>
+            <span class="tag">{{ "featured.tag.creative" | t(lang) }}</span>
+            <span class="tag">{{ "featured.tag.sound" | t(lang) }}</span>
           </div>
-          <a href="/cuerposonoro.html" class="btn btn--primary btn--small" data-i18n="featured.cta">Ver proyecto &rarr;</a>
+          <a href="/cuerposonoro.html" class="btn btn--primary btn--small">{{ "featured.cta" | t(lang) }}</a>
         </div>
       </div>
 
@@ -71,29 +65,29 @@ structuredData: |
         <div class="card card--wip">
           <div class="card__icon card__icon--purple" aria-hidden="true">&#127911;&#65039;</div>
           <h3>Estratos</h3>
-          <p style="font-style: italic; color: var(--text-light); font-size: 0.85rem; margin-bottom: 0.75rem;" data-i18n="estratos.tagline">Datos p&uacute;blicos &rarr; Sonido &rarr; Instalaci&oacute;n sonora</p>
-          <p data-i18n="estratos.desc">&iquest;Y si la historia de un territorio se pudiera escuchar? Estratos convierte datos p&uacute;blicos &mdash;los que est&aacute;n ah&iacute;, disponibles, pero que nadie mira&mdash; en una instalaci&oacute;n sonora que cuenta lo que esconden.</p>
+          <p style="font-style: italic; color: var(--text-light); font-size: 0.85rem; margin-bottom: 0.75rem;">{{ "estratos.tagline" | t(lang) }}</p>
+          <p>{{ "estratos.desc" | t(lang) }}</p>
           <div class="tags">
-            <span class="tag" data-i18n="estratos.tag.opendata">Datos abiertos</span>
-            <span class="tag" data-i18n="estratos.tag.sonification">Sonificaci&oacute;n de datos</span>
-            <span class="tag" data-i18n="estratos.tag.installation">Instalaci&oacute;n</span>
+            <span class="tag">{{ "estratos.tag.opendata" | t(lang) }}</span>
+            <span class="tag">{{ "estratos.tag.sonification" | t(lang) }}</span>
+            <span class="tag">{{ "estratos.tag.installation" | t(lang) }}</span>
           </div>
-          <p style="font-size: 0.75rem; font-weight: 700; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.5rem;" data-i18n="estratos.status">En construcci&oacute;n</p>
-          <a href="mailto:hello@maramotto.com?subject=Estratos" class="card__link" data-i18n="estratos.status.cta">Escr&iacute;beme si te interesa &rarr;</a>
+          <p style="font-size: 0.75rem; font-weight: 700; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.5rem;">{{ "estratos.status" | t(lang) }}</p>
+          <a href="mailto:hello@maramotto.com?subject=Estratos" class="card__link">{{ "estratos.status.cta" | t(lang) }}</a>
         </div>
 
         <div class="card">
           <div class="card__icon card__icon--yellow" aria-hidden="true">&#127908;</div>
           <h3>Universo Punzadas</h3>
-          <p style="font-style: italic; color: var(--text-light); font-size: 0.85rem; margin-bottom: 0.75rem;" data-i18n="punzadas.tagline">Podcast &rarr; Datos &rarr; Visualizaci&oacute;n y buscador</p>
-          <p data-i18n-html="punzadas.desc"><em>Punzadas Sonoras</em> es mi podcast favorito: me fascina c&oacute;mo In&eacute;s y Paula eligen los temas y c&oacute;mo los abordan. Siempre quise una biblioteca con las obras, autoras y referencias de sus m&aacute;s de 100 episodios, as&iacute; que la he construido.</p>
+          <p style="font-style: italic; color: var(--text-light); font-size: 0.85rem; margin-bottom: 0.75rem;">{{ "punzadas.tagline" | t(lang) }}</p>
+          <p>{{ "punzadas.desc" | t(lang) | safe }}</p>
           <div class="tags">
-            <span class="tag" data-i18n="punzadas.tag.data">Datos</span>
+            <span class="tag">{{ "punzadas.tag.data" | t(lang) }}</span>
             <span class="tag">Astro</span>
-            <span class="tag" data-i18n="punzadas.tag.search">Buscador</span>
-            <span class="tag" data-i18n="punzadas.tag.dataviz">Visualizaci&oacute;n de datos</span>
+            <span class="tag">{{ "punzadas.tag.search" | t(lang) }}</span>
+            <span class="tag">{{ "punzadas.tag.dataviz" | t(lang) }}</span>
           </div>
-          <a href="/universo-punzadas.html" class="card__link" data-i18n="punzadas.link">Ver proyecto &rarr;</a>
+          <a href="/universo-punzadas.html" class="card__link">{{ "punzadas.link" | t(lang) }}</a>
         </div>
 
       </div>
@@ -103,65 +97,46 @@ structuredData: |
   <!-- ======= ABOUT ======= -->
   <section class="section section--purple" id="about">
     <div class="container--narrow">
-      <div class="section-label" data-i18n="about.label">Sobre m&iacute;</div>
-      <h2 class="section-title" data-i18n="about.title">Arte + Curiosidad + Creatividad</h2>
-      <p class="about-text" data-i18n="about.p1">
-        Soy feliz cuando imagino algo y consigo hacerlo real. Da igual si acaba siendo software,
-        una canci&oacute;n, una acuarela o un taller: el impulso es el mismo.
-      </p>
-      <p class="about-text" data-i18n="about.p2">
-        Vengo de la ingenier&iacute;a de software, pero la curiosidad me lleva lejos. Compongo y
-        produzco m&uacute;sica, pinto, hago macrofotograf&iacute;a y dise&ntilde;o instalaciones que
-        convierten datos en sonido. Mezclar arte y c&oacute;digo no me parece raro, para m&iacute;
-        es de lo m&aacute;s natural.
-      </p>
-      <p class="about-text" data-i18n="about.p3">
-        &Uacute;ltimamente me interesa mucho lo que pasa cuando los datos dejan de ser una tabla o
-        un gr&aacute;fico y se convierten en algo que se puede escuchar o tocar.
-      </p>
-      <p class="about-text" data-i18n="about.p4">
-        Creo en la tecnolog&iacute;a que sirve a las personas. Es un conjunto de herramientas
-        incre&iacute;ble, pero solo tiene sentido cuando se emplea en mejorar la vida de las
-        personas y de los seres vivos.
-      </p>
-      <p class="about-text" data-i18n="about.p5">
-        Cuando no estoy creando, estoy con mi perro Otto, explorando r&iacute;os y embalses en
-        nuestro kayak, nadando, o en la carretera con nuestro coche camperizado buscando la
-        pr&oacute;xima aventura.
-      </p>
+      <div class="section-label">{{ "about.label" | t(lang) }}</div>
+      <h2 class="section-title">{{ "about.title" | t(lang) }}</h2>
+      <p class="about-text">{{ "about.p1" | t(lang) }}</p>
+      <p class="about-text">{{ "about.p2" | t(lang) }}</p>
+      <p class="about-text">{{ "about.p3" | t(lang) }}</p>
+      <p class="about-text">{{ "about.p4" | t(lang) }}</p>
+      <p class="about-text">{{ "about.p5" | t(lang) }}</p>
     </div>
   </section>
 
   <!-- ======= SKILLS ======= -->
   <section class="section section--white">
     <div class="container">
-      <div class="section-label text-center" data-i18n="skills.label">Lo que hago</div>
-      <h2 class="section-title text-center" data-i18n="skills.title">Multidisciplinar por naturaleza</h2>
+      <div class="section-label text-center">{{ "skills.label" | t(lang) }}</div>
+      <h2 class="section-title text-center">{{ "skills.title" | t(lang) }}</h2>
       <div class="skills-grid">
         <div class="skill-card">
           <img src="/img/skill-code.svg" alt="" class="skill-card__img">
-          <h3 data-i18n="skill.code.title">C&oacute;digo y Software</h3>
-          <p data-i18n="skill.code.desc">Desarrollo de software e IA, aplicaciones web, an&aacute;lisis de datos, creative coding.</p>
+          <h3>{{ "skill.code.title" | t(lang) }}</h3>
+          <p>{{ "skill.code.desc" | t(lang) }}</p>
         </div>
         <div class="skill-card">
           <img src="/img/skill-music.svg" alt="" class="skill-card__img">
-          <h3 data-i18n="skill.music.title">M&uacute;sica y Audio</h3>
-          <p data-i18n="skill.music.desc">Composici&oacute;n, producci&oacute;n musical, ingenier&iacute;a de audio para podcasts.</p>
+          <h3>{{ "skill.music.title" | t(lang) }}</h3>
+          <p>{{ "skill.music.desc" | t(lang) }}</p>
         </div>
         <div class="skill-card">
           <span class="skill-card__emoji" aria-hidden="true">&#127899;&#65039;</span>
-          <h3 data-i18n="skill.techart.title">Instalaciones tech-art</h3>
-          <p data-i18n="skill.techart.desc">Objetos e instalaciones que convierten datos en sonido y movimiento.</p>
+          <h3>{{ "skill.techart.title" | t(lang) }}</h3>
+          <p>{{ "skill.techart.desc" | t(lang) }}</p>
         </div>
         <div class="skill-card">
           <img src="/img/skill-visual.svg" alt="" class="skill-card__img">
-          <h3 data-i18n="skill.visual.title">Arte Visual</h3>
-          <p data-i18n="skill.visual.desc">Macrofotograf&iacute;a, pintura, collage.</p>
+          <h3>{{ "skill.visual.title" | t(lang) }}</h3>
+          <p>{{ "skill.visual.desc" | t(lang) }}</p>
         </div>
         <div class="skill-card" id="talleres">
           <span class="skill-card__emoji" aria-hidden="true">&#128736;&#65039;</span>
-          <h3 data-i18n="skill.workshops.title">Talleres</h3>
-          <p data-i18n="skill.workshops.desc">Talleres presenciales y online que fomentan la creatividad en adultos.</p>
+          <h3>{{ "skill.workshops.title" | t(lang) }}</h3>
+          <p>{{ "skill.workshops.desc" | t(lang) }}</p>
         </div>
       </div>
     </div>
@@ -170,12 +145,10 @@ structuredData: |
   <!-- ======= CONTACT ======= -->
   <section class="section section--yellow" id="contact">
     <div class="container--narrow text-center">
-      <div class="section-label" data-i18n="contact.label">Contacto</div>
-      <h2 class="section-title" data-i18n="contact.title">&iquest;Trabajamos juntas?</h2>
-      <p style="font-size:1.1rem; color:var(--text); margin-bottom:2rem; line-height:1.6;" data-i18n-html="contact.desc">
-        &iquest;Tienes un proyecto en mente? &iquest;Buscas un perfil t&eacute;cnico y creativo? Me encantar&iacute;a saber de ti.
-      </p>
-      <a href="mailto:hello@maramotto.com" class="btn btn--primary" data-i18n="contact.cta">Escr&iacute;beme</a>
+      <div class="section-label">{{ "contact.label" | t(lang) }}</div>
+      <h2 class="section-title">{{ "contact.title" | t(lang) }}</h2>
+      <p style="font-size:1.1rem; color:var(--text); margin-bottom:2rem; line-height:1.6;">{{ "contact.desc" | t(lang) | safe }}</p>
+      <a href="mailto:hello@maramotto.com" class="btn btn--primary">{{ "contact.cta" | t(lang) }}</a>
       <p style="margin-top: 1rem; font-size: 0.95rem; color: var(--text-light);">
         <a href="mailto:hello@maramotto.com" style="color: inherit; text-decoration: underline;">hello@maramotto.com</a>
       </p>

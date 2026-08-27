@@ -43,17 +43,14 @@ structuredData: |
       </div>
       <div class="project-hero__content">
         <h1 class="project-hero__title">CuerpoSonoro</h1>
-        <p class="project-hero__tagline" data-i18n="cs.tagline">
-          Software que transforma el movimiento del cuerpo humano en sonido.
-          Cuerpo humano y tecnolog&iacute;a transformados en arte, unidos en un solo proyecto.
-        </p>
+        <p class="project-hero__tagline">{{ "cs.tagline" | t(lang) }}</p>
         <div class="tags">
-          <span class="tag" data-i18n="cs.tag.creative">Creative Coding</span>
-          <span class="tag" data-i18n="cs.tag.arttech">Arte + Tecnolog&iacute;a</span>
+          <span class="tag">{{ "cs.tag.creative" | t(lang) }}</span>
+          <span class="tag">{{ "cs.tag.arttech" | t(lang) }}</span>
           <span class="tag">Python</span>
           <span class="tag">JavaScript</span>
-          <span class="tag" data-i18n="cs.tag.sound">Sonido</span>
-          <span class="tag" data-i18n="cs.tag.body">Interacci&oacute;n corporal</span>
+          <span class="tag">{{ "cs.tag.sound" | t(lang) }}</span>
+          <span class="tag">{{ "cs.tag.body" | t(lang) }}</span>
         </div>
       </div>
     </div>
@@ -62,43 +59,21 @@ structuredData: |
   <!-- ======= THE QUESTION + HOW IT WORKS ======= -->
   <section class="project-body">
     <div class="container--narrow">
-      <h2 data-i18n="cs.question.title">La pregunta</h2>
-      <p data-i18n="cs.question.p1">
-        &iquest;Y si tu cuerpo fuera un instrumento musical? No una met&aacute;fora, no una danza, un instrumento real
-        donde cada gesto produce un sonido &uacute;nico, donde tu postura da forma al paisaje sonoro a tu alrededor.
-      </p>
-      <p data-i18n="cs.question.p2">
-        CuerpoSonoro naci&oacute; de esa pregunta. Es un proyecto de software que explora
-        la conexi&oacute;n entre el movimiento corporal y la generaci&oacute;n de sonido en tiempo real, convirtiendo el
-        cuerpo humano en una interfaz musical expresiva.
-      </p>
+      <h2>{{ "cs.question.title" | t(lang) }}</h2>
+      <p>{{ "cs.question.p1" | t(lang) }}</p>
+      <p>{{ "cs.question.p2" | t(lang) }}</p>
 
-      <h2 data-i18n="cs.how.title">C&oacute;mo funciona</h2>
-      <p data-i18n-html="cs.how.p1.html">
-        El software captura el movimiento corporal a trav&eacute;s de una c&aacute;mara y lo traduce en par&aacute;metros
-        musicales. Cada gesto, cada postura genera una respuesta sonora diferente.
-        No hay partituras ni secuencias pregrabadas: <span class="highlight">t&uacute; creas
-        el sonido con tu propio cuerpo en tiempo real</span>.
-      </p>
-      <p data-i18n="cs.how.p2">
-        El principio art&iacute;stico clave: el cuerpo no &ldquo;toca notas&rdquo; &mdash; el cuerpo da forma al sonido.
-        No es un instrumento que dispara eventos discretos, sino una interfaz que moldea continuamente
-        un paisaje sonoro vivo. Cualquier posici&oacute;n del cuerpo produce un estado sonoro interesante;
-        no hay &ldquo;notas falsas&rdquo;. Es como meter las manos en arcilla: siempre hay
-        una forma, solo cambia cu&aacute;l.
-      </p>
+      <h2>{{ "cs.how.title" | t(lang) }}</h2>
+      <p>{{ "cs.how.p1.html" | t(lang) | safe }}</p>
+      <p>{{ "cs.how.p2" | t(lang) }}</p>
     </div>
   </section>
 
   <!-- ======= TRY THE WEB DEMO ======= -->
   <section class="project-body">
     <div class="container--narrow">
-      <h2 data-i18n="cs.demo.title">Prueba la demo web</h2>
-      <p data-i18n="cs.demo.p1">
-        Experimenta CuerpoSonoro directamente en tu navegador. La demo web usa MediaPipe.js
-        para la detecci&oacute;n de postura y la Web Audio API para la s&iacute;ntesis de sonido &mdash;
-        no necesitas instalar nada.
-      </p>
+      <h2>{{ "cs.demo.title" | t(lang) }}</h2>
+      <p>{{ "cs.demo.p1" | t(lang) }}</p>
       <iframe
         src="https://cuerposonoro.art"
         class="demo-frame"
@@ -107,45 +82,34 @@ structuredData: |
         allow="camera; microphone; autoplay"
         allowfullscreen
       ></iframe>
-      <p style="font-size: 0.9rem; color: var(--text-light); text-align: center;" data-i18n-html="cs.demo.fallback.html">
-        Si la demo no carga arriba, puedes
-        <a href="https://cuerposonoro.art" target="_blank" rel="noopener" style="color: var(--teal); font-weight: 600;">abrirla en una nueva pesta&ntilde;a</a>.
-      </p>
+      <p style="font-size: 0.9rem; color: var(--text-light); text-align: center;">{{ "cs.demo.fallback.html" | t(lang) | safe }}</p>
     </div>
   </section>
 
   <!-- ======= WHY THIS PROJECT MATTERS (highlighted) ======= -->
   <section class="project-body project-body--highlight">
     <div class="container--narrow">
-      <h2 data-i18n="cs.why.title">Por qu&eacute; este proyecto es importante para m&iacute;</h2>
-      <p data-i18n="cs.why.p1">
-        CuerpoSonoro se sit&uacute;a exactamente donde me gusta trabajar: la intersecci&oacute;n del arte, la tecnolog&iacute;a
-        y la experiencia humana. Es un proyecto que requiere pensamiento musical, habilidad de programaci&oacute;n
-        y una comprensi&oacute;n del cuerpo como medio expresivo.
-      </p>
-      <p data-i18n-html="cs.why.p2.html">
-        Representa lo que creo que la tecnolog&iacute;a deber&iacute;a ser: una herramienta que
-        <span class="highlight">sirve a las personas, ampl&iacute;a sus capacidades creativas
-        y crea experiencias que de otro modo no existir&iacute;an</span>.
-      </p>
+      <h2>{{ "cs.why.title" | t(lang) }}</h2>
+      <p>{{ "cs.why.p1" | t(lang) }}</p>
+      <p>{{ "cs.why.p2.html" | t(lang) | safe }}</p>
     </div>
   </section>
 
   <!-- ======= TECHNOLOGY STACK ======= -->
   <section class="project-body">
     <div class="container--narrow">
-      <h2 data-i18n="cs.tech.title">Stack tecnol&oacute;gico</h2>
+      <h2>{{ "cs.tech.title" | t(lang) }}</h2>
       <div class="tech-stack">
         <div class="tech-item">
-          <div class="tech-item__label" data-i18n="cs.tech.cv">Visi&oacute;n por computador</div>
+          <div class="tech-item__label">{{ "cs.tech.cv" | t(lang) }}</div>
           <div class="tech-item__value">MediaPipe Pose</div>
         </div>
         <div class="tech-item">
-          <div class="tech-item__label" data-i18n="cs.tech.audio">Motor de audio</div>
+          <div class="tech-item__label">{{ "cs.tech.audio" | t(lang) }}</div>
           <div class="tech-item__value">SuperCollider</div>
         </div>
         <div class="tech-item">
-          <div class="tech-item__label" data-i18n="cs.tech.comm">Comunicaci&oacute;n</div>
+          <div class="tech-item__label">{{ "cs.tech.comm" | t(lang) }}</div>
           <div class="tech-item__value">OSC + MIDI/MPE</div>
         </div>
         <div class="tech-item">
@@ -153,137 +117,126 @@ structuredData: |
           <div class="tech-item__value">Python + FastAPI</div>
         </div>
         <div class="tech-item">
-          <div class="tech-item__label" data-i18n="cs.tech.demo">Demo web</div>
+          <div class="tech-item__label">{{ "cs.tech.demo" | t(lang) }}</div>
           <div class="tech-item__value">MediaPipe.js + Web Audio API</div>
         </div>
         <div class="tech-item">
-          <div class="tech-item__label" data-i18n="cs.tech.infra">Infraestructura</div>
+          <div class="tech-item__label">{{ "cs.tech.infra" | t(lang) }}</div>
           <div class="tech-item__value">Docker + Hetzner VPS</div>
         </div>
         <div class="tech-item">
-          <div class="tech-item__label" data-i18n="cs.tech.test">Testing</div>
-          <div class="tech-item__value" data-i18n="cs.tech.test.val">pytest &mdash; 129 tests automatizados</div>
+          <div class="tech-item__label">{{ "cs.tech.test" | t(lang) }}</div>
+          <div class="tech-item__value">{{ "cs.tech.test.val" | t(lang) }}</div>
         </div>
         <div class="tech-item">
-          <div class="tech-item__label" data-i18n="cs.tech.source">C&oacute;digo fuente</div>
-          <div class="tech-item__value" data-i18n="cs.tech.source.val">Open Source (MIT)</div>
+          <div class="tech-item__label">{{ "cs.tech.source" | t(lang) }}</div>
+          <div class="tech-item__value">{{ "cs.tech.source.val" | t(lang) }}</div>
         </div>
       </div>
 
-      <h2 data-i18n="cs.hood.title">Bajo el cap&oacute;</h2>
-      <p data-i18n="cs.hood.p1">
-        CuerpoSonoro ejecuta un pipeline en tiempo real que va desde la captura de c&aacute;mara hasta la salida de audio
-        en menos de 80 milisegundos. As&iacute; fluyen los datos por el sistema:
-      </p>
+      <h2>{{ "cs.hood.title" | t(lang) }}</h2>
+      <p>{{ "cs.hood.p1" | t(lang) }}</p>
 
       <div class="pipeline">
         <div class="pipeline__step">
           <div class="pipeline__step-number">1</div>
-          <div class="pipeline__step-title" data-i18n="cs.pipe.1.title">Captura</div>
-          <div class="pipeline__step-detail" data-i18n="cs.pipe.1.detail">C&aacute;mara a 640&times;480</div>
+          <div class="pipeline__step-title">{{ "cs.pipe.1.title" | t(lang) }}</div>
+          <div class="pipeline__step-detail">{{ "cs.pipe.1.detail" | t(lang) }}</div>
         </div>
         <div class="pipeline__arrow">&rarr;</div>
         <div class="pipeline__step">
           <div class="pipeline__step-number">2</div>
-          <div class="pipeline__step-title" data-i18n="cs.pipe.2.title">Pose</div>
-          <div class="pipeline__step-detail" data-i18n="cs.pipe.2.detail">33 puntos corporales detectados por frame</div>
+          <div class="pipeline__step-title">{{ "cs.pipe.2.title" | t(lang) }}</div>
+          <div class="pipeline__step-detail">{{ "cs.pipe.2.detail" | t(lang) }}</div>
         </div>
         <div class="pipeline__arrow">&rarr;</div>
         <div class="pipeline__step">
           <div class="pipeline__step-number">3</div>
-          <div class="pipeline__step-title" data-i18n="cs.pipe.3.title">Features</div>
-          <div class="pipeline__step-detail" data-i18n="cs.pipe.3.detail">17 descriptores de movimiento extra&iacute;dos</div>
+          <div class="pipeline__step-title">{{ "cs.pipe.3.title" | t(lang) }}</div>
+          <div class="pipeline__step-detail">{{ "cs.pipe.3.detail" | t(lang) }}</div>
         </div>
         <div class="pipeline__arrow">&rarr;</div>
         <div class="pipeline__step">
           <div class="pipeline__step-number">4</div>
-          <div class="pipeline__step-title" data-i18n="cs.pipe.4.title">Mapeo</div>
-          <div class="pipeline__step-detail" data-i18n="cs.pipe.4.detail">Features mapeadas a par&aacute;metros de sonido</div>
+          <div class="pipeline__step-title">{{ "cs.pipe.4.title" | t(lang) }}</div>
+          <div class="pipeline__step-detail">{{ "cs.pipe.4.detail" | t(lang) }}</div>
         </div>
         <div class="pipeline__arrow">&rarr;</div>
         <div class="pipeline__step">
           <div class="pipeline__step-number">5</div>
-          <div class="pipeline__step-title" data-i18n="cs.pipe.5.title">Sonido</div>
-          <div class="pipeline__step-detail" data-i18n="cs.pipe.5.detail">S&iacute;ntesis de audio en tiempo real</div>
+          <div class="pipeline__step-title">{{ "cs.pipe.5.title" | t(lang) }}</div>
+          <div class="pipeline__step-detail">{{ "cs.pipe.5.detail" | t(lang) }}</div>
         </div>
       </div>
 
-      <h2 data-i18n="cs.pose.title">Estimaci&oacute;n de pose y extracci&oacute;n de features</h2>
-      <p data-i18n-html="cs.pose.p1.html">
-        El sistema usa <span class="highlight">MediaPipe Pose</span> para detectar 33 puntos
-        corporales en tiempo real a ~20&ndash;22 FPS. A partir de estas coordenadas, un m&oacute;dulo de extracci&oacute;n
-        de features calcula 17 descriptores de movimiento que describen el car&aacute;cter de
-        tu movimiento &mdash; no solo d&oacute;nde est&aacute; tu cuerpo, sino <em>c&oacute;mo</em> se mueve:
-      </p>
+      <h2>{{ "cs.pose.title" | t(lang) }}</h2>
+      <p>{{ "cs.pose.p1.html" | t(lang) | safe }}</p>
 
       <div class="tech-detail-grid">
         <div class="tech-detail-item">
-          <div class="tech-detail-item__label" data-i18n="cs.detail.energy.label">Energ&iacute;a</div>
-          <div class="tech-detail-item__value" data-i18n="cs.detail.energy.value">Energ&iacute;a de movimiento</div>
-          <div class="tech-detail-item__desc" data-i18n="cs.detail.energy.desc">Actividad corporal global basada en velocidad de puntos</div>
+          <div class="tech-detail-item__label">{{ "cs.detail.energy.label" | t(lang) }}</div>
+          <div class="tech-detail-item__value">{{ "cs.detail.energy.value" | t(lang) }}</div>
+          <div class="tech-detail-item__desc">{{ "cs.detail.energy.desc" | t(lang) }}</div>
         </div>
         <div class="tech-detail-item">
-          <div class="tech-detail-item__label" data-i18n="cs.detail.balance.label">Equilibrio</div>
-          <div class="tech-detail-item__value" data-i18n="cs.detail.balance.value">&Iacute;ndice de simetr&iacute;a</div>
-          <div class="tech-detail-item__desc" data-i18n="cs.detail.balance.desc">Equilibrio izquierda-derecha del cuerpo</div>
+          <div class="tech-detail-item__label">{{ "cs.detail.balance.label" | t(lang) }}</div>
+          <div class="tech-detail-item__value">{{ "cs.detail.balance.value" | t(lang) }}</div>
+          <div class="tech-detail-item__desc">{{ "cs.detail.balance.desc" | t(lang) }}</div>
         </div>
         <div class="tech-detail-item">
-          <div class="tech-detail-item__label" data-i18n="cs.detail.fluidity.label">Fluidez</div>
-          <div class="tech-detail-item__value" data-i18n="cs.detail.fluidity.value">Suavidad temporal</div>
-          <div class="tech-detail-item__desc" data-i18n="cs.detail.fluidity.desc">M&eacute;trica de jerk &mdash; movimiento fluido vs. brusco</div>
+          <div class="tech-detail-item__label">{{ "cs.detail.fluidity.label" | t(lang) }}</div>
+          <div class="tech-detail-item__value">{{ "cs.detail.fluidity.value" | t(lang) }}</div>
+          <div class="tech-detail-item__desc">{{ "cs.detail.fluidity.desc" | t(lang) }}</div>
         </div>
         <div class="tech-detail-item">
-          <div class="tech-detail-item__label" data-i18n="cs.detail.arms.label">Brazos</div>
-          <div class="tech-detail-item__value" data-i18n="cs.detail.arms.value">&Aacute;ngulos de brazos</div>
-          <div class="tech-detail-item__desc" data-i18n="cs.detail.arms.desc">&Aacute;ngulo de elevaci&oacute;n de ambos brazos</div>
+          <div class="tech-detail-item__label">{{ "cs.detail.arms.label" | t(lang) }}</div>
+          <div class="tech-detail-item__value">{{ "cs.detail.arms.value" | t(lang) }}</div>
+          <div class="tech-detail-item__desc">{{ "cs.detail.arms.desc" | t(lang) }}</div>
         </div>
         <div class="tech-detail-item">
-          <div class="tech-detail-item__label" data-i18n="cs.detail.height.label">Altura</div>
-          <div class="tech-detail-item__value" data-i18n="cs.detail.height.value">Extensi&oacute;n vertical</div>
-          <div class="tech-detail-item__desc" data-i18n="cs.detail.height.desc">Cu&aacute;n estirado o comprimido est&aacute; el cuerpo</div>
+          <div class="tech-detail-item__label">{{ "cs.detail.height.label" | t(lang) }}</div>
+          <div class="tech-detail-item__value">{{ "cs.detail.height.value" | t(lang) }}</div>
+          <div class="tech-detail-item__desc">{{ "cs.detail.height.desc" | t(lang) }}</div>
         </div>
         <div class="tech-detail-item">
-          <div class="tech-detail-item__label" data-i18n="cs.detail.tilt.label">Inclinaci&oacute;n</div>
-          <div class="tech-detail-item__value" data-i18n="cs.detail.tilt.value">Inclinaci&oacute;n de cadera y cabeza</div>
-          <div class="tech-detail-item__desc" data-i18n="cs.detail.tilt.desc">Inclinaci&oacute;n lateral de caderas y cabeza</div>
+          <div class="tech-detail-item__label">{{ "cs.detail.tilt.label" | t(lang) }}</div>
+          <div class="tech-detail-item__value">{{ "cs.detail.tilt.value" | t(lang) }}</div>
+          <div class="tech-detail-item__desc">{{ "cs.detail.tilt.desc" | t(lang) }}</div>
         </div>
         <div class="tech-detail-item">
-          <div class="tech-detail-item__label" data-i18n="cs.detail.hands.label">Manos</div>
-          <div class="tech-detail-item__value" data-i18n="cs.detail.hands.value">Velocidad y altura de manos</div>
-          <div class="tech-detail-item__desc" data-i18n="cs.detail.hands.desc">Velocidad y posici&oacute;n vertical de ambas manos</div>
+          <div class="tech-detail-item__label">{{ "cs.detail.hands.label" | t(lang) }}</div>
+          <div class="tech-detail-item__value">{{ "cs.detail.hands.value" | t(lang) }}</div>
+          <div class="tech-detail-item__desc">{{ "cs.detail.hands.desc" | t(lang) }}</div>
         </div>
         <div class="tech-detail-item">
-          <div class="tech-detail-item__label" data-i18n="cs.detail.triggers.label">Disparadores</div>
-          <div class="tech-detail-item__value" data-i18n="cs.detail.triggers.value">Disparadores de movimiento</div>
-          <div class="tech-detail-item__desc" data-i18n="cs.detail.triggers.desc">Movimientos repentinos de manos detectados como eventos</div>
+          <div class="tech-detail-item__label">{{ "cs.detail.triggers.label" | t(lang) }}</div>
+          <div class="tech-detail-item__value">{{ "cs.detail.triggers.value" | t(lang) }}</div>
+          <div class="tech-detail-item__desc">{{ "cs.detail.triggers.desc" | t(lang) }}</div>
         </div>
       </div>
 
-      <h2 data-i18n="cs.mapping.title">Movimiento &rarr; Mapeo de sonido</h2>
-      <p data-i18n="cs.mapping.p1">
-        Cada feature de movimiento controla un aspecto espec&iacute;fico del sonido. El mapeo est&aacute; dise&ntilde;ado
-        para ser intuitivo &mdash; tu cuerpo entiende la conexi&oacute;n antes de que tu mente lo haga:
-      </p>
+      <h2>{{ "cs.mapping.title" | t(lang) }}</h2>
+      <p>{{ "cs.mapping.p1" | t(lang) }}</p>
 
       <div class="mapping-grid">
-        <div class="mapping-grid__header" data-i18n="cs.mapping.header.move">Movimiento</div>
-        <div class="mapping-grid__header" data-i18n="cs.mapping.header.sound">Efecto sonoro</div>
-        <div class="mapping-grid__cell mapping-grid__cell--move" data-i18n="cs.mapping.fast">Movimiento r&aacute;pido</div>
-        <div class="mapping-grid__cell mapping-grid__cell--sound" data-i18n="cs.mapping.fast.sound">Sonido m&aacute;s brillante y fuerte</div>
-        <div class="mapping-grid__cell mapping-grid__cell--move" data-i18n="cs.mapping.arms">Levantar los brazos</div>
-        <div class="mapping-grid__cell mapping-grid__cell--sound" data-i18n="cs.mapping.arms.sound">Tono m&aacute;s agudo</div>
-        <div class="mapping-grid__cell mapping-grid__cell--move" data-i18n="cs.mapping.asym">Asimetr&iacute;a corporal</div>
-        <div class="mapping-grid__cell mapping-grid__cell--sound" data-i18n="cs.mapping.asym.sound">Paneo est&eacute;reo</div>
-        <div class="mapping-grid__cell mapping-grid__cell--move" data-i18n="cs.mapping.smooth">Movimiento suave y fluido</div>
-        <div class="mapping-grid__cell mapping-grid__cell--sound" data-i18n="cs.mapping.smooth.sound">Reverb largo, textura legato</div>
-        <div class="mapping-grid__cell mapping-grid__cell--move" data-i18n="cs.mapping.abrupt">Movimiento brusco y repentino</div>
-        <div class="mapping-grid__cell mapping-grid__cell--sound" data-i18n="cs.mapping.abrupt.sound">Distorsi&oacute;n, textura staccato</div>
-        <div class="mapping-grid__cell mapping-grid__cell--move" data-i18n="cs.mapping.vert">Estiramiento vertical</div>
-        <div class="mapping-grid__cell mapping-grid__cell--sound" data-i18n="cs.mapping.vert.sound">Registro m&aacute;s alto y et&eacute;reo</div>
-        <div class="mapping-grid__cell mapping-grid__cell--move" data-i18n="cs.mapping.hand">Velocidad de manos</div>
-        <div class="mapping-grid__cell mapping-grid__cell--sound" data-i18n="cs.mapping.hand.sound">Intensidad y duraci&oacute;n de notas</div>
-        <div class="mapping-grid__cell mapping-grid__cell--move" data-i18n="cs.mapping.head">Inclinaci&oacute;n de cabeza</div>
-        <div class="mapping-grid__cell mapping-grid__cell--sound" data-i18n="cs.mapping.head.sound">Barrido de filtro global</div>
+        <div class="mapping-grid__header">{{ "cs.mapping.header.move" | t(lang) }}</div>
+        <div class="mapping-grid__header">{{ "cs.mapping.header.sound" | t(lang) }}</div>
+        <div class="mapping-grid__cell mapping-grid__cell--move">{{ "cs.mapping.fast" | t(lang) }}</div>
+        <div class="mapping-grid__cell mapping-grid__cell--sound">{{ "cs.mapping.fast.sound" | t(lang) }}</div>
+        <div class="mapping-grid__cell mapping-grid__cell--move">{{ "cs.mapping.arms" | t(lang) }}</div>
+        <div class="mapping-grid__cell mapping-grid__cell--sound">{{ "cs.mapping.arms.sound" | t(lang) }}</div>
+        <div class="mapping-grid__cell mapping-grid__cell--move">{{ "cs.mapping.asym" | t(lang) }}</div>
+        <div class="mapping-grid__cell mapping-grid__cell--sound">{{ "cs.mapping.asym.sound" | t(lang) }}</div>
+        <div class="mapping-grid__cell mapping-grid__cell--move">{{ "cs.mapping.smooth" | t(lang) }}</div>
+        <div class="mapping-grid__cell mapping-grid__cell--sound">{{ "cs.mapping.smooth.sound" | t(lang) }}</div>
+        <div class="mapping-grid__cell mapping-grid__cell--move">{{ "cs.mapping.abrupt" | t(lang) }}</div>
+        <div class="mapping-grid__cell mapping-grid__cell--sound">{{ "cs.mapping.abrupt.sound" | t(lang) }}</div>
+        <div class="mapping-grid__cell mapping-grid__cell--move">{{ "cs.mapping.vert" | t(lang) }}</div>
+        <div class="mapping-grid__cell mapping-grid__cell--sound">{{ "cs.mapping.vert.sound" | t(lang) }}</div>
+        <div class="mapping-grid__cell mapping-grid__cell--move">{{ "cs.mapping.hand" | t(lang) }}</div>
+        <div class="mapping-grid__cell mapping-grid__cell--sound">{{ "cs.mapping.hand.sound" | t(lang) }}</div>
+        <div class="mapping-grid__cell mapping-grid__cell--move">{{ "cs.mapping.head" | t(lang) }}</div>
+        <div class="mapping-grid__cell mapping-grid__cell--sound">{{ "cs.mapping.head.sound" | t(lang) }}</div>
       </div>
     </div>
   </section>
@@ -291,17 +244,11 @@ structuredData: |
   <!-- ======= EXPLORE THE CODE (highlighted) ======= -->
   <section class="project-body project-body--highlight-dark">
     <div class="container--narrow" style="text-align: center;">
-      <h2 data-i18n="cs.code.title">Explora el c&oacute;digo</h2>
-      <p style="margin-bottom: 2rem;" data-i18n="cs.code.desc">
-        CuerpoSonoro es open source. Explora el c&oacute;digo, ejec&uacute;talo en local o construye sobre &eacute;l.
-      </p>
+      <h2>{{ "cs.code.title" | t(lang) }}</h2>
+      <p style="margin-bottom: 2rem;">{{ "cs.code.desc" | t(lang) }}</p>
       <div class="btn-group btn-group--center">
-        <a href="https://github.com/maramotto/cuerposonoro" class="btn btn--primary btn--small" target="_blank" rel="noopener" data-i18n="cs.code.github">
-          GitHub &mdash; CuerpoSonoro
-        </a>
-        <a href="https://cuerposonoro.art" class="btn btn--outline btn--small" target="_blank" rel="noopener" data-i18n="cs.code.demo">
-          Demo en vivo
-        </a>
+        <a href="https://github.com/maramotto/cuerposonoro" class="btn btn--primary btn--small" target="_blank" rel="noopener">{{ "cs.code.github" | t(lang) }}</a>
+        <a href="https://cuerposonoro.art" class="btn btn--outline btn--small" target="_blank" rel="noopener">{{ "cs.code.demo" | t(lang) }}</a>
       </div>
     </div>
   </section>
@@ -310,8 +257,8 @@ structuredData: |
   <section class="project-body">
     <div class="container--narrow">
       <div class="project-cta">
-        <h2 data-i18n="cs.contact.title">&iquest;Un proyecto parecido en mente?</h2>
-        <a href="mailto:hello@maramotto.com?subject=CuerpoSonoro" class="btn btn--primary" data-i18n="cs.contact.cta">Escr&iacute;beme</a>
+        <h2>{{ "cs.contact.title" | t(lang) }}</h2>
+        <a href="mailto:hello@maramotto.com?subject=CuerpoSonoro" class="btn btn--primary">{{ "cs.contact.cta" | t(lang) }}</a>
         <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-light);">
           <a href="mailto:hello@maramotto.com?subject=CuerpoSonoro" style="color: inherit; text-decoration: underline;">hello@maramotto.com</a>
         </p>
