@@ -65,6 +65,20 @@ module.exports = {
     'skill.workshops.title':  'Talleres',
     'skill.workshops.desc':   'Talleres presenciales y online que fomentan la creatividad en adultos.',
 
+    /* --- WORKSHOPS PAGE --- */
+    'workshops.label':         'Talleres',
+    'workshops.title':         'Talleres de creatividad',
+    'workshops.intro':         'Talleres <<PENDIENTE: presenciales/online/ambos>> que fomentan la creatividad en adultos <<PENDIENTE: para quién concretamente>>.',
+    'workshops.format.title':  'Formato',
+    'workshops.format.body':   '<<PENDIENTE: describir formato y duración con el dato confirmado>>',
+    'workshops.forwho.title':  '¿Para quién?',
+    'workshops.forwho.body':   '<<PENDIENTE>>',
+    'workshops.outcome.title': 'Qué te llevas',
+    'workshops.outcome.body':  '<<PENDIENTE: qué hace/produce un participante>>',
+    'workshops.cta.title':     '¿Te interesa?',
+    'workshops.cta.body':      'Cuéntame qué buscas y hablamos.',
+    'workshops.cta.button':    'Escríbeme',
+
     /* --- CONTACT --- */
     'contact.label':      'Contacto',
     'contact.title':      '\u00bfTrabajamos juntas?',
@@ -325,6 +339,20 @@ module.exports = {
     'skill.visual.desc':      'Macro photography, painting, collage.',
     'skill.workshops.title':  'Workshops',
     'skill.workshops.desc':   'In-person and online workshops that foster creativity in adults.',
+
+    /* --- WORKSHOPS PAGE --- */
+    'workshops.label':         'Workshops',
+    'workshops.title':         'Creativity workshops',
+    'workshops.intro':         '<<PENDIENTE>> workshops that foster creativity in adults <<PENDIENTE>>.',
+    'workshops.format.title':  'Format',
+    'workshops.format.body':   '<<PENDIENTE>>',
+    'workshops.forwho.title':  'Who are they for?',
+    'workshops.forwho.body':   '<<PENDIENTE>>',
+    'workshops.outcome.title': 'What you\'ll come away with',
+    'workshops.outcome.body':  '<<PENDIENTE>>',
+    'workshops.cta.title':     'Interested?',
+    'workshops.cta.body':      'Tell me what you\'re looking for and let\'s talk.',
+    'workshops.cta.button':    'Get in touch',
 
     /* --- CONTACT --- */
     'contact.label':      'Contact',
