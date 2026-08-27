@@ -501,7 +501,7 @@ a { color: inherit; }
 }
 
 .card {
-  background: var(--white);
+  background: var(--cream);
   border-radius: 20px;
   padding: 2.5rem 2rem;
   transition: all 0.35s;
