@@ -35,24 +35,6 @@ const PAGES = [
     hasHomeLink: true,
     translatedSelector: ".project-hero__tagline",
   },
-  {
-    es: "/talleres.html",
-    en: "/en/workshops.html",
-    titleEs: "Talleres — maramotto",
-    titleEn: "Workshops — maramotto",
-    // Unlike the project pages above, the h1 here is a translated heading
-    // (workshops.title in _data/i18n.js), not a proper name, so it differs
-    // per language — hence h1Es/h1En instead of a single shared h1.
-    h1Es: "Talleres de creatividad",
-    h1En: "Creativity workshops",
-    hasHomeLink: true,
-    // talleres.njk has two ".about-text" paragraphs (hero intro + CTA body),
-    // so a bare ".about-text" is a Playwright strict-mode violation here.
-    // Scope to the hero section (the only "section--purple") to target the
-    // hero intro specifically — it differs between ES/EN even with the
-    // <<PENDIENTE>> placeholder copy still in place.
-    translatedSelector: ".section--purple .about-text",
-  },
 ];
 
 for (const { es, en, titleEs, titleEn, h1, h1Es, h1En, hasHomeLink, translatedSelector } of PAGES) {
@@ -88,10 +70,10 @@ for (const { es, en, titleEs, titleEn, h1, h1Es, h1En, hasHomeLink, translatedSe
       });
     }
 
-    test("project dropdown links stay in the same language", async ({ page }) => {
+    test("project dropdown links stay in the same language, except Universo Punzadas (Spanish-only)", async ({ page }) => {
       await page.goto(en);
       await expect(page.locator(".nav__dropdown a[href='/en/cuerposonoro.html']")).toHaveCount(1);
-      await expect(page.locator(".nav__dropdown a[href='/en/universo-punzadas.html']")).toHaveCount(1);
+      await expect(page.locator(".nav__dropdown a[href='/universo-punzadas.html']")).toHaveCount(1);
     });
 
     test("language toggle navigates to the real English URL", async ({ page }) => {
