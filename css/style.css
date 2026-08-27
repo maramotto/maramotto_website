@@ -445,7 +445,7 @@ a { color: inherit; }
   font-family: 'Syne', sans-serif;
   font-size: clamp(2.2rem, 8vw, 5.5rem);
   font-weight: 800;
-  color: var(--yellow);
+  color: var(--yellow-deep);
   line-height: 1;
   margin-bottom: 1rem;
   letter-spacing: -0.03em;
@@ -954,7 +954,7 @@ a { color: inherit; }
 
 .project-hero .tag {
   background: var(--teal-dark);
-  color: var(--yellow);
+  color: var(--white);
   border-color: rgba(255, 255, 255, 0.15);
 }
 
