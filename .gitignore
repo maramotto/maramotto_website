@@ -6,3 +6,8 @@ test-results/
 playwright-report/
 .idea/
 .DS_Store
+
+# Local-only, not for the repo
+.claude/
+brand-review.md
+website-audit.md
