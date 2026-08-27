@@ -725,13 +725,16 @@ a { color: inherit; }
 
 /* --- Skills grid --- */
 .skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1.5rem;
   margin-top: 2.5rem;
 }
 
 .skill-card {
+  flex: 1 1 220px;
+  max-width: 280px;
   text-align: center;
   padding: 2.5rem 1.5rem;
   border-radius: 20px;
@@ -1311,7 +1314,7 @@ a { color: inherit; }
   .container, .container--narrow { padding: 0 1.5rem; }
 
   .projects-grid { grid-template-columns: 1fr; }
-  .skills-grid { grid-template-columns: repeat(2, 1fr); }
+  .skill-card { flex-basis: calc(50% - 0.75rem); max-width: calc(50% - 0.75rem); }
   .tech-stack { grid-template-columns: 1fr; }
 
   .project-hero { padding: 8rem 1.5rem 3rem; }
@@ -1337,7 +1340,7 @@ a { color: inherit; }
 }
 
 @media (max-width: 480px) {
-  .skills-grid { grid-template-columns: 1fr; }
+  .skill-card { flex-basis: 100%; max-width: 100%; }
   .btn-group { flex-direction: column; align-items: center; }
 }
 
