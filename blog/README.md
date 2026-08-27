@@ -80,8 +80,10 @@ post concreto:
 
 ## Local development
 
+The Eleventy config lives at the repo root now (it builds the main pages
+and the blog together) — run these from the repo root, not from `blog/`:
+
 ```bash
-cd blog
 npm install
 npm run serve   # http://localhost:8080, live-reloads on file changes
 ```
@@ -89,8 +91,7 @@ npm run serve   # http://localhost:8080, live-reloads on file changes
 ## Running the filter tests
 
 ```bash
-cd blog
-npm test
+npm run test:unit
 ```
 
 ## Deploying
