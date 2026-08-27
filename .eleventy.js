@@ -6,6 +6,8 @@ const translationUrl = require("./eleventy/filters/translation-url.js");
 const postsByTag = require("./eleventy/filters/posts-by-tag.js");
 const readableDate = require("./eleventy/filters/readable-date.js");
 const isoDate = require("./eleventy/filters/iso-date.js");
+const t = require("./eleventy/filters/t.js");
+const i18nData = require("./_data/i18n.js");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 function uniqueSortedTags(posts) {
@@ -49,6 +51,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("postsByTag", postsByTag);
   eleventyConfig.addFilter("readableDate", readableDate);
   eleventyConfig.addFilter("isoDate", isoDate);
+  eleventyConfig.addFilter("t", (key, lang) => t(i18nData, key, lang));
 
   eleventyConfig.addCollection("posts", (collectionApi) =>
     collectionApi.getFilteredByGlob("blog/posts/*/*.md").sort((a, b) => b.date - a.date)
