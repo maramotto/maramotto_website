@@ -740,9 +740,13 @@ a { color: inherit; }
 }
 
 .skill-card__emoji {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.2rem;
+  font-size: 3rem;
 }
 
 .skill-card__img {
