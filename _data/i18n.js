@@ -65,9 +65,9 @@ module.exports = {
 
     /* --- LEGAL PAGE --- */
     'legal.title':         'Aviso legal',
-    'legal.intro':         'Este sitio es un proyecto personal de Mara <<PENDIENTE: apellido completo>>.',
+    'legal.intro':         'Este sitio es un proyecto personal de Mara Crespo.',
     'legal.owner.title':   'Titular',
-    'legal.owner.body':    'Mara <<PENDIENTE: apellido>>, contacto: hello@maramotto.com. <<PENDIENTE: \u00bfNIF/CIF si aplica, domicilio si los talleres presenciales lo requieren?>>',
+    'legal.owner.body':    'Mara Crespo, contacto: hello@maramotto.com.',
     'legal.purpose.title': 'Objeto',
     'legal.purpose.body':  'maramotto.com presenta proyectos personales de arte y tecnolog\u00eda, y ofrece informaci\u00f3n de contacto para talleres y colaboraciones.',
 
@@ -345,9 +345,9 @@ module.exports = {
 
     /* --- LEGAL PAGE --- */
     'legal.title':         'Legal notice',
-    'legal.intro':         'This site is a personal project by Mara <<PENDING: surname>>.',
+    'legal.intro':         'This site is a personal project by Mara Crespo.',
     'legal.owner.title':   'Owner',
-    'legal.owner.body':    'Mara <<PENDING: surname>>, contact: hello@maramotto.com. <<PENDING: tax ID if applicable, address if in-person workshops require it?>>',
+    'legal.owner.body':    'Mara Crespo, contact: hello@maramotto.com.',
     'legal.purpose.title': 'Purpose',
     'legal.purpose.body':  'maramotto.com presents personal art and technology projects, and provides contact information for workshops and collaborations.',
 
