@@ -1,4 +1,4 @@
-const isoDate = require("../eleventy/filters/iso-date.js");
+const isoDate = require("../../eleventy/filters/iso-date.js");
 
 function postUrl(data) {
   return `/blog/${data.lang === "en" ? "en/" : ""}${data.translationKey}/`;

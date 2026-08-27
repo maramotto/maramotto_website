@@ -1,11 +1,7 @@
-/**
- * i18n.js — Internationalization for maramotto.com
- * Languages: Spanish (default) / English
- * Usage: elements use data-i18n="key" attribute
- *        data-i18n-html="key" for innerHTML (allows <em>, <strong>, <span> etc.)
- */
-
-const TRANSLATIONS = {
+// Moved from js/i18n.js during B-1 (real English URLs). Single source of
+// truth for the site's translated strings, now consumed at build time by
+// the `t` filter (eleventy/filters/t.js) instead of client-side JS.
+module.exports = {
   es: {
     /* --- NAV --- */
     'nav.projects':       'En qu\u00e9 ando',
@@ -528,61 +524,3 @@ const TRANSLATIONS = {
     'up.contact.cta':     'Get in touch',
   }
 };
-
-/* ---- Engine ---- */
-
-const I18N_STORAGE_KEY = 'mara_lang';
-let currentLang = localStorage.getItem(I18N_STORAGE_KEY) || 'es';
-
-function t(key) {
-  return TRANSLATIONS[currentLang]?.[key] || TRANSLATIONS['es']?.[key] || key;
-}
-
-function applyTranslations() {
-  // data-i18n -> textContent
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    const key = el.getAttribute('data-i18n');
-    el.textContent = t(key);
-  });
-
-  // data-i18n-html -> innerHTML (for markup like <em>, <strong>, <span>)
-  document.querySelectorAll('[data-i18n-html]').forEach(el => {
-    const key = el.getAttribute('data-i18n-html');
-    el.innerHTML = t(key);
-  });
-
-  // data-es/data-en -> locale-formatted number literal (e.g. "1.160" es vs
-  // "1,160" en). Intl.NumberFormat's grouping threshold for 4-digit numbers
-  // is inconsistent across browsers' ICU data, so the two variants are
-  // authored explicitly instead of computed.
-  document.querySelectorAll('[data-es][data-en]').forEach(el => {
-    el.textContent = currentLang === 'en' ? el.dataset.en : el.dataset.es;
-  });
-
-  // Update lang toggle buttons
-  document.querySelectorAll('.lang-toggle__btn').forEach(btn => {
-    btn.classList.toggle('active', btn.dataset.lang === currentLang);
-  });
-
-  document.documentElement.lang = currentLang;
-}
-
-function setLang(lang) {
-  if (!TRANSLATIONS[lang]) return;
-  currentLang = lang;
-  localStorage.setItem(I18N_STORAGE_KEY, lang);
-  applyTranslations();
-}
-
-// Expose globally
-window.i18n = { t, setLang, getCurrentLang: () => currentLang };
-
-// Apply on load
-document.addEventListener('DOMContentLoaded', () => {
-  applyTranslations();
-
-  // Wire up language toggle buttons
-  document.querySelectorAll('.lang-toggle__btn').forEach(btn => {
-    btn.addEventListener('click', () => setLang(btn.dataset.lang));
-  });
-});

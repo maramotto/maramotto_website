@@ -1,0 +1,176 @@
+---
+layout: layouts/root-page.njk
+slug: "universo-punzadas.html"
+ogType: article
+image: /img/universo-punzadas-visual.png
+themeColor: "#1E6B7B"
+---
+
+  <!-- ======= PROJECT HERO ======= -->
+  <section class="project-hero">
+    <div class="project-hero__circle project-hero__circle--1"></div>
+    <div class="project-hero__circle project-hero__circle--2"></div>
+    <div class="project-hero__circle project-hero__circle--3"></div>
+    <div class="project-hero__circle project-hero__circle--4"></div>
+
+    <div class="project-hero__inner">
+      <div class="project-hero__visual">
+        <div class="hero-shot">
+          <img src="/img/universo-punzadas-visual.png" alt="Universo Punzadas &mdash; matriz de temas por episodio" width="700" height="422" class="hero-shot__img">
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <span class="hero-stat__num">{{ "118" if lang == "es" else "118" }}</span>
+              <span class="hero-stat__label">{{ "up.stat.episodes" | t(lang) }}</span>
+            </div>
+            <div class="hero-stat">
+              <span class="hero-stat__num">{{ "1.160" if lang == "es" else "1,160" }}</span>
+              <span class="hero-stat__label">{{ "up.stat.authors" | t(lang) }}</span>
+            </div>
+            <div class="hero-stat">
+              <span class="hero-stat__num">{{ "5.874" if lang == "es" else "5,874" }}</span>
+              <span class="hero-stat__label">{{ "up.stat.mentions" | t(lang) }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="project-hero__content">
+        <h1 class="project-hero__title">Universo Punzadas</h1>
+        <p class="project-hero__tagline">{{ "up.tagline" | t(lang) | safe }}</p>
+        <div class="tags">
+          <span class="tag">{{ "up.tag.data" | t(lang) }}</span>
+          <span class="tag">Astro</span>
+          <span class="tag">Python</span>
+          <span class="tag">{{ "up.tag.search" | t(lang) }}</span>
+          <span class="tag">{{ "up.tag.dataviz" | t(lang) }}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= THE QUESTION + HOW IT WORKS ======= -->
+  <section class="project-body">
+    <div class="container--narrow">
+      <h2>{{ "up.question.title" | t(lang) }}</h2>
+      <p>{{ "up.question.p1" | t(lang) }}</p>
+      <p>{{ "up.question.p2" | t(lang) }}</p>
+
+      <h2>{{ "up.how.title" | t(lang) }}</h2>
+      <p>{{ "up.how.p1.html" | t(lang) | safe }}</p>
+      <p>{{ "up.how.p2" | t(lang) }}</p>
+    </div>
+  </section>
+
+  <!-- ======= TRY THE CATALOGUE ======= -->
+  <section class="project-body">
+    <div class="container--narrow">
+      <h2>{{ "up.demo.title" | t(lang) }}</h2>
+      <p>{{ "up.demo.p1" | t(lang) }}</p>
+      <iframe
+        src="https://universopunzadas.com"
+        class="demo-frame"
+        title="Universo Punzadas"
+        loading="lazy"
+      ></iframe>
+      <p style="font-size: 0.9rem; color: var(--text-light); text-align: center;">{{ "up.demo.fallback.html" | t(lang) | safe }}</p>
+    </div>
+  </section>
+
+  <!-- ======= WHY THIS PROJECT MATTERS (highlighted) ======= -->
+  <section class="project-body project-body--highlight">
+    <div class="container--narrow">
+      <h2>{{ "up.why.title" | t(lang) }}</h2>
+      <p>{{ "up.why.p1" | t(lang) }}</p>
+      <p>{{ "up.why.p2.html" | t(lang) | safe }}</p>
+    </div>
+  </section>
+
+  <!-- ======= TECHNOLOGY STACK ======= -->
+  <section class="project-body">
+    <div class="container--narrow">
+      <h2>{{ "up.tech.title" | t(lang) }}</h2>
+      <div class="tech-stack">
+        <div class="tech-item">
+          <div class="tech-item__label">{{ "up.tech.transcription" | t(lang) }}</div>
+          <div class="tech-item__value">mlx-whisper (large-v3) + pyannote 3.1</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item__label">{{ "up.tech.extraction" | t(lang) }}</div>
+          <div class="tech-item__value">{{ "up.tech.extraction.val" | t(lang) }}</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item__label">{{ "up.tech.frontend" | t(lang) }}</div>
+          <div class="tech-item__value">Astro + React</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item__label">{{ "up.tech.dataviz" | t(lang) }}</div>
+          <div class="tech-item__value">Observable Plot + sigma.js</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item__label">{{ "up.tech.data" | t(lang) }}</div>
+          <div class="tech-item__value">{{ "up.tech.data.val" | t(lang) }}</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item__label">{{ "up.tech.infra" | t(lang) }}</div>
+          <div class="tech-item__value">Docker + Hetzner VPS</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item__label">{{ "up.tech.source" | t(lang) }}</div>
+          <div class="tech-item__value">{{ "up.tech.source.val" | t(lang) }}</div>
+        </div>
+      </div>
+
+      <h2>{{ "up.pipeline.title" | t(lang) }}</h2>
+      <p>{{ "up.pipeline.p1" | t(lang) }}</p>
+
+      <div class="pipeline">
+        <div class="pipeline__step">
+          <div class="pipeline__step-number">1</div>
+          <div class="pipeline__step-title">{{ "up.pipe.1.title" | t(lang) }}</div>
+          <div class="pipeline__step-detail">{{ "up.pipe.1.detail" | t(lang) }}</div>
+        </div>
+        <div class="pipeline__arrow">&rarr;</div>
+        <div class="pipeline__step">
+          <div class="pipeline__step-number">2</div>
+          <div class="pipeline__step-title">{{ "up.pipe.2.title" | t(lang) }}</div>
+          <div class="pipeline__step-detail">{{ "up.pipe.2.detail" | t(lang) }}</div>
+        </div>
+        <div class="pipeline__arrow">&rarr;</div>
+        <div class="pipeline__step">
+          <div class="pipeline__step-number">3</div>
+          <div class="pipeline__step-title">{{ "up.pipe.3.title" | t(lang) }}</div>
+          <div class="pipeline__step-detail">{{ "up.pipe.3.detail" | t(lang) }}</div>
+        </div>
+        <div class="pipeline__arrow">&rarr;</div>
+        <div class="pipeline__step">
+          <div class="pipeline__step-number">4</div>
+          <div class="pipeline__step-title">{{ "up.pipe.4.title" | t(lang) }}</div>
+          <div class="pipeline__step-detail">{{ "up.pipe.4.detail" | t(lang) }}</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= EXPLORE THE CODE (highlighted) ======= -->
+  <section class="project-body project-body--highlight-dark">
+    <div class="container--narrow" style="text-align: center;">
+      <h2>{{ "up.code.title" | t(lang) }}</h2>
+      <p style="margin-bottom: 2rem;">{{ "up.code.desc" | t(lang) }}</p>
+      <div class="btn-group btn-group--center">
+        <a href="https://github.com/maramotto/punzadassonoras" class="btn btn--primary btn--small" target="_blank" rel="noopener">{{ "up.code.github" | t(lang) }}</a>
+        <a href="https://universopunzadas.com" class="btn btn--outline btn--small" target="_blank" rel="noopener">{{ "up.code.site" | t(lang) }}</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= CONTACT CTA ======= -->
+  <section class="project-body">
+    <div class="container--narrow">
+      <div class="project-cta">
+        <h2>{{ "up.contact.title" | t(lang) }}</h2>
+        <a href="mailto:hello@maramotto.com?subject=Universo%20Punzadas" class="btn btn--primary">{{ "up.contact.cta" | t(lang) }}</a>
+        <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-light);">
+          <a href="mailto:hello@maramotto.com?subject=Universo%20Punzadas" style="color: inherit; text-decoration: underline;">hello@maramotto.com</a>
+        </p>
+      </div>
+    </div>
+  </section>

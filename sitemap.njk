@@ -1,0 +1,25 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+layout: false
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{% set pages = [
+  {slug: "", lastmod: "2026-08-26", priority: "1.0"},
+  {slug: "cuerposonoro.html", lastmod: "2026-08-26", priority: "0.8"},
+  {slug: "universo-punzadas.html", lastmod: "2026-08-26", priority: "0.8"}
+] %}
+{% for p in pages %}
+  <url>
+    <loc>https://maramotto.com/{{ p.slug }}</loc>
+    <lastmod>{{ p.lastmod }}</lastmod>
+    <priority>{{ p.priority }}</priority>
+  </url>
+  <url>
+    <loc>https://maramotto.com/en/{{ p.slug }}</loc>
+    <lastmod>{{ p.lastmod }}</lastmod>
+    <priority>{{ p.priority }}</priority>
+  </url>
+{% endfor %}
+</urlset>

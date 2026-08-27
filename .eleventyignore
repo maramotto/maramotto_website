@@ -1,0 +1,16 @@
+# Eleventy's dir.input is the repo root, so anything matching
+# templateFormats (md, njk) anywhere in the tree gets rendered as a page
+# unless excluded here. These are docs/scratch files, not site content.
+README.md
+blog/README.md
+docs/
+brand-review.md
+website-audit.md
+.claude/
+
+node_modules/
+blog/node_modules/
+_site/
+blog/_site/
+
+tests/

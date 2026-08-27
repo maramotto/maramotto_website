@@ -1,0 +1,34 @@
+{% set home = "/en/" if lang == "en" else "/" %}
+{% set esHref = esUrl or (collections.posts | translationUrl(translationKey, "es") if translationKey else "/blog/") %}
+{% set enHref = enUrl or (collections.posts | translationUrl(translationKey, "en") if translationKey else "/blog/en/") %}
+<nav class="nav">
+  <a href="{{ home }}" class="nav__logo">maramotto</a>
+  <button class="nav__toggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav__links">
+    {% if not isHome %}
+    <li><a href="{{ home }}">{{ "nav.home" | t(lang) }}</a></li>
+    {% endif %}
+    <li class="nav__item">
+      <a href="{{ home }}#projects">{{ "nav.projects" | t(lang) }}</a>
+      <button class="nav__dropdown-toggle" aria-label="Toggle projects list">
+        <span class="nav__dropdown-arrow">&#9660;</span>
+      </button>
+      <ul class="nav__dropdown">
+        <li><a href="{{ '/en/cuerposonoro.html' if lang == 'en' else '/cuerposonoro.html' }}">CuerpoSonoro</a></li>
+        <li><a href="{{ '/en/universo-punzadas.html' if lang == 'en' else '/universo-punzadas.html' }}">Universo Punzadas</a></li>
+      </ul>
+    </li>
+    <li><a href="{{ '/blog/en/' if lang == 'en' else '/blog/' }}">{{ "nav.blog" | t(lang) }}</a></li>
+    <li><a href="{{ home }}#talleres">{{ "nav.workshops" | t(lang) }}</a></li>
+    <li><a href="{{ home }}#contact">{{ "nav.contact" | t(lang) }}</a></li>
+    <li><a href="{{ home }}#about">{{ "nav.about" | t(lang) }}</a></li>
+    <li>
+      <div class="lang-toggle">
+        <a class="lang-toggle__btn{{ ' active' if lang == 'es' }}" href="{{ esHref }}">ES</a>
+        <a class="lang-toggle__btn{{ ' active' if lang == 'en' }}" href="{{ enHref }}">EN</a>
+      </div>
+    </li>
+  </ul>
+</nav>

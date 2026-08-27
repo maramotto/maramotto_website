@@ -1,0 +1,15 @@
+---
+layout: layouts/base.njk
+fullTitle: true
+eleventyExcludeFromCollections: true
+pagination:
+  data: languages
+  size: 1
+  alias: lang
+permalink: "{{ '/en/' if lang == 'en' else '/' }}{{ slug }}"
+eleventyComputed:
+  esUrl: "/{{ slug }}"
+  enUrl: "/en/{{ slug }}"
+  ogLocaleAlternate: "{{ 'es_ES' if lang == 'en' else 'en_GB' }}"
+---
+{{ content | safe }}

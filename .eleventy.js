@@ -6,6 +6,8 @@ const translationUrl = require("./eleventy/filters/translation-url.js");
 const postsByTag = require("./eleventy/filters/posts-by-tag.js");
 const readableDate = require("./eleventy/filters/readable-date.js");
 const isoDate = require("./eleventy/filters/iso-date.js");
+const t = require("./eleventy/filters/t.js");
+const i18nData = require("./_data/i18n.js");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 function uniqueSortedTags(posts) {
@@ -17,21 +19,30 @@ function uniqueSortedTags(posts) {
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
 
-  // Each post folder (posts/<date>-<slug>/) holds its own cover image
+  // Each post folder (blog/posts/<date>-<slug>/) holds its own cover image
   // alongside its .md files. Copy every non-markdown file to
   // blog/images/<slug>/, stripping the date prefix so the folder's date
   // never leaks into the public image URL.
-  const postsDir = path.join(__dirname, "posts");
+  const postsDir = path.join(__dirname, "blog", "posts");
   for (const entry of fs.readdirSync(postsDir, { withFileTypes: true })) {
     if (!entry.isDirectory()) continue;
     const slug = entry.name.replace(/^\d{4}-\d{2}-\d{2}-/, "");
     for (const file of fs.readdirSync(path.join(postsDir, entry.name))) {
       if (file.endsWith(".md")) continue;
       eleventyConfig.addPassthroughCopy({
-        [`posts/${entry.name}/${file}`]: `blog/images/${slug}/${file}`,
+        [`blog/posts/${entry.name}/${file}`]: `blog/images/${slug}/${file}`,
       });
     }
   }
+
+  // Root pages' static assets — the main site has no build step of its
+  // own, so these just need to land in _site/ unchanged.
+  eleventyConfig.addPassthroughCopy("css");
+  eleventyConfig.addPassthroughCopy("js");
+  eleventyConfig.addPassthroughCopy("img");
+  eleventyConfig.addPassthroughCopy("favicon.ico");
+  eleventyConfig.addPassthroughCopy("favicon.svg");
+  eleventyConfig.addPassthroughCopy("robots.txt");
 
   eleventyConfig.addFilter("readingTime", readingTime);
   eleventyConfig.addFilter("postsByLang", postsByLang);
@@ -39,17 +50,18 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("postsByTag", postsByTag);
   eleventyConfig.addFilter("readableDate", readableDate);
   eleventyConfig.addFilter("isoDate", isoDate);
+  eleventyConfig.addFilter("t", (key, lang) => t(i18nData, key, lang));
 
   eleventyConfig.addCollection("posts", (collectionApi) =>
-    collectionApi.getFilteredByGlob("posts/*/*.md").sort((a, b) => b.date - a.date)
+    collectionApi.getFilteredByGlob("blog/posts/*/*.md").sort((a, b) => b.date - a.date)
   );
 
   eleventyConfig.addCollection("tagListEs", (collectionApi) =>
-    uniqueSortedTags(collectionApi.getFilteredByGlob("posts/*/*.md").filter((p) => p.data.lang === "es"))
+    uniqueSortedTags(collectionApi.getFilteredByGlob("blog/posts/*/*.md").filter((p) => p.data.lang === "es"))
   );
 
   eleventyConfig.addCollection("tagListEn", (collectionApi) =>
-    uniqueSortedTags(collectionApi.getFilteredByGlob("posts/*/*.md").filter((p) => p.data.lang === "en"))
+    uniqueSortedTags(collectionApi.getFilteredByGlob("blog/posts/*/*.md").filter((p) => p.data.lang === "en"))
   );
 
   return {
