@@ -1,9 +1,13 @@
 ---
 layout: layouts/base.njk
-lang: es
 clientI18n: true
 fullTitle: true
 ogLocaleAlternate: en_GB
 eleventyExcludeFromCollections: true
+pagination:
+  data: languages
+  size: 1
+  alias: lang
+permalink: "{{ '/en/' if lang == 'en' else '/' }}{{ slug }}"
 ---
 {{ content | safe }}
