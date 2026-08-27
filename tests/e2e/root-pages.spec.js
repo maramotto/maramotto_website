@@ -35,18 +35,36 @@ const PAGES = [
     hasHomeLink: true,
     translatedSelector: ".project-hero__tagline",
   },
+  {
+    es: "/talleres.html",
+    en: "/en/workshops.html",
+    titleEs: "Talleres — maramotto",
+    titleEn: "Workshops — maramotto",
+    // Unlike the project pages above, the h1 here is a translated heading
+    // (workshops.title in _data/i18n.js), not a proper name, so it differs
+    // per language — hence h1Es/h1En instead of a single shared h1.
+    h1Es: "Talleres de creatividad",
+    h1En: "Creativity workshops",
+    hasHomeLink: true,
+    // talleres.njk has two ".about-text" paragraphs (hero intro + CTA body),
+    // so a bare ".about-text" is a Playwright strict-mode violation here.
+    // Scope to the hero section (the only "section--purple") to target the
+    // hero intro specifically — it differs between ES/EN even with the
+    // <<PENDIENTE>> placeholder copy still in place.
+    translatedSelector: ".section--purple .about-text",
+  },
 ];
 
-for (const { es, en, titleEs, titleEn, h1, hasHomeLink, translatedSelector } of PAGES) {
+for (const { es, en, titleEs, titleEn, h1, h1Es, h1En, hasHomeLink, translatedSelector } of PAGES) {
   test.describe(`Root page ${es}`, () => {
-    for (const [url, title, lang] of [
-      [es, titleEs, "es"],
-      [en, titleEn, "en"],
+    for (const [url, title, expectedH1, lang] of [
+      [es, titleEs, h1Es || h1, "es"],
+      [en, titleEn, h1En || h1, "en"],
     ]) {
       test(`${lang}: loads with correct title, heading, lang, nav, footer and hreflang`, async ({ page }) => {
         await page.goto(url);
         await expect(page).toHaveTitle(title);
-        await expect(page.locator("h1")).toHaveText(h1);
+        await expect(page.locator("h1")).toHaveText(expectedH1);
         await expect(page.locator("html")).toHaveAttribute("lang", lang);
         await expect(page.locator(".nav__logo")).toBeVisible();
         await expect(page.locator("footer.footer")).toBeVisible();

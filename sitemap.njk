@@ -8,7 +8,8 @@ layout: false
 {% set pages = [
   {slug: "", lastmod: "2026-08-26", priority: "1.0"},
   {slug: "cuerposonoro.html", lastmod: "2026-08-26", priority: "0.8"},
-  {slug: "universo-punzadas.html", lastmod: "2026-08-26", priority: "0.8"}
+  {slug: "universo-punzadas.html", lastmod: "2026-08-26", priority: "0.8"},
+  {slug: "talleres.html", enSlug: "workshops.html", lastmod: "2026-08-27", priority: "0.7"}
 ] %}
 {% for p in pages %}
   <url>
@@ -17,7 +18,7 @@ layout: false
     <priority>{{ p.priority }}</priority>
   </url>
   <url>
-    <loc>https://maramotto.com/en/{{ p.slug }}</loc>
+    <loc>https://maramotto.com/en/{{ p.enSlug or p.slug }}</loc>
     <lastmod>{{ p.lastmod }}</lastmod>
     <priority>{{ p.priority }}</priority>
   </url>
