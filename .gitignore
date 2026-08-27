@@ -11,3 +11,4 @@ playwright-report/
 .claude/
 brand-review.md
 website-audit.md
+*.md
