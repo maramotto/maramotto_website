@@ -18,8 +18,8 @@ const PAGES = [
     translatedSelector: ".hero__subtitle",
   },
   {
-    es: "/cuerposonoro.html",
-    en: "/en/cuerposonoro.html",
+    es: "/cuerposonoro/",
+    en: "/en/cuerposonoro/",
     titleEs: "CuerpoSonoro — Arte Interactivo | Movimiento Corporal y Sonido en Tiempo Real",
     titleEn: "CuerpoSonoro — Interactive Art | Real-Time Body Movement and Sound",
     h1: "CuerpoSonoro",
@@ -27,8 +27,8 @@ const PAGES = [
     translatedSelector: ".project-hero__tagline",
   },
   {
-    es: "/universo-punzadas.html",
-    en: "/en/universo-punzadas.html",
+    es: "/universo-punzadas/",
+    en: "/en/universo-punzadas/",
     titleEs: "Universo Punzadas — Catálogo de referencias culturales de Punzadas Sonoras",
     titleEn: "Universo Punzadas — Cultural Reference Catalogue for the Punzadas Sonoras Podcast",
     h1: "Universo Punzadas",
@@ -72,8 +72,8 @@ for (const { es, en, titleEs, titleEn, h1, h1Es, h1En, hasHomeLink, translatedSe
 
     test("project dropdown links stay in the same language, except Universo Punzadas (Spanish-only)", async ({ page }) => {
       await page.goto(en);
-      await expect(page.locator(".nav__dropdown a[href='/en/cuerposonoro.html']")).toHaveCount(1);
-      await expect(page.locator(".nav__dropdown a[href='/universo-punzadas.html']")).toHaveCount(1);
+      await expect(page.locator(".nav__dropdown a[href='/en/cuerposonoro/']")).toHaveCount(1);
+      await expect(page.locator(".nav__dropdown a[href='/universo-punzadas/']")).toHaveCount(1);
     });
 
     test("language toggle navigates to the real English URL", async ({ page }) => {
@@ -94,6 +94,6 @@ test("contact mailto link on the homepage carries no stray subject", async ({ pa
 });
 
 test("project pages carry a pre-filled contact subject", async ({ page }) => {
-  await page.goto("/cuerposonoro.html");
+  await page.goto("/cuerposonoro/");
   await expect(page.locator("a[href*='mailto:hello@maramotto.com?subject=CuerpoSonoro']").first()).toBeVisible();
 });
