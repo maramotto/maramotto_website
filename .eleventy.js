@@ -46,6 +46,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("robots.txt");
   eleventyConfig.addPassthroughCopy("cuerposonoro/demo/css");
   eleventyConfig.addPassthroughCopy("cuerposonoro/demo/js");
+  eleventyConfig.addPassthroughCopy("cuerposonoro/demo/index.html");
+  eleventyConfig.addPassthroughCopy({
+    "cuerposonoro/demo/en/index.html": "en/cuerposonoro/demo/index.html",
+  });
 
   eleventyConfig.addFilter("readingTime", readingTime);
   eleventyConfig.addFilter("postsByLang", postsByLang);
