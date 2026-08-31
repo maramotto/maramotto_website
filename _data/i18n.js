@@ -79,7 +79,7 @@ module.exports = {
     'privacy.storage.title':   'Almacenamiento',
     'privacy.storage.body':    'Este sitio no guarda nada en tu navegador: ni cookies, ni almacenamiento local.',
     'privacy.embeds.title':    'Contenido incrustado',
-    'privacy.embeds.body':     'Las páginas de CuerpoSonoro y Universo Punzadas incrustan contenido de cuerposonoro.art y universopunzadas.com, ambos también proyectos de Mara. Cargar esas páginas transmite tu IP a esos dominios. La demo de CuerpoSonoro funciona en tu propio navegador — no se sube nada a ningún servidor.',
+    'privacy.embeds.body':     'La página de Universo Punzadas incrusta contenido de universopunzadas.com, también un proyecto de Mara. Cargar esa página transmite tu IP a ese dominio. La demo de CuerpoSonoro vive en maramotto.com y todo el procesado de tu cámara ocurre en tu propio navegador — no se sube nada a ningún servidor —, pero carga la librería MediaPipe desde el CDN público cdn.jsdelivr.net, lo que transmite tu IP a ese proveedor.',
 
     /* --- CONTACT --- */
     'contact.label':      'Contacto',
@@ -187,7 +187,7 @@ module.exports = {
     'cs.desc.head.map':        'Filtro tonal global (CC74)',
 
     'cs.compare.title':          'Demo web vs. instalación',
-    'cs.compare.demo.title':     'Demo web — cuerposonoro.art',
+    'cs.compare.demo.title':     'Demo web',
     'cs.compare.demo.1':         'MediaPipe corriendo directamente en el navegador (JS)',
     'cs.compare.demo.2':         'Síntesis de audio vía Web Audio API',
     'cs.compare.demo.3':         '5 descriptores de movimiento principales',
@@ -366,7 +366,7 @@ module.exports = {
     'privacy.storage.title':   'Storage',
     'privacy.storage.body':    'This site stores nothing in your browser — no cookies, no local storage.',
     'privacy.embeds.title':    'Embedded content',
-    'privacy.embeds.body':     "The CuerpoSonoro and Universo Punzadas pages embed content from cuerposonoro.art and universopunzadas.com, both also Mara's own projects. Loading those pages transmits your IP to those domains. The CuerpoSonoro demo runs in your own browser — nothing is uploaded to any server.",
+    'privacy.embeds.body':     "The Universo Punzadas page embeds content from universopunzadas.com, also one of Mara's own projects. Loading that page transmits your IP to that domain. The CuerpoSonoro demo lives on maramotto.com and all camera processing happens in your own browser — nothing is uploaded to any server — but it loads the MediaPipe library from the public CDN cdn.jsdelivr.net, which transmits your IP to that provider.",
 
     /* --- CONTACT --- */
     'contact.label':      'Contact',
@@ -474,7 +474,7 @@ module.exports = {
     'cs.desc.head.map':        'Global tonal filter (CC74)',
 
     'cs.compare.title':          'Web demo vs. installation',
-    'cs.compare.demo.title':     'Web demo \u2014 cuerposonoro.art',
+    'cs.compare.demo.title':     'Web demo',
     'cs.compare.demo.1':         'MediaPipe running directly in the browser (JS)',
     'cs.compare.demo.2':         'Audio synthesis via Web Audio API',
     'cs.compare.demo.3':         '5 core motion descriptors',
