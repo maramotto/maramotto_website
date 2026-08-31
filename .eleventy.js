@@ -47,6 +47,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("cuerposonoro/demo/css");
   eleventyConfig.addPassthroughCopy("cuerposonoro/demo/js");
   eleventyConfig.addPassthroughCopy("cuerposonoro/demo/index.html");
+  // Remapped to the site's /en/ prefix convention (URL must be
+  // /en/cuerposonoro/demo/, not /cuerposonoro/demo/en/) — matches every
+  // other /en/-prefixed page and the hardcoded lang-toggle hrefs in both
+  // demo pages.
   eleventyConfig.addPassthroughCopy({
     "cuerposonoro/demo/en/index.html": "en/cuerposonoro/demo/index.html",
   });

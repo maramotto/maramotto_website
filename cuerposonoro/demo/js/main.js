@@ -2,6 +2,13 @@
  * Main orchestrator for the CuerpoSonoro web demo — fully client-side.
  */
 
+// Status-badge text is looked up on window.CS_STRINGS, which each page
+// (index.html / en/index.html) defines inline before this script loads —
+// this keeps the site's no-runtime-i18n, per-page-language design intact
+// while letting one shared main.js serve both languages. The Spanish
+// literals below are the fallback if a page ever forgets to define it.
+const STRINGS = window.CS_STRINGS || {};
+
 class App {
     constructor() {
         this.camera = null;
@@ -37,7 +44,7 @@ class App {
         5.- Enable init button
     */
     async init() {
-        this.updateStatus('Inicializando...');
+        this.updateStatus(STRINGS.init || 'Inicializando...');
 
         try {
             this.camera = new CameraHandler(this.videoEl);
@@ -50,11 +57,11 @@ class App {
 
             this.audio = new AudioEngine();
 
-            this.updateStatus('Listo');
+            this.updateStatus(STRINGS.ready || 'Listo');
             this.startBtn.disabled = false;
 
         } catch (error) {
-            this.updateStatus(`Error: ${error.message}`);
+            this.updateStatus(`${STRINGS.error || 'Error'}: ${error.message}`);
             console.error('Initialization error:', error);
         }
     }
@@ -71,10 +78,10 @@ class App {
 
             this.startBtn.disabled = true;
             this.stopBtn.disabled = false;
-            this.updateStatus('Activo');
+            this.updateStatus(STRINGS.active || 'Activo');
 
         } catch (error) {
-            this.updateStatus(`Error: ${error.message}`);
+            this.updateStatus(`${STRINGS.error || 'Error'}: ${error.message}`);
             console.error('Start error:', error);
         }
     }
@@ -87,7 +94,7 @@ class App {
 
         this.startBtn.disabled = false;
         this.stopBtn.disabled = true;
-        this.updateStatus('Detenido');
+        this.updateStatus(STRINGS.stopped || 'Detenido');
     }
 
     /** The main process:
