@@ -44,6 +44,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("favicon.ico");
   eleventyConfig.addPassthroughCopy("favicon.svg");
   eleventyConfig.addPassthroughCopy("robots.txt");
+  eleventyConfig.addPassthroughCopy("cuerposonoro/demo/css");
+  eleventyConfig.addPassthroughCopy("cuerposonoro/demo/js");
 
   eleventyConfig.addFilter("readingTime", readingTime);
   eleventyConfig.addFilter("postsByLang", postsByLang);
