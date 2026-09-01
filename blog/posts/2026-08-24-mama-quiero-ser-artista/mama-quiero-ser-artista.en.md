@@ -12,7 +12,7 @@ excerpt: "At 37, with no art-world background or contacts, I'm deciding to pursu
 **Yes, I want to be an artist.** And no, I don't want to do anything else
 with my time and my energy. I want to devote myself to art 24/7.
 
-Because as the great Concha Velasco said:
+Because as *Mamá quiero ser artista* — the great Concha Velasco's song — puts it:
 
 > "And she thought, and rightly so,
  That there are only two kinds of people, The artists, and everyone else"

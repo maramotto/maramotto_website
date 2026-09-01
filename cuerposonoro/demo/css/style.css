@@ -1,0 +1,1062 @@
+/* ============================================
+   cuerposonoro.art — Styles
+   Part of the maramotto design system
+   Primary: Teal #1E6B7B (project color)
+   Accent: Yellow #FFD93D / Purple #7B2D8E
+   Fonts: Syne (headings) + DM Sans (body)
+   Background: Cream #FDF5E6
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap');
+
+/* --- Reset & Tokens --- */
+:root {
+  --yellow:       #FFD93D;
+  --yellow-light: #FFF3C4;
+  --purple:       #7B2D8E;
+  --purple-dark:  #5C1F6A;
+  --purple-light: #F3E8F9;
+  --teal:         #1E6B7B;
+  --teal-dark:    #155460;
+  --teal-light:   #E6F3F5;
+  --dark:         #1A1A2E;
+  --text:         #2D2D3A;
+  --text-light:   #6B6B80;
+  --white:        #FFFEF8;
+  --cream:        #FDF5E6;
+  --cream-dark:   #F7ECDA;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--text);
+  background: var(--cream);
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+a   { color: inherit; text-decoration: none; }
+
+/* --- Utility --- */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.container--wide {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ============================================
+   NAVIGATION
+   ============================================ */
+
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  height: 64px;
+  padding: 0 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(253, 245, 230, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(30, 107, 123, 0.12);
+}
+
+.nav__logo {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: var(--teal);
+  letter-spacing: -0.02em;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav__logo-svg {
+  width: 40px;
+  height: 20px;
+  flex-shrink: 0;
+  color: var(--teal);
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav__links a {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.2s;
+  position: relative;
+}
+
+.nav__links a::after {
+  content: '';
+  position: absolute;
+  bottom: -3px; left: 0;
+  width: 0; height: 2px;
+  background: var(--teal);
+  transition: width 0.25s;
+}
+
+.nav__links a:hover          { color: var(--teal); }
+.nav__links a:hover::after   { width: 100%; }
+.nav__links a.active         { color: var(--teal); }
+.nav__links a.active::after  { width: 100%; }
+
+/* Language toggle */
+.lang-toggle {
+  display: flex;
+  gap: 0.15rem;
+  background: var(--teal-light);
+  border-radius: 20px;
+  padding: 0.2rem;
+}
+
+.lang-toggle__btn {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  padding: 0.3rem 0.7rem;
+  border-radius: 16px;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  color: var(--teal);
+  transition: all 0.2s;
+}
+
+.lang-toggle__btn.active {
+  background: var(--teal);
+  color: var(--white);
+}
+
+/* Mobile hamburger */
+.nav__toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.nav__toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--teal);
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* ============================================
+   HERO (index page)
+   ============================================ */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 8rem 2rem 4rem;
+  background: var(--teal);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative circles */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -80px; right: -60px;
+  width: 350px; height: 350px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  pointer-events: none;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -50px; left: 5%;
+  width: 250px; height: 250px;
+  border-radius: 50%;
+  background: rgba(255, 217, 61, 0.06);
+  pointer-events: none;
+}
+
+.hero__visual {
+  width: 110px;
+  height: 110px;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 1;
+  animation: pulse-glow 3s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { transform: scale(1);    filter: drop-shadow(0 0 0px rgba(255,217,61,0)); }
+  50%       { transform: scale(1.05); filter: drop-shadow(0 0 20px rgba(255,217,61,0.25)); }
+}
+
+.hero__overline {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--yellow);
+  opacity: 0.75;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Claim block groups both title lines together */
+.hero__claim {
+  margin-bottom: 2.5rem;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.hero__title {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(2.8rem, 7vw, 5rem);
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.4rem;
+}
+
+/* "The machine listens" — same Syne family, clearly secondary weight/size */
+.hero__title-sub {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(1.3rem, 3.5vw, 2.2rem);
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+}
+
+.hero__description {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 460px;
+  margin-bottom: 2.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.hero__cta {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.8rem;
+  border-radius: 50px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.25s;
+  text-decoration: none;
+}
+
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.btn--yellow {
+  background: var(--yellow);
+  color: var(--teal-dark);
+  border-color: var(--yellow);
+}
+
+.btn--yellow:not(:disabled):hover {
+  background: var(--white);
+  border-color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.btn--outline-white {
+  background: transparent;
+  color: var(--white);
+  border-color: rgba(255,255,255,0.5);
+}
+
+.btn--outline-white:not(:disabled):hover {
+  background: rgba(255,255,255,0.1);
+  border-color: var(--white);
+  transform: translateY(-2px);
+}
+
+.btn--teal {
+  background: var(--teal);
+  color: var(--white);
+  border-color: var(--teal);
+}
+
+.btn--teal:not(:disabled):hover {
+  background: var(--teal-dark);
+  border-color: var(--teal-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(30,107,123,0.25);
+}
+
+.btn--outline-teal {
+  background: transparent;
+  color: var(--teal);
+  border-color: var(--teal);
+}
+
+.btn--outline-teal:not(:disabled):hover {
+  background: var(--teal);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+/* ============================================
+   DEMO SECTION
+   ============================================ */
+
+.demo-section {
+  padding: 5rem 0;
+  background: var(--cream);
+}
+
+.demo-section__header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.section-label {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--teal);
+  margin-bottom: 0.5rem;
+}
+
+.section-title {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+  font-weight: 800;
+  color: var(--dark);
+  letter-spacing: -0.02em;
+}
+
+/* Camera area */
+.demo-stage {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 2rem;
+  align-items: start;
+}
+
+.video-wrap {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  background: var(--dark);
+  aspect-ratio: 4/3;
+}
+
+#video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scaleX(-1);
+}
+
+#canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transform: scaleX(-1);
+  pointer-events: none;
+}
+
+.status-badge {
+  position: absolute;
+  top: 12px; left: 12px;
+  background: rgba(26, 26, 46, 0.75);
+  backdrop-filter: blur(8px);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--white);
+  letter-spacing: 0.03em;
+}
+
+/* Demo sidebar */
+.demo-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.demo-controls {
+  display: flex;
+  gap: 0.75rem;
+}
+
+/* Feature bars panel */
+.features-panel {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 1.25rem;
+  border: 1px solid rgba(30, 107, 123, 0.1);
+}
+
+.features-panel__title {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--teal);
+  margin-bottom: 1rem;
+}
+
+.feature-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.85rem;
+}
+
+.feature-row:last-child { margin-bottom: 0; }
+
+.feature-row__label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-light);
+  width: 68px;
+  flex-shrink: 0;
+}
+
+.bar-track {
+  flex: 1;
+  height: 6px;
+  background: var(--teal-light);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+/* Symmetry bar — bidirectional from center */
+.bar-track.symmetry {
+  position: relative;
+  overflow: visible;
+}
+
+.bar-track.symmetry::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 50%;
+  width: 1px; height: 100%;
+  background: rgba(30, 107, 123, 0.3);
+  z-index: 1;
+}
+
+.bar-fill {
+  height: 100%;
+  width: 0%;
+  background: var(--teal);
+  border-radius: 3px;
+  transition: width 0.1s ease-out;
+}
+
+.bar-fill.symmetry {
+  position: absolute;
+  left: 50%;
+  transform: translateX(0);
+  transition: width 0.1s ease-out, transform 0.1s ease-out;
+}
+
+.feature-row__value {
+  font-family: 'DM Sans', monospace;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--teal);
+  width: 36px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+/* Connection indicator */
+.ws-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+.ws-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: #ef4444;
+  flex-shrink: 0;
+  transition: background 0.3s;
+}
+
+.ws-dot.connected {
+  background: #22c55e;
+  box-shadow: 0 0 6px rgba(34, 197, 94, 0.5);
+}
+
+/* ============================================
+   DEMO BRIDGE — connector between stage and list
+   ============================================ */
+
+.demo-bridge {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 4rem 0 2.5rem;
+}
+
+.demo-bridge__line {
+  flex: 1;
+  height: 1px;
+  background: rgba(30, 107, 123, 0.2);
+}
+
+.demo-bridge__text {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--teal);
+  white-space: nowrap;
+  opacity: 0.7;
+}
+
+/* ============================================
+   FEATURES LIST — single column
+   ============================================ */
+
+.features-list {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2.5rem;
+}
+
+.fitem {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 2rem;
+  padding: 1.75rem 0;
+  border-bottom: 1px solid rgba(30, 107, 123, 0.12);
+  transition: background 0.2s;
+}
+
+.fitem:first-child { border-top: 1px solid rgba(30, 107, 123, 0.12); }
+
+.fitem:hover {
+  background: rgba(30, 107, 123, 0.03);
+  border-radius: 8px;
+  margin: 0 -1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.fitem__left {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.fitem__icon {
+  font-size: 1.4rem;
+  line-height: 1;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.fitem__name {
+  font-family: 'Syne', sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--dark);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.2rem;
+}
+
+.fitem__measure {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--teal);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+
+.fitem__right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.fitem__desc {
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: var(--text-light);
+}
+
+.fitem__effect {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--teal-dark);
+}
+
+.fitem__arrow {
+  color: var(--teal);
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+/* ============================================
+   ABOUT PAGE HERO
+   ============================================ */
+
+.about-hero {
+  padding: 8rem 2rem 5rem;
+  background: var(--teal);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-hero::before {
+  content: '';
+  position: absolute;
+  top: -80px; right: -60px;
+  width: 350px; height: 350px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  pointer-events: none;
+}
+
+.about-hero__inner {
+  max-width: 760px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.about-hero__overline {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--yellow);
+  opacity: 0.8;
+  margin-bottom: 1.25rem;
+}
+
+.about-hero__title {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 800;
+  color: var(--white);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.about-hero__tagline {
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.65;
+  max-width: 520px;
+}
+
+/* ============================================
+   ABOUT CONTENT — consistent 680px column
+   ============================================ */
+
+.about-section {
+  padding: 5rem 0;
+  background: var(--cream);
+}
+
+/* Strong contrast for maramotto section — teal bg like the hero */
+.about-section--mara {
+  background: var(--teal);
+}
+
+.about-content {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+/* Title sits inside .about-content — aligned with text below */
+.about-section__title {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  font-weight: 800;
+  color: var(--dark);
+  letter-spacing: -0.02em;
+  margin-top: 0.4rem;
+  margin-bottom: 2rem;
+}
+
+.about-content p {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: var(--text);
+  margin-bottom: 1.4rem;
+}
+
+.about-content p:last-child { margin-bottom: 0; }
+
+.about-content p em {
+  font-style: italic;
+  color: var(--teal);
+}
+
+/* Section label colour override inside teal section */
+.about-mara-label {
+  color: var(--yellow) !important;
+  opacity: 0.8;
+}
+
+/* Pullquote */
+.pullquote {
+  border-left: 3px solid var(--teal);
+  padding: 0.5rem 0 0.5rem 1.5rem;
+  margin: 2.5rem 0;
+  font-family: 'Syne', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--dark);
+  line-height: 1.45;
+  letter-spacing: -0.01em;
+}
+
+/* Links row */
+.about-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+/* ── Mara card ── */
+.mara-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2rem;
+  align-items: start;
+  margin-top: 1.5rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.mara-card__avatar {
+  width: 64px; height: 64px;
+  border-radius: 50%;
+  background: var(--yellow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 1.4rem;
+  color: var(--teal-dark);
+  flex-shrink: 0;
+}
+
+.mara-card__name {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--white) !important;
+  margin-bottom: 0.1rem !important;
+}
+
+.mara-card__role {
+  font-size: 0.8rem !important;
+  font-weight: 600;
+  color: var(--yellow) !important;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 1rem !important;
+}
+
+.mara-card__body p {
+  color: rgba(255, 255, 255, 0.8) !important;
+  font-size: 0.95rem !important;
+  line-height: 1.7 !important;
+  margin-bottom: 0.85rem !important;
+}
+
+.mara-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--yellow);
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: gap 0.2s, opacity 0.2s;
+  margin-top: 0.25rem;
+}
+
+.mara-link:hover { gap: 0.7rem; opacity: 0.85; }
+
+/* ============================================
+   CAMERA PERMISSION NOTE
+   ============================================ */
+
+.camera-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: var(--text-light);
+  background: var(--teal-light);
+  border-radius: 10px;
+  padding: 0.65rem 0.9rem;
+}
+
+.camera-note__icon { flex-shrink: 0; }
+
+/* ============================================
+   MARAMOTTO CTA SECTION
+   ============================================ */
+
+.mara-cta {
+  background: var(--yellow-light);
+  padding: 5rem 0;
+  border-top: 2px solid var(--yellow);
+}
+
+.mara-cta__inner {
+  max-width: 580px;
+}
+
+.mara-cta__label {
+  color: var(--purple);
+}
+
+.mara-cta__heading {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 800;
+  color: var(--dark);
+  letter-spacing: -0.02em;
+  margin: 0.4rem 0 1.25rem;
+}
+
+.mara-cta__text {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--text);
+  margin-bottom: 2rem;
+}
+
+.mara-cta__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 1rem;
+  color: var(--purple);
+  text-decoration: none;
+  letter-spacing: -0.01em;
+  transition: gap 0.2s, color 0.2s;
+}
+
+.mara-cta__link:hover {
+  gap: 0.8rem;
+  color: var(--purple-dark);
+}
+
+/* ============================================
+   FOOTER — same as maramotto.com
+   ============================================ */
+
+.footer {
+  padding: 2rem 2.5rem;
+  background: var(--dark);
+  text-align: center;
+}
+
+.footer__text {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.footer__text a {
+  color: var(--yellow);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer__text a:hover { color: var(--white); }
+
+.footer__text span { color: var(--yellow); }
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+  .nav { padding: 0 1.25rem; }
+
+  .nav__links {
+    display: none;
+    position: absolute;
+    top: 64px; left: 0; right: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    background: rgba(253, 245, 230, 0.97);
+    padding: 1.5rem;
+    gap: 1rem;
+    border-bottom: 1px solid rgba(30,107,123,0.12);
+    backdrop-filter: blur(16px);
+  }
+
+  .nav__links.open { display: flex; }
+  .nav__toggle     { display: flex; }
+
+  /* Hero */
+  .hero__visual {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1.25rem;
+  }
+
+  /* Demo stage */
+  .demo-stage {
+    grid-template-columns: 1fr;
+  }
+
+  .demo-controls { justify-content: center; }
+
+  /* Features list collapses to stacked on mobile */
+  .fitem {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .fitem:hover {
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .fitem__left {
+    align-items: center;
+  }
+
+  /* About sections — add horizontal padding */
+  .about-section { padding: 3.5rem 1.5rem; }
+
+  .about-hero__tagline { max-width: 100%; }
+
+  /* Mara card */
+  .mara-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .mara-card__avatar { margin: 0 auto; }
+
+  .about-links { justify-content: center; }
+
+  .pullquote { font-size: 1.1rem; }
+
+  /* Mara CTA */
+  .mara-cta { padding: 3.5rem 1.5rem; }
+
+  .mara-cta__inner { max-width: 100%; }
+}
+
+@media (max-width: 480px) {
+  /* Hero CTAs stack */
+  .hero__cta { flex-direction: column; align-items: center; }
+
+  /* Buttons full width on very small screens */
+  .hero__cta .btn { width: 100%; text-align: center; justify-content: center; }
+
+  /* Demo controls stack */
+  .demo-controls { flex-direction: column; }
+
+  .demo-controls .btn { width: 100%; text-align: center; }
+
+  /* About links stack */
+  .about-links { flex-direction: column; }
+
+  .about-links .btn { width: 100%; text-align: center; justify-content: center; }
+
+  /* Tighter section padding on very small screens */
+  .about-section { padding: 2.5rem 1.25rem; }
+
+  .mara-cta { padding: 2.5rem 1.25rem; }
+
+  /* Reduce demo-section padding */
+  .demo-section .container { padding: 0 1.25rem; }
+}

@@ -1,6 +1,6 @@
 ---
 layout: layouts/root-page.njk
-slug: "cuerposonoro.html"
+slug: "cuerposonoro/"
 ogType: article
 image: /img/cuerposonoro-visual.png
 themeColor: "#1E6B7B"
@@ -32,7 +32,7 @@ themeColor: "#1E6B7B"
     </div>
   </section>
 
-  <!-- ======= THE QUESTION + HOW IT WORKS ======= -->
+  <!-- ======= THE QUESTION ======= -->
   <section class="project-body">
     <div class="container--narrow">
       <h2>{{ "cs.question.title" | t(lang) }}</h2>
@@ -45,71 +45,9 @@ themeColor: "#1E6B7B"
     </div>
   </section>
 
-  <!-- ======= TRY THE WEB DEMO ======= -->
+  <!-- ======= PIPELINE (5 steps) ======= -->
   <section class="project-body">
-    <div class="container--narrow">
-      <h2>{{ "cs.demo.title" | t(lang) }}</h2>
-      <p>{{ "cs.demo.p1" | t(lang) }}</p>
-      <iframe
-        src="https://cuerposonoro.art"
-        class="demo-frame"
-        title="CuerpoSonoro Web Demo"
-        loading="lazy"
-        allow="camera; microphone; autoplay"
-        allowfullscreen
-      ></iframe>
-      <p style="font-size: 0.9rem; color: var(--text-light); text-align: center;">{{ "cs.demo.fallback.html" | t(lang) | safe }}</p>
-    </div>
-  </section>
-
-  <!-- ======= WHY THIS PROJECT MATTERS (highlighted) ======= -->
-  <section class="project-body project-body--highlight">
-    <div class="container--narrow">
-      <h2>{{ "cs.why.title" | t(lang) }}</h2>
-      <p>{{ "cs.why.p1" | t(lang) }}</p>
-      <p>{{ "cs.why.p2.html" | t(lang) | safe }}</p>
-    </div>
-  </section>
-
-  <!-- ======= TECHNOLOGY STACK ======= -->
-  <section class="project-body">
-    <div class="container--narrow">
-      <h2>{{ "cs.tech.title" | t(lang) }}</h2>
-      <div class="tech-stack">
-        <div class="tech-item">
-          <div class="tech-item__label">{{ "cs.tech.cv" | t(lang) }}</div>
-          <div class="tech-item__value">MediaPipe Pose</div>
-        </div>
-        <div class="tech-item">
-          <div class="tech-item__label">{{ "cs.tech.audio" | t(lang) }}</div>
-          <div class="tech-item__value">SuperCollider</div>
-        </div>
-        <div class="tech-item">
-          <div class="tech-item__label">{{ "cs.tech.comm" | t(lang) }}</div>
-          <div class="tech-item__value">OSC + MIDI/MPE</div>
-        </div>
-        <div class="tech-item">
-          <div class="tech-item__label">Backend</div>
-          <div class="tech-item__value">Python + FastAPI</div>
-        </div>
-        <div class="tech-item">
-          <div class="tech-item__label">{{ "cs.tech.demo" | t(lang) }}</div>
-          <div class="tech-item__value">MediaPipe.js + Web Audio API</div>
-        </div>
-        <div class="tech-item">
-          <div class="tech-item__label">{{ "cs.tech.infra" | t(lang) }}</div>
-          <div class="tech-item__value">Docker + Hetzner VPS</div>
-        </div>
-        <div class="tech-item">
-          <div class="tech-item__label">{{ "cs.tech.test" | t(lang) }}</div>
-          <div class="tech-item__value">{{ "cs.tech.test.val" | t(lang) }}</div>
-        </div>
-        <div class="tech-item">
-          <div class="tech-item__label">{{ "cs.tech.source" | t(lang) }}</div>
-          <div class="tech-item__value">{{ "cs.tech.source.val" | t(lang) }}</div>
-        </div>
-      </div>
-
+    <div class="container">
       <h2>{{ "cs.hood.title" | t(lang) }}</h2>
       <p>{{ "cs.hood.p1" | t(lang) }}</p>
 
@@ -144,75 +82,155 @@ themeColor: "#1E6B7B"
           <div class="pipeline__step-detail">{{ "cs.pipe.5.detail" | t(lang) }}</div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <h2>{{ "cs.pose.title" | t(lang) }}</h2>
-      <p>{{ "cs.pose.p1.html" | t(lang) | safe }}</p>
+  <!-- ======= TRY THE DEMO ======= -->
+  <section class="project-body project-body--highlight">
+    <div class="container--narrow" style="text-align: center;">
+      <h2>{{ "cs.demo.title" | t(lang) }}</h2>
+      <p>{{ "cs.demo.privacy" | t(lang) }}</p>
+      <div class="btn-group btn-group--center" style="margin-top: 1.5rem;">
+        <a href="{{ '/en/cuerposonoro/demo/' if lang == 'en' else '/cuerposonoro/demo/' }}" class="btn btn--primary">{{ "cs.demo.cta" | t(lang) }}</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= WHAT THE SYSTEM MEASURES (9 descriptors) ======= -->
+  <section class="project-body">
+    <div class="container">
+      <h2>{{ "cs.desc.title" | t(lang) }}</h2>
+      <p>{{ "cs.desc.intro" | t(lang) }}</p>
 
       <div class="tech-detail-grid">
         <div class="tech-detail-item">
-          <div class="tech-detail-item__label">{{ "cs.detail.energy.label" | t(lang) }}</div>
-          <div class="tech-detail-item__value">{{ "cs.detail.energy.value" | t(lang) }}</div>
-          <div class="tech-detail-item__desc">{{ "cs.detail.energy.desc" | t(lang) }}</div>
+          <div class="tech-detail-item__label">{{ "cs.desc.energy.name" | t(lang) }}</div>
+          <div class="tech-detail-item__value">{{ "cs.desc.energy.map" | t(lang) }}</div>
+          <div class="tech-detail-item__desc">{{ "cs.desc.energy.body" | t(lang) }}</div>
         </div>
         <div class="tech-detail-item">
-          <div class="tech-detail-item__label">{{ "cs.detail.balance.label" | t(lang) }}</div>
-          <div class="tech-detail-item__value">{{ "cs.detail.balance.value" | t(lang) }}</div>
-          <div class="tech-detail-item__desc">{{ "cs.detail.balance.desc" | t(lang) }}</div>
+          <div class="tech-detail-item__label">{{ "cs.desc.symmetry.name" | t(lang) }}</div>
+          <div class="tech-detail-item__value">{{ "cs.desc.symmetry.map" | t(lang) }}</div>
+          <div class="tech-detail-item__desc">{{ "cs.desc.symmetry.body" | t(lang) }}</div>
         </div>
         <div class="tech-detail-item">
-          <div class="tech-detail-item__label">{{ "cs.detail.fluidity.label" | t(lang) }}</div>
-          <div class="tech-detail-item__value">{{ "cs.detail.fluidity.value" | t(lang) }}</div>
-          <div class="tech-detail-item__desc">{{ "cs.detail.fluidity.desc" | t(lang) }}</div>
+          <div class="tech-detail-item__label">{{ "cs.desc.smoothness.name" | t(lang) }}</div>
+          <div class="tech-detail-item__value">{{ "cs.desc.smoothness.map" | t(lang) }}</div>
+          <div class="tech-detail-item__desc">{{ "cs.desc.smoothness.body" | t(lang) }}</div>
         </div>
         <div class="tech-detail-item">
-          <div class="tech-detail-item__label">{{ "cs.detail.arms.label" | t(lang) }}</div>
-          <div class="tech-detail-item__value">{{ "cs.detail.arms.value" | t(lang) }}</div>
-          <div class="tech-detail-item__desc">{{ "cs.detail.arms.desc" | t(lang) }}</div>
+          <div class="tech-detail-item__label">{{ "cs.desc.feet.name" | t(lang) }}</div>
+          <div class="tech-detail-item__value">{{ "cs.desc.feet.map" | t(lang) }}</div>
+          <div class="tech-detail-item__desc">{{ "cs.desc.feet.body" | t(lang) }}</div>
         </div>
         <div class="tech-detail-item">
-          <div class="tech-detail-item__label">{{ "cs.detail.height.label" | t(lang) }}</div>
-          <div class="tech-detail-item__value">{{ "cs.detail.height.value" | t(lang) }}</div>
-          <div class="tech-detail-item__desc">{{ "cs.detail.height.desc" | t(lang) }}</div>
+          <div class="tech-detail-item__label">{{ "cs.desc.knee.name" | t(lang) }}</div>
+          <div class="tech-detail-item__value">{{ "cs.desc.knee.map" | t(lang) }}</div>
+          <div class="tech-detail-item__desc">{{ "cs.desc.knee.body" | t(lang) }}</div>
         </div>
         <div class="tech-detail-item">
-          <div class="tech-detail-item__label">{{ "cs.detail.tilt.label" | t(lang) }}</div>
-          <div class="tech-detail-item__value">{{ "cs.detail.tilt.value" | t(lang) }}</div>
-          <div class="tech-detail-item__desc">{{ "cs.detail.tilt.desc" | t(lang) }}</div>
+          <div class="tech-detail-item__label">{{ "cs.desc.hands.name" | t(lang) }}</div>
+          <div class="tech-detail-item__value">{{ "cs.desc.hands.map" | t(lang) }}</div>
+          <div class="tech-detail-item__desc">{{ "cs.desc.hands.body" | t(lang) }}</div>
         </div>
         <div class="tech-detail-item">
-          <div class="tech-detail-item__label">{{ "cs.detail.hands.label" | t(lang) }}</div>
-          <div class="tech-detail-item__value">{{ "cs.detail.hands.value" | t(lang) }}</div>
-          <div class="tech-detail-item__desc">{{ "cs.detail.hands.desc" | t(lang) }}</div>
+          <div class="tech-detail-item__label">{{ "cs.desc.jerk.name" | t(lang) }}</div>
+          <div class="tech-detail-item__value">{{ "cs.desc.jerk.map" | t(lang) }}</div>
+          <div class="tech-detail-item__desc">{{ "cs.desc.jerk.body" | t(lang) }}</div>
         </div>
         <div class="tech-detail-item">
-          <div class="tech-detail-item__label">{{ "cs.detail.triggers.label" | t(lang) }}</div>
-          <div class="tech-detail-item__value">{{ "cs.detail.triggers.value" | t(lang) }}</div>
-          <div class="tech-detail-item__desc">{{ "cs.detail.triggers.desc" | t(lang) }}</div>
+          <div class="tech-detail-item__label">{{ "cs.desc.elbow.name" | t(lang) }}</div>
+          <div class="tech-detail-item__value">{{ "cs.desc.elbow.map" | t(lang) }}</div>
+          <div class="tech-detail-item__desc">{{ "cs.desc.elbow.body" | t(lang) }}</div>
+        </div>
+        <div class="tech-detail-item">
+          <div class="tech-detail-item__label">{{ "cs.desc.head.name" | t(lang) }}</div>
+          <div class="tech-detail-item__value">{{ "cs.desc.head.map" | t(lang) }}</div>
+          <div class="tech-detail-item__desc">{{ "cs.desc.head.body" | t(lang) }}</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= DEMO VS. INSTALLATION ======= -->
+  <section class="project-body">
+    <div class="container--narrow">
+      <h2>{{ "cs.compare.title" | t(lang) }}</h2>
+      <div class="mapping-grid">
+        <div class="mapping-grid__header">{{ "cs.compare.demo.title" | t(lang) }}</div>
+        <div class="mapping-grid__header">{{ "cs.compare.install.title" | t(lang) }}</div>
+        <div class="mapping-grid__cell mapping-grid__cell--move">{{ "cs.compare.demo.1" | t(lang) }}</div>
+        <div class="mapping-grid__cell mapping-grid__cell--sound">{{ "cs.compare.install.1" | t(lang) }}</div>
+        <div class="mapping-grid__cell mapping-grid__cell--move">{{ "cs.compare.demo.2" | t(lang) }}</div>
+        <div class="mapping-grid__cell mapping-grid__cell--sound">{{ "cs.compare.install.2" | t(lang) }}</div>
+        <div class="mapping-grid__cell mapping-grid__cell--move">{{ "cs.compare.demo.3" | t(lang) }}</div>
+        <div class="mapping-grid__cell mapping-grid__cell--sound">{{ "cs.compare.install.3" | t(lang) }}</div>
+        <div class="mapping-grid__cell mapping-grid__cell--move">{{ "cs.compare.demo.4" | t(lang) }}</div>
+        <div class="mapping-grid__cell mapping-grid__cell--sound">{{ "cs.compare.install.4" | t(lang) }}</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= WHY THIS PROJECT MATTERS (highlighted, real essay) ======= -->
+  <section class="project-body project-body--highlight-dark">
+    <div class="container--narrow">
+      <h2>{{ "cs.why.title" | t(lang) }}</h2>
+      <p>{{ "cs.why.p1" | t(lang) }}</p>
+      <p>{{ "cs.why.p2" | t(lang) }}</p>
+    </div>
+  </section>
+
+  <!-- ======= TECH STACK (4 layers) ======= -->
+  <section class="project-body">
+    <div class="container--narrow">
+      <h2>{{ "cs.tech.title" | t(lang) }}</h2>
+
+      <h3>{{ "cs.stack.layer.vision" | t(lang) }}</h3>
+      <div class="tech-stack">
+        <div class="tech-item">
+          <div class="tech-item__label">MediaPipe Pose</div>
+          <div class="tech-item__value">{{ "cs.stack.mediapipe.desc" | t(lang) }}</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item__label">OpenCV</div>
+          <div class="tech-item__value">{{ "cs.stack.opencv.desc" | t(lang) }}</div>
         </div>
       </div>
 
-      <h2>{{ "cs.mapping.title" | t(lang) }}</h2>
-      <p>{{ "cs.mapping.p1" | t(lang) }}</p>
+      <h3>{{ "cs.stack.layer.audio" | t(lang) }}</h3>
+      <div class="tech-stack">
+        <div class="tech-item">
+          <div class="tech-item__label">SuperCollider</div>
+          <div class="tech-item__value">{{ "cs.stack.supercollider.desc" | t(lang) }}</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item__label">MIDI/MPE</div>
+          <div class="tech-item__value">{{ "cs.stack.midi.desc" | t(lang) }}</div>
+        </div>
+      </div>
 
-      <div class="mapping-grid">
-        <div class="mapping-grid__header">{{ "cs.mapping.header.move" | t(lang) }}</div>
-        <div class="mapping-grid__header">{{ "cs.mapping.header.sound" | t(lang) }}</div>
-        <div class="mapping-grid__cell mapping-grid__cell--move">{{ "cs.mapping.fast" | t(lang) }}</div>
-        <div class="mapping-grid__cell mapping-grid__cell--sound">{{ "cs.mapping.fast.sound" | t(lang) }}</div>
-        <div class="mapping-grid__cell mapping-grid__cell--move">{{ "cs.mapping.arms" | t(lang) }}</div>
-        <div class="mapping-grid__cell mapping-grid__cell--sound">{{ "cs.mapping.arms.sound" | t(lang) }}</div>
-        <div class="mapping-grid__cell mapping-grid__cell--move">{{ "cs.mapping.asym" | t(lang) }}</div>
-        <div class="mapping-grid__cell mapping-grid__cell--sound">{{ "cs.mapping.asym.sound" | t(lang) }}</div>
-        <div class="mapping-grid__cell mapping-grid__cell--move">{{ "cs.mapping.smooth" | t(lang) }}</div>
-        <div class="mapping-grid__cell mapping-grid__cell--sound">{{ "cs.mapping.smooth.sound" | t(lang) }}</div>
-        <div class="mapping-grid__cell mapping-grid__cell--move">{{ "cs.mapping.abrupt" | t(lang) }}</div>
-        <div class="mapping-grid__cell mapping-grid__cell--sound">{{ "cs.mapping.abrupt.sound" | t(lang) }}</div>
-        <div class="mapping-grid__cell mapping-grid__cell--move">{{ "cs.mapping.vert" | t(lang) }}</div>
-        <div class="mapping-grid__cell mapping-grid__cell--sound">{{ "cs.mapping.vert.sound" | t(lang) }}</div>
-        <div class="mapping-grid__cell mapping-grid__cell--move">{{ "cs.mapping.hand" | t(lang) }}</div>
-        <div class="mapping-grid__cell mapping-grid__cell--sound">{{ "cs.mapping.hand.sound" | t(lang) }}</div>
-        <div class="mapping-grid__cell mapping-grid__cell--move">{{ "cs.mapping.head" | t(lang) }}</div>
-        <div class="mapping-grid__cell mapping-grid__cell--sound">{{ "cs.mapping.head.sound" | t(lang) }}</div>
+      <h3>{{ "cs.stack.layer.core" | t(lang) }}</h3>
+      <div class="tech-stack">
+        <div class="tech-item">
+          <div class="tech-item__label">Python</div>
+          <div class="tech-item__value">{{ "cs.stack.python.desc" | t(lang) }}</div>
+        </div>
+      </div>
+
+      <h3>{{ "cs.stack.layer.infra" | t(lang) }}</h3>
+      <div class="tech-stack">
+        <div class="tech-item">
+          <div class="tech-item__label">Docker + Hetzner VPS</div>
+          <div class="tech-item__value">{{ "cs.stack.docker.desc" | t(lang) }}</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item__label">{{ "cs.tech.test" | t(lang) }}</div>
+          <div class="tech-item__value">{{ "cs.tech.test.val" | t(lang) }}</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item__label">{{ "cs.tech.source" | t(lang) }}</div>
+          <div class="tech-item__value">{{ "cs.tech.source.val" | t(lang) }}</div>
+        </div>
       </div>
     </div>
   </section>
@@ -224,7 +242,7 @@ themeColor: "#1E6B7B"
       <p style="margin-bottom: 2rem;">{{ "cs.code.desc" | t(lang) }}</p>
       <div class="btn-group btn-group--center">
         <a href="https://github.com/maramotto/cuerposonoro" class="btn btn--primary btn--small" target="_blank" rel="noopener">{{ "cs.code.github" | t(lang) }}</a>
-        <a href="https://cuerposonoro.art" class="btn btn--outline btn--small" target="_blank" rel="noopener">{{ "cs.code.demo" | t(lang) }}</a>
+        <a href="{{ '/en/cuerposonoro/demo/' if lang == 'en' else '/cuerposonoro/demo/' }}" class="btn btn--outline btn--small">{{ "cs.code.demo" | t(lang) }}</a>
       </div>
     </div>
   </section>

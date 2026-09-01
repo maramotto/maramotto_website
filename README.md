@@ -59,8 +59,8 @@ useful before a Docker build.
 Every page on the site — main pages and blog — has a real URL per language,
 generated at build time, no client-side JS involved:
 
-- **Main pages**: `/`, `/en/`; `/cuerposonoro.html`, `/en/cuerposonoro.html`;
-  `/universo-punzadas.html`, `/en/universo-punzadas.html`. Each of the 3
+- **Main pages**: `/`, `/en/`; `/cuerposonoro/`, `/en/cuerposonoro/`;
+  `/universo-punzadas/`, `/en/universo-punzadas/`. Each of the 3
   `.njk` files paginates over `_data/languages.js` (`pagination: {data:
   languages, size: 1, alias: lang}` in `layouts/root-page.njk`), and the
   `permalink` there derives the output path from `lang` + a per-page `slug`
@@ -123,7 +123,7 @@ docker compose up -d --build
 ```
 
 `nginx.conf` serves clean URLs (`/cuerposonoro` resolves to
-`cuerposonoro.html`), caches static assets, and falls back unknown routes
+`cuerposonoro/`), caches static assets, and falls back unknown routes
 to `index.html`. See `blog/README.md` for the actual deploy/publish
 workflow (`blog/deploy.sh`, `blog/publish.sh`) — those scripts are
 unaffected by the template restructuring and unchanged.
