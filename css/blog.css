@@ -15,6 +15,18 @@
   margin-bottom: 2rem;
 }
 
+.blog-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.blog-categories__btn.is-active {
+  background: var(--purple);
+  color: var(--white);
+}
+
 .blog-list__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));

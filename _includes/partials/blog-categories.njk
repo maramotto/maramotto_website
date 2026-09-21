@@ -1,0 +1,13 @@
+{% macro categoryNav(lang, active) %}
+{% set base = "/blog/en/" if lang == "en" else "/blog/" %}
+{% set labels = {
+  "thoughts": "Thoughts" if lang == "en" else "Pensamientos",
+  "art": "Art" if lang == "en" else "Arte",
+  "engineering": "Engineering" if lang == "en" else "Ingeniería"
+} %}
+<nav class="blog-categories" aria-label="{{ 'Blog categories' if lang == 'en' else 'Categorías del blog' }}">
+  {% for key, label in labels %}
+  <a href="{{ base }}{{ key }}/" class="btn btn--outline blog-categories__btn{{ ' is-active' if active == key }}">{{ label }}</a>
+  {% endfor %}
+</nav>
+{% endmacro %}

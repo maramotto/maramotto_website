@@ -1,17 +1,19 @@
 ---
-title: "Blog"
-description: "Artículos y notas de maramotto sobre arte interactivo, creative coding y tecnología creativa."
+title: "Ingeniería"
+description: "Posts de maramotto sobre ingeniería de software y código."
+permalink: /blog/engineering/
 lang: es
-permalink: /blog/
+category: engineering
 eleventyExcludeFromCollections: true
 layout: layouts/list.njk
 ---
 {% from "partials/blog-categories.njk" import categoryNav %}
 <section class="blog-list">
   <h1>{{ title }}</h1>
-  {{ categoryNav(lang) }}
+  {{ categoryNav(lang, category) }}
   <div class="blog-list__grid">
-    {% for post in collections.posts | postsByLang(lang) %}
+    {% set posts = collections.posts | postsByLang(lang) | postsByCategory(category) %}
+    {% for post in posts %}
       {% include "partials/post-card.njk" %}
     {% endfor %}
   </div>

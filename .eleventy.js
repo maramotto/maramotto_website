@@ -4,6 +4,7 @@ const readingTime = require("./eleventy/filters/reading-time.js");
 const postsByLang = require("./eleventy/filters/posts-by-lang.js");
 const translationUrl = require("./eleventy/filters/translation-url.js");
 const postsByTag = require("./eleventy/filters/posts-by-tag.js");
+const postsByCategory = require("./eleventy/filters/posts-by-category.js");
 const readableDate = require("./eleventy/filters/readable-date.js");
 const isoDate = require("./eleventy/filters/iso-date.js");
 const t = require("./eleventy/filters/t.js");
@@ -59,13 +60,22 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("postsByLang", postsByLang);
   eleventyConfig.addFilter("translationUrl", translationUrl);
   eleventyConfig.addFilter("postsByTag", postsByTag);
+  eleventyConfig.addFilter("postsByCategory", postsByCategory);
   eleventyConfig.addFilter("readableDate", readableDate);
   eleventyConfig.addFilter("isoDate", isoDate);
   eleventyConfig.addFilter("t", (key, lang) => t(i18nData, key, lang));
 
-  eleventyConfig.addCollection("posts", (collectionApi) =>
-    collectionApi.getFilteredByGlob("blog/posts/*/*.md").sort((a, b) => b.date - a.date)
-  );
+  const VALID_CATEGORIES = ["thoughts", "art", "engineering"];
+
+  eleventyConfig.addCollection("posts", (collectionApi) => {
+    const posts = collectionApi.getFilteredByGlob("blog/posts/*/*.md").sort((a, b) => b.date - a.date);
+    posts.forEach((post) => {
+      if (!VALID_CATEGORIES.includes(post.data.category)) {
+        console.warn(`[blog] "${post.data.title}" (${post.inputPath}) has no valid category (thoughts|art|engineering)`);
+      }
+    });
+    return posts;
+  });
 
   eleventyConfig.addCollection("tagListEs", (collectionApi) =>
     uniqueSortedTags(collectionApi.getFilteredByGlob("blog/posts/*/*.md").filter((p) => p.data.lang === "es"))
