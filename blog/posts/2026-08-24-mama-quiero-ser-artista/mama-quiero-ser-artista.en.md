@@ -3,6 +3,7 @@ title: "Mom, I want to be an artist"
 date: 2026-08-24
 lang: en
 translationKey: mama-quiero-ser-artista
+category: thoughts
 tags: ["note"]
 imageFile: "cover.svg"
 imageRatio: square

@@ -3,6 +3,7 @@ title: "Mamá quiero ser artista"
 date: 2026-08-24
 lang: es
 translationKey: mama-quiero-ser-artista
+category: thoughts
 tags: ["nota"]
 imageFile: "cover.svg"
 imageRatio: square

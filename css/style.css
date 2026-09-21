@@ -190,17 +190,24 @@ a { color: inherit; }
 
 /* --- Logo with letter wave --- */
 .nav__logo {
-  font-family: 'Syne', sans-serif;
-  font-weight: 800;
-  font-size: 1.5rem;
-  color: var(--purple);
-  text-decoration: none;
-  letter-spacing: -0.02em;
   display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.nav__logo-svg {
+  height: 1.6rem;
+  width: auto;
+  display: block;
+}
+
+/* The shared accent color is yellow, same as the nav background — swap it
+   for purple here so the accent letter stays visible. */
+.nav__logo-svg .brand-logo-accent {
+  fill: var(--purple);
 }
 
 .nav__logo-letter {
-  display: inline-block;
   transition: transform 0.2s;
 }
 
@@ -210,7 +217,7 @@ a { color: inherit; }
 
 @keyframes letter-wave {
   0%   { transform: translateY(0); }
-  40%  { transform: translateY(-6px); }
+  40%  { transform: translateY(-16px); }
   100% { transform: translateY(0); }
 }
 
@@ -472,7 +479,7 @@ a { color: inherit; }
   display: block;
 }
 
-.hero__title-logo .hero__title-accent {
+.brand-logo-accent {
   fill: var(--yellow);
 }
 

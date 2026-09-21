@@ -34,9 +34,9 @@ post concreto:
 
 2. Escribe la versión en español, `mi-nuevo-post.es.md`. Required
    front matter: `title`, `date`, `lang: es`, `translationKey`
-   (shared between the ES/EN pair), `tags`, `imageFile` (nombre del
-   archivo de imagen dentro de la misma carpeta), `imageRatio`
-   (`square` o `wide`), `excerpt`.
+   (shared between the ES/EN pair), `category`, `tags`, `imageFile`
+   (nombre del archivo de imagen dentro de la misma carpeta),
+   `imageRatio` (`square` o `wide`), `excerpt`.
 
    ```markdown
    ---
@@ -44,6 +44,7 @@ post concreto:
    date: 2026-09-01
    lang: es
    translationKey: mi-nuevo-post
+   category: art
    tags: ["nota", "creative-coding"]
    imageFile: "cover.jpg"
    imageRatio: square
@@ -55,11 +56,18 @@ post concreto:
 
    `translationKey` debe coincidir exactamente entre la versión ES y EN
    de un mismo post — es lo que enlaza ambas URLs en el selector de
-   idioma. `imageRatio` es `square` (1:1) o `wide` (16:9), según la
-   imagen que prepares. `imageFile` solo lleva el nombre del archivo
-   (no la ruta) — Eleventy construye la URL pública automáticamente a
-   partir de `translationKey` + `imageFile`. Cualquier `tag` nuevo
-   genera automáticamente su propia página en `/blog/tags/<tag>/`.
+   idioma. `category` es obligatorio y siempre en inglés, uno de
+   `thoughts` | `art` | `engineering` (igual en ambas versiones del
+   post) — determina en qué botón/página de categoría aparece
+   (`/blog/<categoría>/` en español, `/blog/en/<categoría>/` en
+   inglés). Si falta o no es uno de esos tres valores, el build avisa
+   por consola pero no falla. `imageRatio` es `square` (1:1) o `wide`
+   (16:9), según la imagen que prepares. `imageFile` solo lleva el
+   nombre del archivo (no la ruta) — Eleventy construye la URL pública
+   automáticamente a partir de `translationKey` + `imageFile`.
+   Cualquier `tag` nuevo genera automáticamente su propia página en
+   `/blog/tags/<tag>/` — son etiquetas libres, independientes de
+   `category`.
 
 3. Añade la imagen de portada en la misma carpeta del post (`.jpg`,
    `.png` o `.svg`), con el mismo nombre que declaraste en

@@ -7,23 +7,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* ----- 1. Logo letter wave (every 10s) ----- */
+  // The 9 letters are separate <g class="nav__logo-letter"> groups in the
+  // brand SVG (see partials/nav.njk) — no DOM construction needed here.
   const logo = document.querySelector('.nav__logo');
   if (logo && !prefersReducedMotion) {
-    // Wrap each letter in a span, preserving the <span> child for "motto"
-    const raw = logo.innerHTML;            // e.g. mara<span>motto</span>
-    // Build letter spans from full text "maramotto"
-    const fullText = logo.textContent;     // "maramotto"
-    logo.innerHTML = '';
-    fullText.split('').forEach((char, i) => {
-      const s = document.createElement('span');
-      s.className = 'nav__logo-letter';
-      s.textContent = char;
-      s.style.setProperty('--i', i);
-      logo.appendChild(s);
-    });
+    const letters = logo.querySelectorAll('.nav__logo-letter');
 
     function triggerWave() {
-      const letters = logo.querySelectorAll('.nav__logo-letter');
       letters.forEach(l => l.classList.remove('wave'));
       // Force reflow so animation restarts
       void logo.offsetWidth;
