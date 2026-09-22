@@ -11,7 +11,7 @@ backend:
   name: github
   repo: maramotto/maramotto_website
   branch: master
-  # base_url: "https://maramotto-decap-oauth.<tu-subdominio>.workers.dev"
+  base_url: "https://maramotto-decap-oauth.maramotto.workers.dev"
 
 local_backend: true
 
