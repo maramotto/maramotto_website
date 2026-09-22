@@ -17,11 +17,14 @@ local_backend: true
 
 publish_mode: editorial_workflow
 
-# Valores de nivel raíz obligatorios para Decap — se sobrescriben por
-# entrada con los media_folder/public_folder vacíos de la colección
-# "blog" de abajo, así que en la práctica no se usan.
-media_folder: "blog/posts"
-public_folder: "/blog/images"
+# Valores de nivel raíz obligatorios para Decap. Solo entran en juego
+# si usas el botón "Media" global (fuera del formulario de un post) —
+# los campos de imagen dentro de la colección "blog" usan su propio
+# media_folder/public_folder de abajo. Iban antes a blog/posts/ a
+# secas y acabaron ensuciándolo con subidas sueltas sin pasar por PR;
+# ahora caen en su propia carpeta.
+media_folder: "img/cms-uploads"
+public_folder: "/img/cms-uploads"
 
 i18n:
   structure: multiple_files
@@ -32,7 +35,10 @@ collections:
   - name: blog
     label: Blog
     folder: blog/posts
-    path: "{{slug}}/index"
+    # Coincide con tu convención real: blog/posts/<slug>/<slug>.<idioma>.md
+    # (nada de "index.md" — así los posts escritos a mano y los hechos
+    # desde aquí quedan exactamente iguales).
+    path: "{{slug}}/{{slug}}"
     create: true
     i18n: true
     media_folder: "/blog/posts/{{slug}}"
