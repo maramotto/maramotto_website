@@ -1,13 +1,16 @@
 ---
-title: "Mom, I want to be an artist"
-date: 2026-08-24
+title: Mom, I want to be an artist
 lang: en
-translationKey: mama-quiero-ser-artista
+date: 2026-08-24
 category: thoughts
-tags: ["note"]
-imageFile: "cover.svg"
+tags:
+  - note
+imageFile: /blog/images/mamá-quiero-ser-artista/artist.svg
 imageRatio: square
-excerpt: "At 37, with no art-world background or contacts, I'm deciding to pursue it anyway. I don't know where it'll lead — I just know it's what makes me feel alive."
+excerpt: At 37, with no art-world background or contacts, I'm deciding to pursue
+  it anyway. I don't know where it'll lead — I just know it's what makes me feel
+  alive.
+translationKey: mama-quiero-ser-artista
 ---
 
 **Yes, I want to be an artist.** And no, I don't want to do anything else
