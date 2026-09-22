@@ -1,0 +1,53 @@
+# Panel de edición del blog (Decap CMS).
+#
+# En local (localhost) se usa automáticamente el proxy de `decap-server`
+# gracias a `local_backend: true`, sin necesidad de credenciales de
+# GitHub. En producción, este mismo config.yml se conecta al backend
+# `github` de verdad — ver docs/decap-cms.md para la puesta en marcha
+# del proxy de OAuth (fase 2, pendiente).
+
+backend:
+  name: github
+  repo: maramotto/maramotto_website
+  branch: master
+
+local_backend: true
+
+publish_mode: editorial_workflow
+
+# Valores de nivel raíz obligatorios para Decap — se sobrescriben por
+# entrada con los media_folder/public_folder vacíos de la colección
+# "blog" de abajo, así que en la práctica no se usan.
+media_folder: "blog/posts"
+public_folder: "/blog/images"
+
+i18n:
+  structure: multiple_files
+  locales: [es, en]
+  default_locale: es
+
+collections:
+  - name: blog
+    label: Blog
+    folder: blog/posts
+    path: "{{slug}}/index"
+    create: true
+    i18n: true
+    media_folder: "/blog/posts/{{slug}}"
+    public_folder: "/blog/images/{{slug}}"
+    fields:
+      - { label: "Título", name: title, widget: string, i18n: true }
+      - { label: "Idioma", name: lang, widget: select, options: [es, en], i18n: true }
+      - { label: "Fecha", name: date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, i18n: duplicate }
+      - { label: "Categoría", name: category, widget: select, options: [thoughts, art, engineering], i18n: duplicate }
+      - label: "Etiquetas"
+        name: tags
+        widget: select
+        multiple: true
+        i18n: true
+        hint: "Elige la etiqueta correspondiente al idioma de esta pestaña (ver blog/posts/tags.map para los pares ES/EN)."
+        options: [nota, note, arte, art, "creative-coding", carrera, career, ia, ai, aforo]
+      - { label: "Imagen de portada", name: imageFile, widget: image, i18n: duplicate }
+      - { label: "Proporción de imagen", name: imageRatio, widget: select, options: [square, wide], i18n: duplicate }
+      - { label: "Extracto", name: excerpt, widget: text, i18n: true }
+      - { label: "Cuerpo", name: body, widget: markdown, i18n: true }
