@@ -3,13 +3,15 @@
 # En local (localhost) se usa automáticamente el proxy de `decap-server`
 # gracias a `local_backend: true`, sin necesidad de credenciales de
 # GitHub. En producción, este mismo config.yml se conecta al backend
-# `github` de verdad — ver docs/decap-cms.md para la puesta en marcha
-# del proxy de OAuth (fase 2, pendiente).
+# `github` de verdad a través del proxy de OAuth — ver
+# oauth-worker/README.md para desplegarlo y obtener la URL a poner
+# abajo en `base_url`.
 
 backend:
   name: github
   repo: maramotto/maramotto_website
   branch: master
+  # base_url: "https://maramotto-decap-oauth.<tu-subdominio>.workers.dev"
 
 local_backend: true
 

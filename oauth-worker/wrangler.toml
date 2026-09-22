@@ -1,0 +1,11 @@
+name = "maramotto-decap-oauth"
+main = "worker.js"
+compatibility_date = "2026-09-22"
+
+[vars]
+ALLOWED_ORIGIN = "https://maramotto.com"
+
+# GITHUB_CLIENT_ID y GITHUB_CLIENT_SECRET se configuran como secrets,
+# no aquí (no deben quedar en texto plano en el repo):
+#   npx wrangler secret put GITHUB_CLIENT_ID
+#   npx wrangler secret put GITHUB_CLIENT_SECRET
