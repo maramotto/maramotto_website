@@ -1,13 +1,16 @@
 ---
-title: "Mamá quiero ser artista"
-date: 2026-08-24
+title: Mamá quiero ser artista
 lang: es
-translationKey: mama-quiero-ser-artista
+date: 2026-08-24
 category: thoughts
-tags: ["nota"]
-imageFile: "cover.svg"
+tags:
+  - nota
+imageFile: /blog/images/mamá-quiero-ser-artista/artist.svg
 imageRatio: square
-excerpt: "A los 37, sin estudios de arte ni contactos en la industria, decido dedicarme a ello de todas formas. No sé a dónde me llevará — solo sé que es lo que me hace sentir viva."
+excerpt: A los 37, sin estudios de arte ni contactos en la industria, decido
+  dedicarme a ello de todas formas. No sé a dónde me llevará — solo sé que es lo
+  que me hace sentir viva.
+translationKey: mama-quiero-ser-artista
 ---
 
 **Sí, quiero ser artista.** Y no, no quiero hacer otra cosa con mi tiempo y mi
