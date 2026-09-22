@@ -3,6 +3,7 @@
 # unless excluded here. These are docs/scratch files, not site content.
 README.md
 blog/README.md
+oauth-worker/
 docs/
 brand-review.md
 website-audit.md
