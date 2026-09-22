@@ -4,13 +4,11 @@
   "devDependencies": {
     "@playwright/test": "^1.47.0",
     "@11ty/eleventy": "^2.0.1",
-    "@11ty/eleventy-plugin-rss": "^1.2.0",
-    "decap-server": "^3.11.3"
+    "@11ty/eleventy-plugin-rss": "^1.2.0"
   },
   "scripts": {
     "build": "eleventy",
     "serve": "eleventy --serve",
-    "cms": "decap-server",
     "test:unit": "node --test 'eleventy/filters/**/*.test.js'",
     "test:e2e": "playwright test"
   }
